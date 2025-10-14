@@ -1,0 +1,52 @@
+site_name: "UofG HPC"
+theme:
+  name: material
+  logo: assets\logo.png
+  favicon: assets\favicon.png
+  features:
+    - content.action.view
+    - navigation.footer
+    - navigation.path
+    - navigation.top
+    - content.tabs.link
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: 'teal'
+      accent: 'teal'
+      toggle:
+        icon: material/brightness-5
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: 'teal'
+      accent: 'teal'
+      toggle:
+        icon: material/brightness-7
+        name: Switch to system preference
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.snippets:
+      url_download: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+plugins:
+  - search
+  - awesome-nav

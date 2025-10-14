@@ -1,0 +1,14 @@
+nav: 
+  - Welcome: index.md
+  - Clusters: clusters 
+  - account-registration.md
+  - quickstart.md
+  - Tutorials: tutorials
+  - Guides: 
+    - guides/slurm.md
+    - guides/*.md
+  - References: references
+  - Policies: 
+    - policies/*
+    - policies/website-privacy-policy.md
+  
