@@ -1,0 +1,41 @@
+# The workflow below can be run manually through the Actions tab, but will also runs automatically, 
+# whenever new content is pushed into the "webpage" directory on the branch "main".
+#
+# The workflow below builds the contents of the markdown files in the webpage directory into a static site 
+# and deploys this site onto a branch called "gh-pages". From there the rranch is used to publish the 
+# page via a default GitHub Pages deployment.
+#
+# Workflow code is based on the example in this link, with additions for certain add-ons used: 
+# https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions-material-for-mkdocs
+#
+# For GitHub Pages settings, within the repository go to Settings > Pages
+
+name: Build and Deploy MkDocs
+on:
+  workflow_dispatch: 
+  push:
+    branches:
+      - main
+    paths:
+      - 'webpage/**'
+permissions:
+  contents: write 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+      - name: Install packages
+        run: pip install \
+            mkdocs-material \
+            pymdown-extensions \
+            mkdocs-awesome-nav \
+            mkdocs-material-extensions
+      - name: Build documentation
+        run: mkdocs gh-deploy --config-file webpage/mkdocs.yml --force 
+
