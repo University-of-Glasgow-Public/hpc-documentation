@@ -168,7 +168,19 @@ result> {"access_token":"<string of random
 characters>","expiry":"2024-12-16T14:59:27.6563422+01:00"}
 ```
 
-From the list choose "SharePoint site name or URL" by entering `url`:
+If you are getting an error that looks along the lines of "`Fatal error: failed to configure OneDrive: empty token found`", run the following command below in your console and start the configuration again:
+
+```
+sttyback=$(stty -g) ; stty -icanon
+```
+
+Careful, with this command active, you are no longer able to use backspace to correct text in the Rclone interactive setup, so ensure you are typing or pasting things correctly! Once you finish the configuration, you can either restart your shell, to deactivate this command, or run:
+
+```
+stty $sttyback
+```
+
+After the token has been accepted, you can choose "SharePoint site name or URL" from the list:
 
 ```
 ... 
