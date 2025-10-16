@@ -93,7 +93,7 @@ exit
 ```
 
 ## Lesson 3: Batch Job
-If you are thinking the previous lesson was quite tedious and not very convenient, you will like batch job submissions.
+Interactive jobs are not very easily reproducible and generally take longer, as you have to type or paste every command yourself into the console. It is also not guaranteed, that your jobs will run right away, meaning you could be waiting hours for your interactive job to start! This is why we encourage users to use batch jobs. With batch job submission, you can schedule your work, log off the system and come back once your work is finished, fully autonomous.
 
 First, we have to save our python code into a file. For this create a file with the `.py` ending and add the lines we executed in python above in the interactive job. To make sure the output of our script is unique we will add the JobID as an identifier to the output file of the script.
 
