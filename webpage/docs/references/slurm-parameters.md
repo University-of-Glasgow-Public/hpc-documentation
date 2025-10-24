@@ -13,6 +13,8 @@ You can use a whole lot of parameters to specify your resource request to the sc
 |`-b, --begin=<time>`|`--begin=2025-01-01T12:00:00`|If you want a job to run at a specific time, you can set a start time. The start time is not guaranteed.|
 |`-d, --dependency=<condition>:<jobID>`|`--dependency=afterok:9999`|Set a dependency for your job to run. In the example, the job will run if job 9999 finished successfully. Read the manual for more configuration opetions.|
 |`-N, --nodes=<num>`|`--nodes=2`|Number of servers you want your job to run on. Use only if your code supports parallel processing.|
+|`-n, --ntasks=<num>`|`--ntasks=4`|Number of Slurm tasks to be launched, increase for multi-process runs ex. MPI.|
+|`--ntasks-per-node=<num>`|`--ntasks-per-node=4`|Number of Slurm tasks to be launched per node. Helpful to evenly distribute workload between nodes (servers).|
 |`-c, --cpus-per-task=<num>`|`--cpus-per-task=8`|Request the number of CPUs to be allocated per process. This may be useful if the job is multithreaded and requires more than one CPU per task for optimal performance.|
 |`--gres=gpu:<type>:<num>`|`--gres=gpu:gtx1080:1`|Specify the type and number of GPUs for your allocation.|
 |`--mem=<num><unit>`|`--mem=16G`|Specify the real memory required per node. Default units are megabytes. Different units can be specified using the suffix [K|M|G].|
