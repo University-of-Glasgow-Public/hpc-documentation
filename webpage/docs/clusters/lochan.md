@@ -6,10 +6,9 @@ The platform and team around it have been supporting researchers in all colleges
 ## Technology
 Lochan offers the following compute resources:
 
-- 856 virtual CPUs
+- 856 CPU cores
 - 3 NVIDIA Tesla V100 GPUs
 - 2 Nvidia L40S GPUs
-- 8 Nvidia GeForce GTX 1080 GPUs
 - 14+TB GB of memory with up to 2TB per node
 
 All servers of the cluster run on Oracle Linux 9. Oracle Linux (OL) is a Red Hat based open-source operating system.
