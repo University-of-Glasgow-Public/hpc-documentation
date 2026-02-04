@@ -9,9 +9,9 @@ You can use a whole lot of parameters to specify your resource request to the sc
 |`-o, --output=<path>`|`--output=/path/to/file/%x-%j.out`|Write all output of `STDOUT` to file. You can use dynamic parameters for filenames, like `%x` for job name and `%j` for jobID.|
 |`-e, --error=<path>`|`--error=/path/to/file/%x-%j.err`|Write all output of `STDERR` to file. You can use dynamic parameters for filenames, like `%x` for job name and `%j` for jobID. See "filename pattern" in manual for more information.|
 |`-D, --chdir=<directory>`|`--chdir=/path/to/workdir`|Set the working directory of the batch script to the specified relative or full path before it is executed|
-|`-t, --time=<dd-hh-mm-ss>`|`--time 00-01:00:00`|Set a limit on the total run time of the job allocation. When the time limit is reached, each task in each job step is sent a kill signal.|
-|`-b, --begin=<time>`|`--begin=2025-01-01T12:00:00`|If you want a job to run at a specific time, you can set a start time. The start time is not guaranteed.|
-|`-d, --dependency=<condition>:<jobID>`|`--dependency=afterok:9999`|Set a dependency for your job to run. In the example, the job will run if job 9999 finished successfully. Read the manual for more configuration opetions.|
+|`-t, --time=<dd-hh:mm:ss>`|`--time 00-01:00:00`|Set a limit on the total run time of the job allocation. When the time limit is reached, each task in each job step is sent a kill signal.|
+|`-b, --begin=<yyyy-MM-ddThh:mm:ss>`|`--begin=2025-01-01T12:00:00`|If you want a job to run at a specific time, you can set a start time. The start time is not guaranteed.|
+|`-d, --dependency=<condition>:<jobID>`|`--dependency=afterok:9999`|Set a dependency for your job to run. In the example, the job will run if job 9999 finished successfully. Read the manual for more configuration options.|
 |`-N, --nodes=<num>`|`--nodes=2`|Number of servers you want your job to run on. Use only if your code supports parallel processing.|
 |`-n, --ntasks=<num>`|`--ntasks=4`|Number of Slurm tasks to be launched, increase for multi-process runs ex. MPI.|
 |`--ntasks-per-node=<num>`|`--ntasks-per-node=4`|Number of Slurm tasks to be launched per node. Helpful to evenly distribute workload between nodes (servers).|
