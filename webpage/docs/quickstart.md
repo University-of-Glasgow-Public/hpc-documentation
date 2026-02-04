@@ -146,6 +146,17 @@ Partitions, also known as queues on other scheduling systems, are used to determ
 
     On Lochan, users are responsible for their own software. Though we offer some tools through modules, that make it easier for users to manage their own software. We also offer modules for software, that have a shared license, that is managed by the University of Glasgow.
 
+    !!! tip "Manage shared software"
+
+        If you are looking to manage shared software on Lochan, either exclusive for a specialist group or available for all Lochan users, please get in contact with the admins about requesting a domain software space.
+
+    In some cases software installed will have to be restricted due to license concerns. You will have to contact the admin team via Ivanti to get access to these software. These software include:
+    
+    - Matlab
+    - NVIDIA HPC SDK
+    - Intel oneAPI
+
+
 ### Environment Modules
 This is software that is centrally installed and can be used across the cluster. The full manual of `modules` can be found [here](https://modules.readthedocs.io/en/latest/).
 
@@ -154,7 +165,7 @@ The most used commands are listed below:
 |Command|Description|
 |---|---|
 |`module available`|List all available modules on the system.|
-|`module load `|Activate module for use in your current session.|
+|`module load <name>`|Activate module for use in your current session.|
 |`module unload <name>`|Deactivate module from your current session.|
 |`module search <search_term>`|Search for modules by name or description.|
 |`module list`|List all active modules in your current session.|
