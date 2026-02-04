@@ -1,8 +1,8 @@
 site_name: "UofG HPC"
 theme:
   name: material
-  logo: assets\logo.png
-  favicon: assets\favicon.png
+  logo: assets/logo.png
+  favicon: assets/favicon.png
   features:
     - content.action.view
     - navigation.footer
