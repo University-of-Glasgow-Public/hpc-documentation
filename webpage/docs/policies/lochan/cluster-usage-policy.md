@@ -54,7 +54,7 @@ Lochan is a shared resource used by a large number of people. With the help of q
 
 ## Maintenance
 1. To ensure the stability and security of Lochan, maintenance is needed. This might result in access to the cluster or parts of it being restricted for periods of time. These maintenance windows will be announced at least 2 weeks in advance.
-2. In the event of an unplanned outage or disruption to MARS, users will be informed via notification channels.
+2. In the event of an unplanned outage or disruption, users will be informed via notification channels.
 3. Updates affecting service will only be applied during a scheduled maintenance window.
 4. Updates affecting running jobs will only be applied on empty nodes.
 
