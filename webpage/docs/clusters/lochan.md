@@ -11,7 +11,7 @@ Lochan offers the following compute resources:
 - 2 Nvidia L40S GPUs
 - 14+TB GB of memory with up to 2TB per node
 
-All servers of the cluster run on Oracle Linux 9. Oracle Linux (OL) is a Red Hat based open-source operating system.
+All servers of the cluster run on Rocky Linux 9. Rocky Linux (RL) is a Red Hat based open-source operating system.
 
 The cluster's scheduler is the Slurm Workload Manager, developed by SchedMD. This software is crucial for HPC and helps achieve fair usage of all available compute resources.
 
