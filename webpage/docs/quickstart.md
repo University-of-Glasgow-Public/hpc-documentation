@@ -38,7 +38,7 @@ Scheduling is a complicated matter, and multiple factors play into the priority 
 After you got your account, you can log into the login node. The login node is the central point of access to the cluster for all users. This server is not very powerful and should therefore not be used for computational work. Any computational work should go through a job allocation on the scheduler.
 
 !!! info 
-    You have to be connected to the Campus network either via LAN, eduroam or VPN to access the cluster.
+    You have to be connected to the Campus network either via LAN, [eduroam](https://www.gla.ac.uk/myglasgow/it/eduroam/) or [VPN](https://www.gla.ac.uk/myglasgow/it/vpn/) to access the cluster.
 
 ### Connection Information
 
@@ -48,8 +48,18 @@ After you got your account, you can log into the login node. The login node is t
     - **Username**: *University of Glasgow GUID*
     - **Password**: *GUID Password*
 
+=== "GES-Petrarch"
+
+    - **Hostname**: `petrarch_esd.hpc.gla.ac.uk`
+    - **Username**: *University of Glasgow GUID*
+    - **Password**: *On first login provided by Administrator*
+
+    Please change your password upon first login using the command `passwd`
+
+GUID must be in lowercase ex: 999999x or xx999x
+
 ### Connecting via SSH
-You will need to use `SSH` to connect to the login node and use the HPC. The simplest way to connect is by opening a console and connect using the preinstalled `SSH` utility of your device (If you are prompted for a password, it will not show up while typing):
+You will need to use `SSH` to connect to the login node and use the HPC. The simplest way to connect is by opening a console or a terminal program and connect using the preinstalled `SSH` utility of your device (If you are prompted for a password, it will not show up while typing):
 
 ```
 ssh <username>@<hostaname>
@@ -67,12 +77,12 @@ All storage available is to be used for the duration of your work. It is not exp
 
 ### Storage Spaces
 
+
 === "Lochan"
 
     !!! warning
 
         **This is not a trusted research environment**, therefore all research data must be anonymised prior to transferring it onto the system.
-
 
     **User Home**
 
@@ -90,7 +100,146 @@ All storage available is to be used for the duration of your work. It is not exp
     |**Path**|`~/sharedscratch` or `/mnt/scratch/users/<GUID>`|
     |**Use**|This storage is shared between all nodes. Read and write data that you need during your jobs. Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!|
 
+=== "GES-Petrarch"
+
+    !!! warning
+
+        **This is not a trusted research environment**, therefore all research data must be anonymised prior to transferring it onto the system.
+
+    **User Home**
+
+    |||
+    |---|---|
+    |**Size**|100G (quota per user)|
+    |**Path**|`/mnt/home/<GUID>`|
+    |**Use**|Set up your environments and store all the scripts and data you need for your personal use.|
+
+    **Shared User Scratch**
+
+    |||
+    |---|---|
+    |**Size**|280Tb (shared between all cluster users)|
+    |**Path**|`~/sharedscratch` or `/mnt/shared-scratch/<GUID>`|
+    |**Use**|This storage is shared between all nodes. Save and write data that you need between your parallel and array jobs that run on multiple nodes simultaneously. Also, if Local Node Scratch is not sufficient, use this instead, as it has a larger capacity.|
+
+    **Local Node Scratch**
+
+    |||
+    |---|---|
+    |**Path***|`~/localscratch`|
+    |**Use**|Data Processing. All nodes have a scratch storage space that is dedicated to that node and not shared with others. We recommend running your jobs here, if they only run on one node, especially if they are read/write intensive. Don’t forget to move your data to a shared storage within your job, after you are done processing! Data left unused on these storage spaces will be deleted after 2 weeks!|
+
+### Storage Quotas
+
+=== "GES-Petrarch"
+
+    There are quotas set up across the cluster for different filesystems / shares. A quota means you are unable to write data after that quota is reached. These quotas are set up, to prevent users from using the cluster as data storage. The cluster should only be used to process data, any results or unused data should be moved off, after a job has finished running. The login node and all compute nodes, can connect to other campus systems or the internet, to perform data transfers.
+
+    **Filesystem Quotas**
+
+    ||||||
+    |---|---|---|---|---|
+    |**Name**|**Path**|**Soft Limit**|**Hard Limit**|**Grace Period**|
+    |User Home|/mnt/home|100GiB|120GiB|7 days|
+    |Shared Scratch|/mnt/shared-scratch or ~/sharedscratch|2000GiB|2100GiB|7 days|
+
+    **Clean Up Time on Scratch Space**
+
+    We also set up the clean-up scratch as:
+
+    ||||
+    |---|---|---|
+    |**Filesystem**|**Retention Time**|**Note**|
+    |/tmp/local-scratch|2 weeks|Exceptions Sebastian: 2 months, Todd: 2 months|
+    |/mnt/shared-scratch|4 weeks||
+
  
+    **Quota Terminology**
+
+    |||
+    |---|---|
+    |**Term**|**Explanation**|
+    |**Soft Limit**|•	Users are still able to use the system normally and write files until either the Grace period runs out or they reach the hard limit, whichever comes first.<br>•	Referred to as "quota" in the quota command output.|
+    |**Hard Limit**|•	When reached users won't be able to further write files. <br>•	Referred to as "limit" in the quota command output.|
+    |**Grace Period**|Time until the user's quota turns from a soft limit to a hard limit. You have to act during this period on reducing your quota to be lower than the soft limit again to avoid any issues logging into or using the system.|
+
+
+    **Quota Warning**
+
+    If you are over your quota's hard limit or past your grace period exceeding the soft limit you will get the following errors when working on the system:
+    `Disk quota exceeded`
+    In addition, when logging into the login node, you should get a warning, that looks something like this:
+    ```
+    --------- Warning: Quota violation! ---------
+    You are violating the following quotas:
+    In block grace period on /mnt/shared-scratch
+    Block limit reached on /mnt/home
+     
+    use command "quota -s" for more information
+    ---------------------------------------------
+    [<GUID>@headnode01 ~]$
+    ```
+
+    In block grace period... --> Quota is reached and grace period has started
+
+    Block limit reached... --> Limit (hard) is reached
+
+
+    **Analyse your storage usage**
+    
+    To see if or how close you are to reaching your quota, you can use the following command on the login node:
+
+    ```
+    [<GUID>@headnode01 ~]$ quota -s
+    [<GUID>@headnode01 ~]$ quota -s
+    Disk quotas for user <GUID> (uid <UID>):
+         Filesystem   space   quota   limit   grace   files   quota   limit   grace
+    10.3.95.31:/exports/home
+                      8280K    100G    120G            1775       0       0
+    10.3.95.31:/exports/scratch
+                       291G    500G    550G              16       0       0
+
+    ```
+    In the first column "Filesystem" you see the name of the filesystem. Since it is a mounted share, you will see the mount information. If you want to see which local filesystem this equates to, you can add the --show-mntpoint parameter.
+     
+    The second column "space" shows the currently used space on the filesystem by your user. This will give you an idea of how close you are to reaching either your quota or your limit. If you are over your quota, you will see an asterisk "*" next to the number too.
+     
+    The sixth column "files" shows you the number of files on the filesystem. This currently does not matter, as file count quotas are not set up. You can tell by the last three columns being either empty or set to 0.
+     
+    If you have an elaborate directory structure and you are unsure where the bulk of your data is the command du (from disk usage) can help you narrow that down. Here a couple of helpful commands:
+     
+    Show size of all subdirectories in a directory:
+
+    ```
+    [<GUID>@headnode01 ~]$ du -h -d 1  ~/sharedscratch/
+    121G    /mnt/home/<GUID>/sharedscratch/catPictures
+    111G    /mnt/home/<GUID>/sharedscratch/mydata
+    61G     /mnt/home/<GUID>/sharedscratch/myResults
+    291G    /mnt/home/<GUID>/sharedscratch/
+    ```
+
+    Show all directories and files over 50GiB throughout a whole filesystem:
+    ```
+    [<GUID>@headnode01 ~]$ du -h -t 50G -a ~/sharedscratch/
+    121G    /mnt/home/<GUID>/sharedscratch/catPictures/file
+    121G    /mnt/home/<GUID>/sharedscratch/catPictures
+    76G     /mnt/home/<GUID>/sharedscratch/mydata/dataset1
+    111G    /mnt/home/<GUID>/sharedscratch/mydata
+    61G     /mnt/home/<GUID>/sharedscratch/myResults/file1
+    61G     /mnt/home/<GUID>/sharedscratch/myResults
+    291G    /mnt/home/<GUID>/sharedscratch/
+    ```
+
+    For both of these command you can pipe the result to sort –h to sort them by size. To reverse this sort also use the -r parameter:
+    ```
+    [<GUID>@headnode01 ~]$ du -h -d 1  ~/sharedscratch/ | sort -h
+    61G     /mnt/home/<GUID>/sharedscratch/myResults
+    111G    /mnt/home/<GUID>/sharedscratch/mydata
+    121G    /mnt/home/<GUID>/sharedscratch/catPictures
+    291G    /mnt/home/<GUID>/sharedscratch/
+    ```
+
+
 ### Transfer Data
 To transfer data from your local machine (or another system), you can use `SSH`. You can do this either with the `scp` command:
 
@@ -137,6 +286,16 @@ Partitions, also known as queues on other scheduling systems, are used to determ
     |---|---|
     |cpu|This is the *default* partition, meaning this is chosen when no partition is specified. It contains all CPU focused servers of the Cluster.|
     |gpu|This partitions contains all servers with GPU resources available. You can specify which type with the `--gres` parameter.|
+
+
+=== "GES-Petrarch"
+
+    |Partition|Description|Node List|
+    |---|---|---|
+    |cpu|All Small Nodes servers. This is the default partition is none is defined.|node[001-006]|
+    |cpuplus|All Large Nodes servers|node[007-008]|
+    |cpuall|Both Small Nodes and Large Nodes servers|node[001-008]|
+    |gpu|All GPU Nodes|node[009-010]|
 
 ---
 
