@@ -2,7 +2,7 @@
 
 Use the University of Glasgow’s self-service portal Ivanti to request your account.
 
-[User Registration](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/CDA3CC542ACA46519AE911214CCF383E){ .md-button }
+[User Registration](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/6C80D9CCDE5A4B4D8134B617A9A33865){ .md-button }
 
 === "Lochan"
 
