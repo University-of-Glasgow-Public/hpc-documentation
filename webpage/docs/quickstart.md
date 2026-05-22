@@ -51,12 +51,15 @@ After you got your account, you can log into the login node. The login node is t
 === "GES-Petrarch"
 
     - **Hostname**: `petrarch_esd.hpc.gla.ac.uk`
+    - **Port**: 22
     - **Username**: *University of Glasgow GUID*
     - **Password**: *On first login provided by Administrator*
 
     Please change your password upon first login using the command `passwd`
 
 GUID must be in lowercase ex: 999999x or xx999x
+
+The same information can also be used to log in via SFTP to copy files from your local device onto the system.
 
 ### Connecting via SSH
 You will need to use `SSH` to connect to the login node and use the HPC. The simplest way to connect is by opening a console or a terminal program and connect using the preinstalled `SSH` utility of your device (If you are prompted for a password, it will not show up while typing):
