@@ -39,6 +39,8 @@ In the grid below you can find some quick links to content users are frequently 
     Join our Team on Microsoft Teams to be up to date on any news and find like-minded HPC users!
 
     [:octicons-arrow-right-24: Lochan Community](#)
+
+    [:octicons-arrow-right-24: GES Petrarch Community](https://teams.microsoft.com/l/team/19%3Ac87348e258c541e39b68b0e4106f6766%40thread.tacv2/conversations?groupId=37f36cdd-d021-4286-a81d-4a876570d0f2&tenantId=6e725c29-763a-4f50-81f2-2e254f0133c8)
 </div>
 
 This page is managed by Research Computing as a Service, a function within the University of Glasgow, supporting researchers across all disciplines with their computing needs. More information on RCaaS can be found [here](https://www.gla.ac.uk/myglasgow/rcaas/).
