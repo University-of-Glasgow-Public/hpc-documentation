@@ -1,10 +1,12 @@
 # GES Petrarch HPC Cluster
 This cluster was built by RCaaS HPC Engineers with hardware provided by the School of Geography and Earth Sciences within the College of Science and Engineering at the University of Glasgow in 2023-2024.
 
-## System Layout
+## System Overview
+
+### System Layout
 ![system_layout](assets/gesp_system_layout.svg)
 
-## Technology
+### Technology
 ![compute_resources](assets/gesp_compute_resources.svg)
 
 
