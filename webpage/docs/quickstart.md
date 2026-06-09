@@ -242,8 +242,22 @@ All storage available is to be used for the duration of your work. It is not exp
     291G    /mnt/home/<GUID>/sharedscratch/
     ```
 
+### Data Backup
+Below are the types of data found on the cluster filesystems, with information if they are backed up, where they are not backed up, a comment explains why.
+The backups are done using the Rubrik backup system, managed by Central IT. 
 
-### Transfer Data
+=== "GES-Petrarch"
+    ||||||
+    |---|---|---|---|---|
+    |**Name**|**Path**|**Owner**|**Backed-up**|**Comment**|
+    |Homes|/exports/home|Individual user|Yes||
+    |Software Catalogue|/exports/software|Administrators|Yes||
+    |Shared-Scratch|/exports/scratch|Individual user|No|Data is not meant to be persistent|
+    |Local-Scratch|/tmp/local-scratch|Individual user|No|Data is not meant to be persistent|
+
+
+
+### Data Transfer
 To transfer data from your local machine (or another system), you can use `SSH`. You can do this either with the `scp` command:
 
 ```
