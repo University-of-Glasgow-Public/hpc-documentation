@@ -183,11 +183,6 @@ Now let’s get some more information on how and where our job ran. In this outp
 $ sacct -X -j <JobID> -o JobID,NodeList,Start,End,Elapsed,State,ExitCode
 ```
 
-If your jobs have already finished or you want an overview of all jobs you ran in recent history, you can use sacct. With the following command you get an overview of all jobs you’ve ran in the last 7 days:
-
-```
-sacct -u <GUID> -S $(date +%Y-%m-%d -d "-7 days") -X
-```
 
 Say we want to check if our job ran efficiently, we could use the `seff` command. It uses data from the Slurm accounting database, to create information on how efficiently your job ran. We can use this information to make our jobs more efficient:
 

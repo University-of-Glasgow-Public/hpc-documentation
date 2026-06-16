@@ -219,5 +219,6 @@ The configured environment variables in the template are the most commonly used,
 prepend-path    PATH                $APPDIR/bin
 ```
  
-A full documentation of modulefiles from the developer of Environment Modules can be found here: https://modules.readthedocs.io/en/stable/modulefile.html
+A full documentation of modulefiles from the developer of Environment Modules can be found [here](https://modules.readthedocs.io/en/stable/modulefile.html).
+
 

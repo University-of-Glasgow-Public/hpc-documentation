@@ -4,13 +4,13 @@ This cluster was built by RCaaS HPC Engineers with hardware provided by the Scho
 ## System Overview
 
 ### System Layout
-![system_layout](assets/gesp_system_layout.svg)
+![system_layout](assets/gespetrarch_system_layout.png)
 
 ### Technology
-![compute_resources](assets/gesp_compute_resources.svg)
+![compute_resources](assets/gespetrarch_compute_resources.svg)
 
 
-All servers of the cluster run on Rocky Linux 9. Rocky Linux (RL) is a Red Hat based open-source operating system.
+All servers of the cluster run on Oracle Linux 9. Oracle Linux (OL) is a Red Hat based open-source operating system.
 
 The cluster's scheduler is the Slurm Workload Manager, developed by SchedMD. This software is crucial for HPC and helps achieve fair usage of all available compute resources.
 
@@ -54,8 +54,9 @@ Password: <smb-password>
 You can now access the share and work with the same permissions you work with on your PC. 
  
  
-**Important to know:** Although the credentials are not saved between sessions on the process node, the Samba session created when first accessing the system is. What this means, is that if you access the share, log out and then log back in, you are still able to access the share without setting your credentials, as the Samba session is not destroyed with your Linux session. However, the Samba session has a timeout of 15mins, so you will be expected to set your credentials again after 15 mins of inactivity, if you don't have it set in your current session with the command above!
+!!! note
+    Although the credentials are not saved between sessions on the process node, the Samba session created when first accessing the system is. What this means, is that if you access the share, log out and then log back in, you are still able to access the share without setting your credentials, as the Samba session is not destroyed with your Linux session. However, the Samba session has a timeout of 15mins, so you will be expected to set your credentials again after 15 mins of inactivity, if you don't have it set in your current session with the command above!
 
 ## Acknowlegement
 Where GES Petrarch is used in the development of research outputs the following attribution should be used:
-> This research utilised the University of Glasgow’s GES Petrarch HPC, supported by University of Glasgow Research Computing as a Service. (https://hpc.gla.ac.uk/clusters/gesp/)
+> This research utilised the University of Glasgow’s GES Petrarch HPC, supported by University of Glasgow Research Computing as a Service. (https://hpc.gla.ac.uk/clusters/gespetrarch/)
