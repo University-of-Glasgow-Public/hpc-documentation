@@ -121,7 +121,7 @@ All storage available is to be used for the duration of your work. It is not exp
 
     |||
     |---|---|
-    |**Size**|280Tb (shared between all cluster users)|
+    |**Size**|40Tb (shared between all cluster users)|
     |**Path**|`~/sharedscratch` or `/mnt/shared-scratch/<GUID>`|
     |**Use**|This storage is shared between all nodes. Save and write data that you need between your parallel and array jobs that run on multiple nodes simultaneously. Also, if Local Node Scratch is not sufficient, use this instead, as it has a larger capacity.|
 
@@ -309,7 +309,7 @@ Partitions, also known as queues on other scheduling systems, are used to determ
 
     |Partition|Description|Node List|
     |---|---|---|
-    |cpu|All Small Nodes servers. This is the default partition is none is defined.|node[001-006]|
+    |cpu|All Small Nodes servers. This is the default partition if none is defined.|node[001-006]|
     |cpuplus|All Large Nodes servers|node[007-008]|
     |cpuall|Both Small Nodes and Large Nodes servers|node[001-008]|
     |gpu|All GPU Nodes|node[009-010]|

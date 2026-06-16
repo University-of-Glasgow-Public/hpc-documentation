@@ -18,7 +18,7 @@ Use the University of Glasgow’s self-service portal Ivanti to request your acc
 
 === "GES-Petrarch"
 
-    GES-Petrarch has an Ivanti presence for the system. We are using the same “tiles” as are used for the two other clusters RCaaS manages; Lochan (formerly Central) and MARS. You will see Petrarch in the dropdown:
+    GES-Petrarch has an Ivanti presence for the system. We are using the same HPC tiles that are used for other clusters within the university. You will see Petrarch in the dropdown:
 
     ![Ivanti Request](assets/account_reg_imgs/gesp_ivanti_request.svg)
 
