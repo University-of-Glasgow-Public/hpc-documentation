@@ -57,6 +57,3 @@ You can now access the share and work with the same permissions you work with on
 !!! note
     Although the credentials are not saved between sessions on the process node, the Samba session created when first accessing the system is. What this means, is that if you access the share, log out and then log back in, you are still able to access the share without setting your credentials, as the Samba session is not destroyed with your Linux session. However, the Samba session has a timeout of 15mins, so you will be expected to set your credentials again after 15 mins of inactivity, if you don't have it set in your current session with the command above!
 
-## Acknowlegement
-Where GES Petrarch is used in the development of research outputs the following attribution should be used:
-> This research utilised the University of Glasgow’s GES Petrarch HPC, supported by University of Glasgow Research Computing as a Service. (https://hpc.gla.ac.uk/clusters/gespetrarch/)
