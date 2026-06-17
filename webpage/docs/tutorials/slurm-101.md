@@ -36,6 +36,8 @@ gpu        3      gpu[01-20]
 ## Lesson 2: Interactive Job
 Interactive jobs are great to install software, prepare your environment or debug your script. It is also a good point to start to engage with HPC. But please, for any serious or larger work, use batch jobs. More on those in Lesson 3!
 
+If you lose connection to your shell during an interactive job, you won’t be able to reconnect. This is not the case for job batch submissions.
+
 You can start an interactive job using the `srun` command. You can tell, you are on a different server by the prompt, which should now feature the name of a compute node:
 
 ```
@@ -95,6 +97,10 @@ exit
 ## Lesson 3: Batch Job
 Interactive jobs are not very easily reproducible and generally take longer, as you have to type or paste every command yourself into the console. It is also not guaranteed, that your jobs will run right away, meaning you could be waiting hours for your interactive job to start! This is why we encourage users to use batch jobs. With batch job submission, you can schedule your work, log off the system and come back once your work is finished, fully autonomous.
 
+It is highly recommended, to run all your jobs with submission scripts. Your script should contain your Slurm parameters, your software modules and the code you intend to run.
+
+A submission script is usually written in bash and is just a collection of commands you would usually type into a console in a file.
+
 First, we have to save our python code into a file. For this create a file with the `.py` ending and add the lines we executed in python above in the interactive job. To make sure the output of our script is unique we will add the JobID as an identifier to the output file of the script.
 
 You can create and edit files using either `vi` or `nano`, whatever is more comfortable to you. Nano is the easier of the two, so if you are unfamiliar, we recommend using it. To exit and save in Nano do `ctrl+X → Y → Enter`.
@@ -121,7 +127,7 @@ In the “My Code” section run the script you saved earlier by providing it as
 python3 myPythonCode.py
 ```
 
-Now you can submit your job using the `sbatch` utility and the path to the script. You will get a JobID in return, remember this to find your output later:
+Now you can submit your job using the `sbatch` utility and the path to the script. You will get a JobID in return which is a unique identifier to your job. The JobID can be used to retrieve information about your job from the scheduler, remember this to find your output later:
 
 ```
 $ sbatch myPythonJob.sh
@@ -176,6 +182,7 @@ Now let’s get some more information on how and where our job ran. In this outp
 ```
 $ sacct -X -j <JobID> -o JobID,NodeList,Start,End,Elapsed,State,ExitCode
 ```
+
 
 Say we want to check if our job ran efficiently, we could use the `seff` command. It uses data from the Slurm accounting database, to create information on how efficiently your job ran. We can use this information to make our jobs more efficient:
 
