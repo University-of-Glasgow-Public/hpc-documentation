@@ -163,3 +163,62 @@ setenv          APP_HOME            $APPDIR
 ```
 
 
+
+## (GES-Petrarch Specific Configurations) Install Software Tools and Module Files 
+
+This guide is to explain how GES members can set up software installations, and create module files for them.
+ 
+In order to enable that, RCaaS has applied these configurations:
+ 
+1- Created `ges-dev` unix group, members of this group should have the needed permissions to add software and modules.
+
+2- Created `/mnt/software/ges-dev` directory, where the GES members can add software installations.
+
+3- Created `/mnt/software/ges-dev-modules`, where module files for the installations can be created.
+
+4- Added a template module file `/mnt/software/ges-dev-modules/.module_template` (hidden file), this template can be copied and adjusted to activate various installations.
+ 
+
+ 
+More details on each point:
+ 
+1- Members who are supposed to add software should contact RCaaS through Ivanti and request to be added to that group.
+ 
+ 
+2- In general, to perform a software installation, you should follow the relevant installation guide, whether it's in the official documentation, a README file with the source distribution or on a GitHub page,.. Etc
+ 
+You can start experimenting in your local dirs (home or scratch), or you can directly use `/mnt/software/ges-dev` and create subdirs for your installations, whatever you feel comfortable with.
+ 
+There's a convention for the directory structure and its naming that we recommend following which looks like `/software_root/app_name/app_version/build_or_dependencies`
+ 
+For example, if you're installing Open MPI 5.0.6 using GCC 13.2.0, the installation path should be
+`/mnt/software/ges-dev/openmpi/5.0.6/el9_gnu1320`
+Where el95 refers to Enterprise Linux (an OS that's based off Red Hat Enterprise Linux, which on our system is Oracle Linux) of version 9
+(As you can see we removed the dots in the build name to make it more compact)
+ 
+This convention helps to have multiple flavours of the same tool and easily identify them.
+ 
+ 
+3- The directory `/mnt/software/ges-dev-modules` is already configured to be part of the module path, meaning any modules added there will appear in the "module avail" command output and can be used like the other ones. 
+ 
+It's recommended to follow the same convention for directory structure and naming as explained earlier.
+ 
+ 
+4- In the template module file (.module_template) we tried to cover as much configurations for a software installation as we can. 
+ 
+The most important change (sometimes it could be the only one) needed to configure a software module would be where you set up the installation path. This is later used to easily set up your environment variables:
+```
+set APPDIR /mnt/software/ges-dev/APPNAME/APPVERSION/BUILD
+```
+Any dependencies used to build and are needed for the runtime of the software should be loaded in the module file. The command is similar to what you run on the terminal: 
+```
+module load app/version/build
+``` 
+The configured environment variables in the template are the most commonly used, please remove the ones that are not needed for your installation. As an example, the location of the generated binaries/executables of an installation should be appended to the PATH env var in order to run it directly without the need to use the full path:
+```
+prepend-path    PATH                $APPDIR/bin
+```
+ 
+A full documentation of modulefiles from the developer of Environment Modules can be found [here](https://modules.readthedocs.io/en/stable/modulefile.html).
+
+

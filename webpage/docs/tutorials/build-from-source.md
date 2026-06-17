@@ -11,7 +11,7 @@ Let’s create a directory where we want the installation to sit. This is going 
 mkdir --parents ~/mysoftware/python3/3.13.2
 ```
 
-For larger installations we recommend doing them within an interactive batch job if possible!
+For larger installations we recommend doing them within an interactive or batch job if possible!
 
 ## Dependencies
 Sometimes software requires preinstalled dependencies to be built. These packages are often called `*-devel` and contain the header files for common libraries used during the build process. But it can also be other dependant software like `openMPI` or `nvidia-cuda`. In some cases you might be able to just load the appropriate modules on the cluster.
