@@ -22,3 +22,15 @@ Use the University of Glasgow’s self-service portal Ivanti to request your acc
 
     ![Ivanti Request](assets/account_reg_imgs/gesp_ivanti_request.svg)
 
+
+=== "MARS"
+
+    We are happy to see you want to join MARS! Eligible for access are Staff and Students within MVLS or [affiliates / honorary](https://www.gla.ac.uk/myglasgow/it/businesssystems/hms/) and collaborators from other colleges, if they are part of a MARS approved and MVLS funded project. As affiliate / honorary you’ll also need a University of Glasgow email address, which you can request through the Ivanti help desk portal.
+    
+    The account will be bound to your University of Glasgow GUID, and therefore will have the same credentials and be disabled when your main account does.
+    
+    If you want to start a larger scale project or collaborate with colleagues, please see [Getting a project]() on MARS for more information!
+    
+    We expect users to request their own account. A user account request should not be submitted by another person on behalf of that user. If you have a request for a bulk account creation of more than 10 accounts, please [contact us]()!
+    
+    Use the University of Glasgow’s self-service portal Ivanti to request your account. Choose MARS in the “Cluster name” dropdown.
