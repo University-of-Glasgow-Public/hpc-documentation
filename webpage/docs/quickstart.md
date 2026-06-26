@@ -447,6 +447,36 @@ Partitions, also known as queues on other scheduling systems, are used to determ
 
     MARS uses a modular software control system to store and enable applications and tools. This means that we can install multiple versions of the same software and have these work independently for different users. All software currently available on MARS can be listed, loaded, and unloaded, by using the command module.
 
+    Below a list with all available [Modules](https://hpc.gla.ac.uk/guides/modules/) on MARS. This list is growing, as we keep installing software our users need for their work on the cluster. Don’t see the software you need? Don’t hesitate to get in contact with us!
+
+    Modules marked with a * are restricted modules. To gain access, please contact us!
+
+    To load a Module on MARS use the following syntax:
+
+    `module load <module-type>/<module-name>/<module-version>`
+
+    ||||
+    |---|---|---|
+    |**Module Type**|**Module Name**|**Module Version**|
+    |apps|alphafold*|3.0.1|
+    |apps|apptainer|1.3.4|
+    |apps|dmtcp|3.1.2|
+    |apps|java|23.0.1|
+    |apps|juliaup|1.18.9|
+    |apps|matlab*|r2024b|
+    |apps|miniforge|24.7.1|
+    |apps|nvhpc*|24.9|
+    |apps|nvidia-cuda|12.6.2|
+    |apps|oneapi*|2024.2.1|
+    |apps|python3|3.12.7|
+    |apps|R|4.4.1|
+    |apps|rstudio|2024.09.0|
+    |compilers|gcc|8.5.0,|14.2.0|
+    |libs|gcc|8.5.0,|14.2.0|
+    |libs|openblas|0.3.28|
+    |mpi|openmpi|5.0.5|
+
+
 For more and advanced information on Environment Modules, see the [official documentation](https://modules.readthedocs.io/en/latest/).
 
 

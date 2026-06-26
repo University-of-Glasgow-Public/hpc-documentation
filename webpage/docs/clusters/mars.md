@@ -86,7 +86,7 @@ Below we have listed rough estimates of peak power ratings for compute resources
 Please be aware, that factors like server cooling and other peripherals used to run MARS are not accounted for in the numbers above
 
 
-## Using Slurm to get energy usage
+### Using Slurm to Get Energy Usage
 
 !!! info
     Please keep in mind that the numbers from Slurm are only accurate on node exclusive jobs. This is a job where you are using nodes entirely yourself.
@@ -104,7 +104,7 @@ JobID        ConsumedEnergy
 3600 J are 1 Wh. If we take the example above of 10 MJ, that would be equivalent to 2.78 kWh.
 
 
-## MARS Power
+### MARS Power
 
 We don’t have reliable figures for the power usage of MARS, but it has a maximum power draw of 71 kW, this is however never reached, as the system is never 100% utilised. We would estimate the average power usage at 30 kW. In the future we will work to gather more reliable numbers for this!  
 
@@ -113,7 +113,7 @@ MARS is hosted within the [Imaging Centre of Excellence (ICE)](https://www.gla.a
 Scotland has lower emissions as the rest of the UK, due to the large amount of renewable energy produced. An overview of the energy production of Scotland on a quarterly basis is provided by the [Scottish Government](https://www.gov.scot/collections/quarterly-energy-statistics-scotland/). The [Carbon Intensity API](https://carbonintensity.org.uk/) is a helpful tool to show current and historic intensity in gCO2/kWh (grams of CO2 emissions per kWh) and fuel mix of different regions. MARS is in region 2 “South Scotland”, this gives a more realistic overview of the origin of the energy used to power MARS. 
 
 
-## Usage in 2025
+### Usage in 2025
 
 !!! info
     All information here is estimation, as we currently have no reliable way to measure these values! 
