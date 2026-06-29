@@ -17,12 +17,3 @@ The cluster's scheduler is the Slurm Workload Manager, developed by SchedMD. Thi
 The cluster and storage mounted on to the system are located in Saughfield House on the University of Glasgow Campus next to the Library.
 
 
-## Process Node
-
-The credentials are the same as the credentials for the rest of the GES-Petrarch HPC administered by RCaaS.
-
-- **Hostname**: `ges-procnode01.hpc.gla.ac.uk`
-- **Port**: 22
-- **Username**: University of Glasgow GUID
-- **Password**: GES-Petrarch HPC password
-
