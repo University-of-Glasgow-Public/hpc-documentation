@@ -155,7 +155,7 @@ There are quotas set up across the cluster for different filesystems / shares. A
     |User Home|/mnt/home|100GiB|120GiB|7 days|
     |Shared Scratch|/mnt/shared-scratch or ~/sharedscratch|2000GiB|2100GiB|7 days|
 
-    **Clean Up Time on Scratch Space**
+**Clean Up Time on Scratch Space**
 
 We also set up the clean-up scratch as:
 
