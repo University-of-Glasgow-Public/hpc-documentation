@@ -138,7 +138,11 @@ There are quotas set up across the cluster for different filesystems / shares. A
 
 === "Lochan"
 
-    More info is coming soon.
+    |||||
+    |---|---|---|---|
+    |**Name**|**Path**|**Soft Limit**|**Hard Limit**|
+    |User Home|/mnt/home|100GiB|120GiB|
+
 
 === "GES-Petrarch"
 
@@ -157,7 +161,10 @@ We also set up the clean-up scratch as:
 
 === "Lochan"
     
-    More info is coming soon.
+    |||
+    |---|---|
+    |**Filesystem**|**Retention Time**|
+    |/mnt/scratch|2 weeks|
 
 === "GES-Petrarch"
 
