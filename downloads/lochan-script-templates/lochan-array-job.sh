@@ -9,6 +9,7 @@
 #SBATCH --ntasks=1              # number of Slurm tasks to be launched, increase for multi-process runs ex. MPI
 #SBATCH --cpus-per-task=1       # number of processor cores to be assigned for each task, default is 1, increase for multi-threaded runs
 #SBATCH --ntasks-per-node=1     # number of tasks to be launched on each allocated node
+#SBATCH --array=1-10            # create job array of 10 tasks numbered 1 through 10
 
 ############# SOFTWARE SETUP #############
 #module load xxx
@@ -17,4 +18,4 @@
 ############# MY CODE #############
 echo "Hello from $SLURM_JOB_NODELIST"
 echo "This is task $SLURM_ARRAY_TASK_ID out of $SLURM_ARRAY_TASK_COUNT"
-exho "Jobs are between $SLURM_ARRAY_TASK_MIN and $SLURM_ARRAY_TASK_MAX"
+echo "Jobs are between $SLURM_ARRAY_TASK_MIN and $SLURM_ARRAY_TASK_MAX"
