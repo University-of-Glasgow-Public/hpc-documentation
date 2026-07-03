@@ -65,11 +65,23 @@ After you got your account, you can log into the login node. The login node is t
     - **Username**: *University of Glasgow GUID*
     - **Password**: *The password to your University of Glasgow account*
 
+    **Access through Browser**
+
+    You can access the Cluster through the Alces Flight Website. Just open a browser of your choice, for example Chrome, and go to <https://mars-login.ice.gla.ac.uk>.    
+
+    At the top right of the site you will see a log in button. If you already have an account, you can authenticate with your University of Glasgow GUID + Password. 
+    
+    As described on the site you can access a console, interactive desktop, file manager and job manager from there. More information on the usage of these tools follows soon!
+    
+
+
 GUID must be in lowercase ex: 999999x or xx999x
+
+We recommend setting up SSH key authentication. See [SSH Key Authentication](https://hpc.gla.ac.uk/guides/ssh-key-auth/) for help.
 
 The same information can also be used to log in via SFTP to copy files from your local device onto the system.
 
-### Connecting via SSH
+### Connecting via SSH Command
 You will need to use `SSH` to connect to the login node and use the HPC. The simplest way to connect is by opening a console or a terminal program and connect using the preinstalled `SSH` utility of your device (If you are prompted for a password, it will not show up while typing):
 
 ```
@@ -149,7 +161,7 @@ You can use [Rclone](https://hpc.gla.ac.uk/guides/rclone/) to manage your data.
 
     !!! warning
 
-        **This is not a trusted research environment**, therefore all research data must be anonymised prior to transferring it onto the system. More information on the can be found here [Research Data on MARS: What to Know]().
+        **This is not a trusted research environment**, therefore all research data must be anonymised prior to transferring it onto the system. More information on the can be found here [Research Data on MARS: What to Know](https://hpc.gla.ac.uk/policies/mars/research-data/).
 
 
 
@@ -344,13 +356,48 @@ The backups are done using the Rubrik backup system, managed by Central IT.
 
 
 ### Data Transfer
-To transfer data from your local machine (or another system), you can use `SSH`. You can do this either with the `scp` command:
+To transfer data from your local machine (or another system), you can use `SSH`. You can do this either with:
+
+#### SFTP ####
+Secure File Transfer Protocol (SFTP) is a protocol to transfer data between systems using SSH. There are multiple ways to make use of the protocol:
+
+**Terminal**
+
+If installed, you can use sftp from a command prompt on your personal device:
+
+```
+sftp <guid>@<hostname>
+```
+After connecting you can use sftp commands in your interactive sessions. More information on that here: [SFTP Manual](https://linux.die.net/man/1/sftp)
+
+**GUI Application**
+
+Other GUI clients of your choice will also work, for example [WinSCP](https://winscp.net). Use the connection details of the login node, mentioned above to connect.
+
+You can also use your SSH key to authenticate. More information: [SSH key authentication](https://hpc.gla.ac.uk/guides/ssh-key-auth/) or you can find more info in the manual for the specific software you are using.
+
+
+#### SCP ####
+
+Use scp (secure copy) to easily copy data between two systems via your console.
 
 ```
 scp <source file> <guid>@<hostname>:<target file>
 ```
+or
+```
+scp -i <mykeyfile.pem> <source file> <guid>@<hostname>:<target file>
+```
 
-Or you can use a graphical SFTP Client of choice, for example [WinSCP](https://winscp.net). Use the connection details of the login node, mentioned above to connect.
+- replace `<mykeyfile.pem>` with the name of your SSH public key (if you dont have SSH key authentication set up, ignore the -i parameter). More information on creating an SSH key can be found here [SSH Key Authentication](https://hpc.gla.ac.uk/guides/ssh-key-auth/).
+- replace `<source file>` with the path/name of the file you want to transfer from your local device.
+- replace `<guid>` with your username
+- replace `<targetfile>` with the path/name of where you want the file to go on the target device.
+
+
+#### Cloud Storage ####
+
+If you need to access cloud storage from the system directly, you can make use of `rclone`. More information can be found in our software manual: [Rclone](https://hpc.gla.ac.uk/guides/rclone/).
 
 ---
 
@@ -387,11 +434,19 @@ Compute servers - also referred to as nodes - can carry different resource confi
 
 
 ### Partitions / Queues
-Partitions, also known as queues on other scheduling systems, are used to determine which nodes you want your job to run. To see the partition configuration of the HPC you are using run this command:
+Partitions, also known as queues on other scheduling systems, are used to determine which nodes you want your job to run. Partitions are used to categorise jobs. Different partitions in Slurm can have different resources, and boundaries configured, this is to support different workloads.
+
+To see the partition configuration of the HPC you are using run this command:
 
  ```
  scontrol show partition
  ```
+
+A specific partition can be requested, by specifying it with the `--partition` parameter for all Slurm submission commands. Example:
+
+```
+srun --account=none --partition=cpu --pty bash
+```
 
 === "Lochan"
 
@@ -415,9 +470,10 @@ Partitions, also known as queues on other scheduling systems, are used to determ
     |Partition|Description|Specifications|Count|Node List|
     |---|---|---|---|---|
     |nodes|This is the default partition if none is defined|2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>512Gb RAM|9|node[01-09]|
-    |smp|CPU+ Nodes|2x AMD 7763 Processors @2.45Ghz<br>64 cores each CPU<br>1Tb RAM|6|node[101-106]|
-    |gpu|GPU Nodes (A40)|2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>256Gb RAM<br>Nvidia A40 (48GB)|20|node[01-20]|
-    |gpuplus|GPU+ Nodes (A100)|2x AMD 7763 Processors @2.8Ghz<br>64 cores each CPU<br>512Gb RAM<br>Nvidia HGX – 4x A100 GPU (80GB)|4|node[101-104]|
+    |smp|CPU+ Nodes<br>This partition offers the same resource as the `nodes` partition, just in larger quantities per node. This can be useful if your jobs can not be parallel over multiple nodes but require large amounts of resources.|2x AMD 7763 Processors @2.45Ghz<br>64 cores each CPU<br>1Tb RAM|6|node[101-106]|
+    |short|This partition is intended to be used for short CPU based jobs and interactive sessions. This allows users to always have resource available for installations or tests, even when the cluster is full of long running jobs. The partition uses the CPU capacity of GPU nodes, which is usually not in high use.<br>The partition has a max runtime of 2h and can only use up to 48 CPUs per server, to prevent blocking of GPU jobs. A singe user can not request more than 256 CPUs in this partition. GPU resources can not be requested in this partition.|2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>256Gb RAM<br>Nvidia A40 (48GB)|20|gpu[01-20]|
+    |gpu|GPU Nodes (A40)<br>This partition is intended to be used for GPU jobs.<br>The partition has a higher priority, so jobs in the short partition don’t prevent people from using GPUs. The partition can not be used without a GPU allocation `(--gres=gpu:1)`.|2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>256Gb RAM<br>Nvidia A40 (48GB)|20|gpu[01-20]|
+    |gpuplus|GPU+ Nodes (A100)<br>This partition is intended to be used for heavy GPU jobs. The partition is not available to all users of the cluster, as the resource is scarce.<br>The partition can only be used as part of a project with GPU+ permission. Please specify the need for these resources in your [project application]().|2x AMD 7763 Processors @2.8Ghz<br>64 cores each CPU<br>512Gb RAM<br>Nvidia HGX – 4x A100 GPU (80GB)|4|gpu[101-104]|
 
 
 ---

@@ -54,7 +54,7 @@ ssh -i C:\Users\<GUID>/.ssh/id_rsa-Petrarch <GUID>@petrarch_esd.hpc.gla.ac.uk
 
 To make sure your keys are protected, please follow these principles:
 
-- Secure your private key with a passphrase that adheres to the University of Glasgow password requirements.
+- Secure your private key with a passphrase that adheres to the [University of Glasgow password requirements](https://www.gla.ac.uk/myglasgow/it/informationsecurity/passwords/).
 - Use different key pairs for each system or cluster.
 - Treat your private key like a password, meaning you don’t share it with anyone.
 - If you think your private key might have been compromised, create a new key pair.

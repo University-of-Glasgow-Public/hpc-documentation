@@ -134,6 +134,7 @@ A collection of resources about sustainability at the University of Glasgow can 
 
 
 Find US
+
 Address
 ICE Building
 QEUH
@@ -141,5 +142,3 @@ Langlands Dr,
 Glasgow G51 4LB
 
 
-[Privacy Notice]()
-[Terms and Conditions]()
