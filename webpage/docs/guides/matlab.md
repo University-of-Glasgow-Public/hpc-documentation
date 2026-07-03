@@ -8,7 +8,7 @@ MATLAB will run as a GUI, if X is configured, otherwise it will run within your 
 matlab
 ```
 
-Information on how to work with GUI applications on MARS see [GUI / X applications]().
+Information on how to work with GUI applications on MARS see [GUI / X applications](https://hpc.gla.ac.uk/guides/gui-apps/).
 
 ## Use Console Interface
 

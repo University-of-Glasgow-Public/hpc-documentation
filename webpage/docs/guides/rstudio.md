@@ -12,7 +12,7 @@ If you choose to use RStudio on the system, for debugging or code development, w
 
 === "MARS"
 
-    First you will need to open a Flight Desktop session. You can find more information about that [here]().
+    First you will need to open a Flight Desktop session. You can find more information about that [here](https://hpc.gla.ac.uk/guides/gui-apps/).
 
     ![RStudio-Via-Desktop](assets/RStudio-Via-Desktop.jpg)
 
