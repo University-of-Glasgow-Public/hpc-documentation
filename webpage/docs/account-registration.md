@@ -29,8 +29,8 @@ Use the University of Glasgow’s self-service portal Ivanti to request your acc
     
     The account will be bound to your University of Glasgow GUID, and therefore will have the same credentials and be disabled when your main account does.
     
-    If you want to start a larger scale project or collaborate with colleagues, please see [MARS Projects](https://hpc.gla.ac.uk/policies/mars/mars-projects.md) for more information!
+    If you want to start a larger scale project or collaborate with colleagues, please see [MARS Projects](https://hpc.gla.ac.uk/policies/mars/mars-projects) for more information!
     
-    We expect users to request their own account. A user account request should not be submitted by another person on behalf of that user. If you have a request for a bulk account creation of more than 10 accounts, please [contact us]()!
+    We expect users to request their own account. A user account request should not be submitted by another person on behalf of that user. If you have a request for a bulk account creation of more than 10 accounts, please [contact us](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945)!
     
     Use the University of Glasgow’s self-service portal Ivanti to request your account. Choose MARS in the “Cluster name” dropdown.
