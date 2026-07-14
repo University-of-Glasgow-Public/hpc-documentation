@@ -468,7 +468,7 @@ srun --account=none --partition=cpu --pty bash
     |Partition|Description|Nodes|
     |---|---|---|
     |cpu|This is the *default* partition, meaning this is chosen when no partition is specified. It contains all CPU focused servers of the Cluster.|`node[011-021,023]`|
-    |mpi|There are four identical servers on Lochan which lend themselves to be used for MPI jobs. use this partition, to guarantee to get onto these nodes for large multi-node mpi jobs.|`node[018-021]`|
+    |mpi|There are four identical servers on Lochan which lend themselves to be used for MPI jobs. Use this partition, to guarantee to get onto these nodes for large multi-node mpi jobs.|`node[018-021]`|
     |gpu|This partitions contains all servers with GPU resources available. You can specify which type with the `--gres` parameter.|`gpu[003-004]`|
 
 
@@ -503,10 +503,10 @@ The QOS associated with a job will affect the job in three key ways: scheduling 
 
 === "Lochan"
 
-    |Name|Properties||Description|
+    |Name|Properties|Description|
     |---|---|---|
     |`default`|-|This is the default QOS, that is applied to every job, unless it is defined differently.|
-    |`priority`|Priority=100, Preempt=default|To be used by select users considered VIPs of the platform. Jobs scheduled with this QOS have higher priority and can preempt jobs of the `default` QOS. |
+    |`priority`|Priority=100, Preempt=default|To be used by select users. Jobs scheduled with this QOS have higher priority and can preempt jobs of the `default` QOS. |
 
 === "GES-Petrarch"
 
@@ -519,10 +519,10 @@ The QOS associated with a job will affect the job in three key ways: scheduling 
 
         Some QOS on MARS do not have to be set, so are not mentioned here.
     
-    |Name|Properties||Description|
+    |Name|Properties|Description|
     |---|---|---|
     |`normal`|-|This is the default QOS, that is applied to every job, unless it is defined differently.|
-    |`highpri`|Priority=10|Used by administrators to get jobs scheduled with higher priority|
+    |`highpri`|Priority=10|Used by administrators to schedule jobs with higher priority|
 
 
 ---

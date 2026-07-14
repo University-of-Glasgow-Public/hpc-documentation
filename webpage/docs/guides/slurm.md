@@ -207,12 +207,11 @@ To ensure fair use of the system and to facilitate its maintenance, the schedule
 === "Lochan"
 
     |Resource|Default|Maximum|
-    |---|---|---|---|
+    |---|---|---|
     |Timeout|1 hour|7 days|
     |CPU|1 core|256 cores|
-    |Memory|4GiB per core|-|
+    |Memory|4 GB per core|-|
     |GPU\*|1|-|
-    |Concurrent Jobs|-|-|
 
     *\*only for “gpu” partition*
 
