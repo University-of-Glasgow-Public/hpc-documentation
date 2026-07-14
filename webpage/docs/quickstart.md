@@ -478,7 +478,7 @@ srun --account=none --partition=cpu --pty bash
     |smp|CPU+ Nodes<br>This partition offers the same resource as the `nodes` partition, just in larger quantities per node. This can be useful if your jobs can not be parallel over multiple nodes but require large amounts of resources.|2x AMD 7763 Processors @2.45Ghz<br>64 cores each CPU<br>1Tb RAM|6|node[101-106]|
     |short|This partition is intended to be used for short CPU based jobs and interactive sessions. This allows users to always have resource available for installations or tests, even when the cluster is full of long running jobs. The partition uses the CPU capacity of GPU nodes, which is usually not in high use.<br>The partition has a max runtime of 2h and can only use up to 48 CPUs per server, to prevent blocking of GPU jobs. A singe user can not request more than 256 CPUs in this partition. GPU resources can not be requested in this partition.|2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>256Gb RAM<br>Nvidia A40 (48GB)|20|gpu[01-20]|
     |gpu|GPU Nodes (A40)<br>This partition is intended to be used for GPU jobs.<br>The partition has a higher priority, so jobs in the short partition don’t prevent people from using GPUs. The partition can not be used without a GPU allocation `(--gres=gpu:1)`.|2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>256Gb RAM<br>Nvidia A40 (48GB)|20|gpu[01-20]|
-    |gpuplus|GPU+ Nodes (A100)<br>This partition is intended to be used for heavy GPU jobs. The partition is not available to all users of the cluster, as the resource is scarce.<br>The partition can only be used as part of a project with GPU+ permission. Please specify the need for these resources in your [project application]().|2x AMD 7763 Processors @2.8Ghz<br>64 cores each CPU<br>512Gb RAM<br>Nvidia HGX – 4x A100 GPU (80GB)|4|gpu[101-104]|
+    |gpuplus|GPU+ Nodes (A100)<br>This partition is intended to be used for heavy GPU jobs. The partition is not available to all users of the cluster, as the resource is scarce.<br>The partition can only be used as part of a project with GPU+ permission. Please specify the need for these resources in your [project application](https://hpc.gla.ac.uk/policies/mars/mars-projects.md).|2x AMD 7763 Processors @2.8Ghz<br>64 cores each CPU<br>512Gb RAM<br>Nvidia HGX – 4x A100 GPU (80GB)|4|gpu[101-104]|
 
 
 ---
@@ -510,7 +510,7 @@ srun --account=none --partition=cpu --pty bash
 
     Below a list with all available [Modules](https://hpc.gla.ac.uk/guides/modules/) on MARS. This list is growing, as we keep installing software our users need for their work on the cluster. Don’t see the software you need? Don’t hesitate to get in contact with us!
 
-    Modules marked with a * are restricted modules. To gain access, please contact us!
+    Modules marked with a * are restricted modules. To gain access, please [contact us!](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945)
 
     To load a Module on MARS use the following syntax:
 

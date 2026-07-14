@@ -1,6 +1,6 @@
 # UNIX for Beginners
 
-This small tutorial should give you a start to the world of UNIX console! If you have any questions or issues, feel free to contact us! We help novice and expert users alike to get settled.
+This small tutorial should give you a start to the world of UNIX console! If you have any questions or issues, feel free to [contact us](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945)! We help novice and expert users alike to get settled.
 
 For this whole tutorial you will find code snippets, these are displayed as interactions on a console. Lines with a preceding $ are the commands entered, ones without, are the output of these commands.
 
