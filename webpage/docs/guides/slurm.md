@@ -200,14 +200,21 @@ $ sacct -X -o Timelimit,Elapsed -j <JobID>
 There is no easy way to get GPU efficiency, but generally speaking if you don’t need GPU, don’t request it.
 
 
-
 ## Default and Maximum Values
 
 To ensure fair use of the system and to facilitate its maintenance, the scheduler is set up to have default and maximum values applied to submitted jobs. We might adjust these values in the future to align with the load and usage of the system.
 
 === "Lochan"
 
-    More info is coming soon.
+    |Resource|Default|Maximum|
+    |---|---|---|---|
+    |Timeout|1 hour|7 days|
+    |CPU|1 core|256 cores|
+    |Memory|4GiB per core|-|
+    |GPU\*|1|-|
+    |Concurrent Jobs|-|-|
+
+    *\*only for “gpu” partition*
 
 === "GES-Petrarch"
 
