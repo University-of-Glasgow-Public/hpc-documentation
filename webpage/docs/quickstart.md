@@ -45,6 +45,7 @@ After you got your account, you can log into the login node. The login node is t
 === "Lochan"
 
     - **Hostname**: `lochan.hpc.gla.ac.uk`
+    - **Port**: 22
     - **Username**: *University of Glasgow GUID*
     - **Password**: *GUID Password*
 
@@ -57,11 +58,30 @@ After you got your account, you can log into the login node. The login node is t
 
     Please change your password upon first login using the command `passwd`
 
+=== "MARS"
+
+    - **Hostname**: `mars-login.ice.gla.ac.uk`
+    - **Port**: 22
+    - **Username**: *University of Glasgow GUID*
+    - **Password**: *The password to your University of Glasgow account*
+
+    **Access through Browser**
+
+    You can access the Cluster through the Alces Flight Website. Just open a browser of your choice, for example Chrome, and go to <https://mars-login.ice.gla.ac.uk>.    
+
+    At the top right of the site you will see a log in button. If you already have an account, you can authenticate with your University of Glasgow GUID + Password. 
+    
+    As described on the site you can access a console, interactive desktop, file manager and job manager from there. More information on the usage of these tools follows soon!
+    
+
+
 GUID must be in lowercase ex: 999999x or xx999x
+
+We recommend setting up SSH key authentication. See [SSH Key Authentication](https://hpc.gla.ac.uk/guides/ssh-key-auth/) for help.
 
 The same information can also be used to log in via SFTP to copy files from your local device onto the system.
 
-### Connecting via SSH
+### Connecting via SSH Command
 You will need to use `SSH` to connect to the login node and use the HPC. The simplest way to connect is by opening a console or a terminal program and connect using the preinstalled `SSH` utility of your device (If you are prompted for a password, it will not show up while typing):
 
 ```
@@ -75,7 +95,11 @@ We would recommend you use a SSH GUI client for regular access to the platform, 
 ## Data Management
 Data is an important part of HPC. Where and how to store your data is important for efficient usage of the platform. 
 
-All storage available is to be used for the duration of your work. It is not expected to provide long term/primary storage. The data will assumed to be transient with only limited protection. As the HPC is not a primary storage solution, we recommend storing all HPC data, you can’t afford to lose in a primary, safe location like a centralised storage system provided by your school or a Team within Microsoft Teams. 
+All storage available is to be used for the duration of your work. It is not expected to provide long term/primary storage. The data will assumed to be transient with only limited protection. As the HPC is not a primary storage solution, we recommend storing all HPC data you can’t afford to lose in a primary, safe location like a centralised storage system provided by your school or a Team within Microsoft Teams. 
+
+We recognise this is an issue for many schools and it is on the radar as a future area that requires attention. 
+
+You can use [Rclone](https://hpc.gla.ac.uk/guides/rclone/) to manage your data.
 
 
 ### Storage Spaces
@@ -132,6 +156,52 @@ All storage available is to be used for the duration of your work. It is not exp
     |**Path***|`~/localscratch`|
     |**Use**|Data Processing. All nodes have a scratch storage space that is dedicated to that node and not shared with others. We recommend running your jobs here, if they only run on one node, especially if they are read/write intensive. Don’t forget to move your data to a shared storage within your job, after you are done processing! Data left unused on these storage spaces will be deleted after 2 weeks!|
 
+
+=== "MARS"
+
+    !!! warning
+
+        **This is not a trusted research environment**, therefore all research data must be anonymised prior to transferring it onto the system. More information on the can be found here [Research Data on MARS: What to Know](https://hpc.gla.ac.uk/policies/mars/research-data/).
+
+
+
+**Home Storage**
+
+|||
+|---|---|
+|**Size**|40Gb (quota per user)|
+|**Path**|`/users/<GUID>`|
+|**Use**|**Data Storing**<br>Set up your environments and store all the scripts and data you need for your personal use.|
+
+
+**Project Storage**
+
+|||
+|---|---|
+|**Size**|As requested in application (2.6Pb in total)|
+|**Path**|`/mnt/data/project<ProjectNumber>`|
+|**Use**|**Data Storing**<br>Save scripts and data you and the colleagues in your project use together. Each project is assigned dedicated space. The size of this space is dependent on what was requested in the original Project application, but can be extended on request. You will be told the <ProjectNumber> when the project has been created on MARS.|
+
+
+**Shared User Scratch**
+
+|||
+|---|---|
+|**Size**|~180Tb (shared between all cluster users)|
+|**Path**|`~/sharedscratch` or `/mnt/scratch/users/<GUID>`|
+|**Use**|**Data Processing**<br>This storage is shared between all nodes. Read and write data that you need during your jobs.<br>Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!|
+
+
+**Local Node Scratch**
+
+|||
+|---|---|
+|**Size**|Varies depending on the node type (shared between all node users):<br>CPU Nodes: 400Gb<br>CPU+ Nodes: 400Gb<br>GPU Nodes:  700Gb<br>GPU+ Nodes: 1.7Tb|
+|**Path**|`~/localscratch` or `/tmp/users/<GUID>`|
+|**Use**|**Data Processing**<br>This storage is local to the node and can’t be accessed outside of it. Read and write here for the best possible storage performance. If you drop files into the localscratch of the login node it won’t be available to you on the compute nodes, so the moving of data has to be part of your workflow /submission script.<br>Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!|
+
+
+
 ### Storage Quotas
 
 There are quotas set up across the cluster for different filesystems / shares. A quota means you are unable to write data after that quota is reached. These quotas are set up, to prevent users from using the cluster as data storage. The cluster should only be used to process data, any results or unused data should be moved off, after a job has finished running. The login node and all compute nodes, can connect to other campus systems or the internet, to perform data transfers.
@@ -157,6 +227,10 @@ There are quotas set up across the cluster for different filesystems / shares. A
 
 **Clean Up Time on Scratch Space**
 
+=== "MARS"
+
+    More info is coming soon.
+
 We also set up the clean-up scratch as:
 
 === "Lochan"
@@ -173,6 +247,10 @@ We also set up the clean-up scratch as:
     |**Filesystem**|**Retention Time**|**Note**|
     |/tmp/local-scratch|2 weeks|Exceptions Sebastian: 2 months, Todd: 2 months|
     |/mnt/shared-scratch|4 weeks||
+
+=== "MARS"
+
+    More info is coming soon.
 
  
 **Quota Terminology**
@@ -279,15 +357,59 @@ The backups are done using the Rubrik backup system, managed by Central IT.
     |Local-Scratch|/tmp/local-scratch|Individual user|No|Data is not meant to be persistent|
 
 
+=== "MARS"
+
+    While there is significant redundancy in the hardware, there is no backup.
+
 
 ### Data Transfer
-To transfer data from your local machine (or another system), you can use `SSH`. You can do this either with the `scp` command:
+To transfer data from your local machine (or another system), you can use `SSH`. You can do this either with:
+
+#### SFTP ####
+Secure File Transfer Protocol (SFTP) is a protocol to transfer data between systems using SSH. There are multiple ways to make use of the protocol:
+
+**Terminal**
+
+If installed, you can use sftp from a command prompt on your personal device:
+
+```
+sftp <guid>@<hostname>
+```
+After connecting you can use sftp commands in your interactive sessions. More information on that here: [SFTP Manual](https://linux.die.net/man/1/sftp)
+
+**GUI Application**
+
+Other GUI clients of your choice will also work, for example [WinSCP](https://winscp.net). Use the connection details of the login node, mentioned above to connect.
+
+You can also use your SSH key to authenticate. More information: [SSH key authentication](https://hpc.gla.ac.uk/guides/ssh-key-auth/) or you can find more info in the manual for the specific software you are using.
+
+
+#### SCP ####
+
+Use scp (secure copy) to easily copy data between two systems via your console.
 
 ```
 scp <source file> <guid>@<hostname>:<target file>
 ```
+or
+```
+scp -i <mykeyfile.pem> <source file> <guid>@<hostname>:<target file>
+```
 
-Or you can use a graphical SFTP Client of choice, for example [WinSCP](https://winscp.net). Use the connection details of the login node, mentioned above to connect.
+- replace `<mykeyfile.pem>` with the name of your SSH public key (if you dont have SSH key authentication set up, ignore the -i parameter). More information on creating an SSH key can be found here [SSH Key Authentication](https://hpc.gla.ac.uk/guides/ssh-key-auth/).
+- replace `<source file>` with the path/name of the file you want to transfer from your local device.
+- replace `<guid>` with your username
+- replace `<targetfile>` with the path/name of where you want the file to go on the target device.
+
+
+#### Cloud Storage ####
+
+If you need to access cloud storage from the system directly, you can make use of `rclone`. More information can be found in our software manual: [Rclone](https://hpc.gla.ac.uk/guides/rclone/).
+
+
+#### Web File Manager ####
+
+For certain systems that are managed by Alces [web file access and management can be used](https://hpc.gla.ac.uk/tutorials/web-file-manager.md).
 
 ---
 
@@ -313,12 +435,30 @@ Compute servers - also referred to as nodes - can carry different resource confi
         - **MEMORY:** Amount of memory / RAM available on the node in MB.
         - **GRES:** GPU resources available on the node. `gpu:<type>:<amount>`.
 
+=== "GES-Petrarch"
+
+    More info is coming soon.
+
+
+=== "MARS"
+
+    More info is coming soon.
+
+
 ### Partitions / Queues
-Partitions, also known as queues on other scheduling systems, are used to determine which nodes you want your job to run. To see the partition configuration of the HPC you are using run this command:
+Partitions, also known as queues on other scheduling systems, are used to determine which nodes you want your job to run. Partitions are used to categorise jobs. Different partitions in Slurm can have different resources, and boundaries configured, this is to support different workloads.
+
+To see the partition configuration of the HPC you are using run this command:
 
  ```
  scontrol show partition
  ```
+
+A specific partition can be requested, by specifying it with the `--partition` parameter for all Slurm submission commands. Example:
+
+```
+srun --account=none --partition=cpu --pty bash
+```
 
 === "Lochan"
 
@@ -336,6 +476,17 @@ Partitions, also known as queues on other scheduling systems, are used to determ
     |cpuplus|All Large Nodes servers|node[007-008]|
     |cpuall|Both Small Nodes and Large Nodes servers|node[001-008]|
     |gpu|All GPU Nodes|node[009-010]|
+
+=== "MARS"
+
+    |Partition|Description|Specifications|Count|Node List|
+    |---|---|---|---|---|
+    |nodes|This is the default partition if none is defined|2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>512Gb RAM|9|node[01-09]|
+    |smp|CPU+ Nodes<br>This partition offers the same resource as the `nodes` partition, just in larger quantities per node. This can be useful if your jobs can not be parallel over multiple nodes but require large amounts of resources.|2x AMD 7763 Processors @2.45Ghz<br>64 cores each CPU<br>1Tb RAM|6|node[101-106]|
+    |short|This partition is intended to be used for short CPU based jobs and interactive sessions. This allows users to always have resource available for installations or tests, even when the cluster is full of long running jobs. The partition uses the CPU capacity of GPU nodes, which is usually not in high use.<br>The partition has a max runtime of 2h and can only use up to 48 CPUs per server, to prevent blocking of GPU jobs. A singe user can not request more than 256 CPUs in this partition. GPU resources can not be requested in this partition.|2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>256Gb RAM<br>Nvidia A40 (48GB)|20|gpu[01-20]|
+    |gpu|GPU Nodes (A40)<br>This partition is intended to be used for GPU jobs.<br>The partition has a higher priority, so jobs in the short partition don’t prevent people from using GPUs. The partition can not be used without a GPU allocation `(--gres=gpu:1)`.|2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>256Gb RAM<br>Nvidia A40 (48GB)|20|gpu[01-20]|
+    |gpuplus|GPU+ Nodes (A100)<br>This partition is intended to be used for heavy GPU jobs. The partition is not available to all users of the cluster, as the resource is scarce.<br>The partition can only be used as part of a project with GPU+ permission. Please specify the need for these resources in your [project application](https://hpc.gla.ac.uk/policies/mars/mars-projects.md).|2x AMD 7763 Processors @2.8Ghz<br>64 cores each CPU<br>512Gb RAM<br>Nvidia HGX – 4x A100 GPU (80GB)|4|gpu[101-104]|
+
 
 ---
 
@@ -355,9 +506,50 @@ Partitions, also known as queues on other scheduling systems, are used to determ
     - NVIDIA HPC SDK
     - Intel oneAPI
 
+=== "GES-Petrarch"
+
+    More info coming soon.
+
+
+=== "MARS"
+
+    MARS uses a modular software control system to store and enable applications and tools. This means that we can install multiple versions of the same software and have these work independently for different users. All software currently available on MARS can be listed, loaded, and unloaded, by using the command module.
+
+    Below a list with all available [Modules](https://hpc.gla.ac.uk/guides/modules/) on MARS. This list is growing, as we keep installing software our users need for their work on the cluster. Don’t see the software you need? Don’t hesitate to get in contact with us!
+
+    Modules marked with a * are restricted modules. To gain access, please [contact us!](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945)
+
+    To load a Module on MARS use the following syntax:
+
+    `module load <module-type>/<module-name>/<module-version>`
+
+    ||||
+    |---|---|---|
+    |**Module Type**|**Module Name**|**Module Version**|
+    |apps|alphafold*|3.0.1|
+    |apps|apptainer|1.3.4|
+    |apps|dmtcp|3.1.2|
+    |apps|java|23.0.1|
+    |apps|juliaup|1.18.9|
+    |apps|matlab*|r2024b|
+    |apps|miniforge|24.7.1|
+    |apps|nvhpc*|24.9|
+    |apps|nvidia-cuda|12.6.2|
+    |apps|oneapi*|2024.2.1|
+    |apps|python3|3.12.7|
+    |apps|R|4.4.1|
+    |apps|rstudio|2024.09.0|
+    |compilers|gcc|8.5.0,|14.2.0|
+    |libs|gcc|8.5.0,|14.2.0|
+    |libs|openblas|0.3.28|
+    |mpi|openmpi|5.0.5|
+
+
+For more and advanced information on Environment Modules, see the [official documentation](https://modules.readthedocs.io/en/latest/).
+
 
 ### Environment Modules
-This is software that is centrally installed and can be used across the cluster. The full manual of `modules` can be found [here](https://modules.readthedocs.io/en/latest/).
+This is software that is centrally installed and can be used across the cluster. The full manual of `modules` can be found [here](https://modules.readthedocs.io/en/latest/) or check our [guide](https://hpc.gla.ac.uk/guides/modules/).
 
 The most used commands are listed below:
 
