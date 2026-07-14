@@ -232,7 +232,7 @@ The default values are applied to your Slurm job when alternative values are not
 
 ### Max Single User
 
-The maximum values for single users are enforced when the job’s usage is not charged to a Slurm project. The values are defined to allow users to adequately test the platform for their work, before committing to a [project](https://hpc.gla.ac.uk/policies/mars/mars-projects.md).
+The maximum values for single users are enforced when the job’s usage is not charged to a Slurm project. The values are defined to allow users to adequately test the platform for their work, before committing to a [project](https://hpc.gla.ac.uk/policies/mars/mars-projects).
 
 ### Max Project User
 
