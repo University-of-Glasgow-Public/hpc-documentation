@@ -225,11 +225,14 @@ There are quotas set up across the cluster for different filesystems / shares. A
     |User Home|/mnt/home|100GiB|120GiB|7 days|
     |Shared Scratch|/mnt/shared-scratch or ~/sharedscratch|2000GiB|2100GiB|7 days|
 
-**Clean Up Time on Scratch Space**
 
 === "MARS"
 
-    More info is coming soon.
+    |||||
+    |---|---|---|---|
+    |**Name**|**Path**|**Soft Limit**|**Hard Limit**|
+    |User Home|/users|40GiB|50GiB|
+
 
 We also set up the clean-up scratch as:
 
@@ -409,7 +412,7 @@ If you need to access cloud storage from the system directly, you can make use o
 
 #### Web File Manager ####
 
-For certain systems that are managed by Alces [web file access and management can be used](https://hpc.gla.ac.uk/tutorials/web-file-manager.md).
+For certain systems that are managed by Alces [web file access and management can be used](https://hpc.gla.ac.uk/tutorials/web-file-manager).
 
 ---
 
