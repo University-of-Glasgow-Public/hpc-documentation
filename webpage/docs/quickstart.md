@@ -491,6 +491,39 @@ srun --account=none --partition=cpu --pty bash
     |gpu|GPU Nodes (A40)<br>This partition is intended to be used for GPU jobs.<br>The partition has a higher priority, so jobs in the short partition don’t prevent people from using GPUs. The partition can not be used without a GPU allocation `(--gres=gpu:1)`.|2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>256Gb RAM<br>Nvidia A40 (48GB)|20|gpu[01-20]|
     |gpuplus|GPU+ Nodes (A100)<br>This partition is intended to be used for heavy GPU jobs. The partition is not available to all users of the cluster, as the resource is scarce.<br>The partition can only be used as part of a project with GPU+ permission. Please specify the need for these resources in your [project application](https://hpc.gla.ac.uk/policies/mars/mars-projects).|2x AMD 7763 Processors @2.8Ghz<br>64 cores each CPU<br>512Gb RAM<br>Nvidia HGX – 4x A100 GPU (80GB)|4|gpu[101-104]|
 
+### Quality of Service
+
+QOS can be specified with with each job submission using the `--qos` parameter. They are defined by administrators in the Slurm database and can be shows on a system using the following command:
+
+```
+sacctmgr show qos
+```
+
+The QOS associated with a job will affect the job in three key ways: scheduling priority, preemption, and resource limits. More information on this can be found in the official Slurm documentation [here](https://slurm.schedmd.com/qos.html#priority)
+
+=== "Lochan"
+
+    |Name|Properties||Description|
+    |---|---|---|
+    |`default`|-|This is the default QOS, that is applied to every job, unless it is defined differently.|
+    |`priority`|Priority=100, Preempt=default|To be used by select users considered VIPs of the platform. Jobs scheduled with this QOS have higher priority and can preempt jobs of the `default` QOS. |
+
+=== "GES-Petrarch"
+
+    *There are no QOS configured on GES-Petrarch*
+
+
+=== "MARS"
+
+    !!! info
+
+        Some QOS on MARS do not have to be set, so are not mentioned here.
+    
+    |Name|Properties||Description|
+    |---|---|---|
+    |`normal`|-|This is the default QOS, that is applied to every job, unless it is defined differently.|
+    |`highpri`|Priority=10|Used by administrators to get jobs scheduled with higher priority|
+
 
 ---
 
