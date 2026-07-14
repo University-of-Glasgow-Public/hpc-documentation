@@ -54,6 +54,46 @@ You are not guarateed an allocation right away! If the cluster is busy, you migh
 
 If due to a network issue you lose access to this console, there is no way to get access back, this is why it is a bad idea to use it for longer running jobs! If you lose access and the job is still scheduled to run for a long amount of time, please kill it, to make the resource available for other users again.
 
+### Interactive GUI Job
+
+=== "Lochan"
+
+    These configs do not apply for this system as of now.
+
+=== "GES-Petrarch"
+
+    These configs do not apply for this system as of now.
+
+=== "MARS"
+
+    If you intend to use a application with a GUI on MARS, you can still do this using Slurm.
+    
+    At first you’ll need a [Flight Desktop session](https://hpc.gla.ac.uk/tutorials/flight-desktop/).
+    
+    ![MARS Flight Desktop](assets/slurm-interactive-gui-job_open-console-1536x763.png)
+    
+    You want to open up a console. In the top left of your desktop press “Applications”. And then go to “System Tools” and choose “Terminal”
+    
+    In the console that opens you can then start your interactive GUI job. For this you can use the srun-x11 utility. The syntax and parameters are the same as srun, so you can specify the jobs to your needs.
+    
+    ```
+    srun-x11 --account=none --cpus-per-task=4 --mem=8G --time=03:00:00
+    ```
+    
+    The command you copied gives you a session with 4 CPU cores and 8GB of memory for 3 hours and will be accounted to no project. The parameters are the same like any other job, and can be adjusted to your needs. More information on that here [Slurm Settings](https://hpc.gla.ac.uk/references/slurm-parameters/).
+    
+    You can tell that you have been connected to a compute node by the change in your console prompt, here from login2 to node01:
+    
+    ```
+    [<GUID>@login2 [mars] ~]$ srun-x11 --account=none --cpus-per-task=4 --mem=8G --time=03:00:00
+    Enabling login2 to accept our X-connection... node01 being added to access control list 
+    [<GUID>@node01 [mars] ~]$
+    ```
+    
+    From here you can start your GUI applications. As a test you can try running `xeyes`.
+
+
+
 ## Batch Job Submission
 Batch job submission is the way the cluster is ideally used. You use a "Submission Script" to submit your work to the cluster. This script is usually a `bash` script containing your job specification, environment setup and then your work. Example scripts can  be found here [Submission Script Templates](../references/submission-script-templates.md).
 
@@ -158,3 +198,42 @@ $ sacct -X -o Timelimit,Elapsed -j <JobID>
 ```
 
 There is no easy way to get GPU efficiency, but generally speaking if you don’t need GPU, don’t request it.
+
+
+
+## Default and Maximum Values
+
+To ensure fair use of the system and to facilitate its maintenance, the scheduler is set up to have default and maximum values applied to submitted jobs. We might adjust these values in the future to align with the load and usage of the system.
+
+=== "Lochan"
+
+    More info is coming soon.
+
+=== "GES-Petrarch"
+
+    More info is coming soon.
+
+=== "MARS"
+
+    |||||
+    |---|---|---|---|
+    |**Resource**|**Default**|**Max Single User**|**Max Project User**|
+    |**Timeout**|1 hour|7 days|7 days|
+    |**CPU**|1 core|256 cores|*Project limits*|
+    |**Memory**|8GiB for CPU and CPU+ nodes<br>4GiB for GPU and GPU+ nodes|-|*Project limits*|
+    |**GPU**\*|0|1|*Project limits*|
+    |**Concurrent Jobs**|-|-|-|
+    
+    *\*only for “gpu” partition*
+
+### Default
+
+The default values are applied to your Slurm job when alternative values are not specified within the submission. Values can be given either through the script or on the command line. For more information on how to set resource values see [Slurm Settings](https://hpc.gla.ac.uk/references/slurm-parameters/).
+
+### Max Single User
+
+The maximum values for single users are enforced when the job’s usage is not charged to a Slurm project. The values are defined to allow users to adequately test the platform for their work, before committing to a [project](https://hpc.gla.ac.uk/policies/mars/mars-projects.md).
+
+### Max Project User
+
+The maximum values for project users are enforced when a job is charged to with any project within Slurm. The maximum value varies from project to project and is based on the resource allocations that were approved on creation of the project. If you have prematurely consumed your project’s resources, feel free to get in [contact with us!](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945)

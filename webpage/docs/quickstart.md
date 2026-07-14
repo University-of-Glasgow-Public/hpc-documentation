@@ -399,6 +399,11 @@ scp -i <mykeyfile.pem> <source file> <guid>@<hostname>:<target file>
 
 If you need to access cloud storage from the system directly, you can make use of `rclone`. More information can be found in our software manual: [Rclone](https://hpc.gla.ac.uk/guides/rclone/).
 
+
+#### Web File Manager ####
+
+For certain systems that are managed by Alces [web file access and management can be used](https://hpc.gla.ac.uk/tutorials/web-file-manager.md).
+
 ---
 
 ## Scheduler

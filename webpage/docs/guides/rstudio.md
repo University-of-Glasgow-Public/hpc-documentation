@@ -10,6 +10,10 @@ If you choose to use RStudio on the system, for debugging or code development, w
 
     More info is coming soon.
 
+=== "GES-Petrarch"
+
+    More info is coming soon.
+
 === "MARS"
 
     First you will need to open a Flight Desktop session. You can find more information about that [here](https://hpc.gla.ac.uk/guides/gui-apps/).
@@ -44,10 +48,6 @@ If you choose to use RStudio on the system, for debugging or code development, w
     ```
     
     A RStudio window within your Flight Desktop will open, where you can debug and test your code, as you are used to!
-
-=== "GES-Petrarch"
-
-    More info is coming soon.
 
 
 ## External Resources
