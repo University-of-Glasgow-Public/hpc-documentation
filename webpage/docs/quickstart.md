@@ -165,41 +165,41 @@ You can use [Rclone](https://hpc.gla.ac.uk/guides/rclone/) to manage your data.
 
 
 
-**Home Storage**
-
-|||
-|---|---|
-|**Size**|40Gb (quota per user)|
-|**Path**|`/users/<GUID>`|
-|**Use**|**Data Storing**<br>Set up your environments and store all the scripts and data you need for your personal use.|
-
-
-**Project Storage**
-
-|||
-|---|---|
-|**Size**|As requested in application (2.6Pb in total)|
-|**Path**|`/mnt/data/project<ProjectNumber>`|
-|**Use**|**Data Storing**<br>Save scripts and data you and the colleagues in your project use together. Each project is assigned dedicated space. The size of this space is dependent on what was requested in the original Project application, but can be extended on request. You will be told the <ProjectNumber> when the project has been created on MARS.|
-
-
-**Shared User Scratch**
-
-|||
-|---|---|
-|**Size**|~180Tb (shared between all cluster users)|
-|**Path**|`~/sharedscratch` or `/mnt/scratch/users/<GUID>`|
-|**Use**|**Data Processing**<br>This storage is shared between all nodes. Read and write data that you need during your jobs.<br>Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!|
-
-
-**Local Node Scratch**
-
-|||
-|---|---|
-|**Size**|Varies depending on the node type (shared between all node users):<br>CPU Nodes: 400Gb<br>CPU+ Nodes: 400Gb<br>GPU Nodes:  700Gb<br>GPU+ Nodes: 1.7Tb|
-|**Path**|`~/localscratch` or `/tmp/users/<GUID>`|
-|**Use**|**Data Processing**<br>This storage is local to the node and can’t be accessed outside of it. Read and write here for the best possible storage performance. If you drop files into the localscratch of the login node it won’t be available to you on the compute nodes, so the moving of data has to be part of your workflow /submission script.<br>Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!|
-
+    **Home Storage**
+    
+    |||
+    |---|---|
+    |**Size**|40Gb (quota per user)|
+    |**Path**|`/users/<GUID>`|
+    |**Use**|**Data Storing**<br>Set up your environments and store all the scripts and data you need for your personal use.|
+    
+    
+    **Project Storage**
+    
+    |||
+    |---|---|
+    |**Size**|As requested in application (2.6Pb in total)|
+    |**Path**|`/mnt/data/project<ProjectNumber>`|
+    |**Use**|**Data Storing**<br>Save scripts and data you and the colleagues in your project use together. Each project is assigned dedicated space. The size of this space is dependent on what was requested in the original Project application, but can be extended on request. You will be told the <ProjectNumber> when the project has been created on MARS.|
+    
+    
+    **Shared User Scratch**
+    
+    |||
+    |---|---|
+    |**Size**|~180Tb (shared between all cluster users)|
+    |**Path**|`~/sharedscratch` or `/mnt/scratch/users/<GUID>`|
+    |**Use**|**Data Processing**<br>This storage is shared between all nodes. Read and write data that you need during your jobs.<br>Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!|
+    
+    
+    **Local Node Scratch**
+    
+    |||
+    |---|---|
+    |**Size**|Varies depending on the node type (shared between all node users):<br>CPU Nodes: 400Gb<br>CPU+ Nodes: 400Gb<br>GPU Nodes:  700Gb<br>GPU+ Nodes: 1.7Tb|
+    |**Path**|`~/localscratch` or `/tmp/users/<GUID>`|
+    |**Use**|**Data Processing**<br>This storage is local to the node and can’t be accessed outside of it. Read and write here for the best possible storage performance. If you drop files into the localscratch of the login node it won’t be available to you on the compute nodes, so the moving of data has to be part of your workflow /submission script.<br>Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!|
+    
 
 
 ### Storage Quotas
