@@ -465,10 +465,11 @@ srun --account=none --partition=cpu --pty bash
 
 === "Lochan"
 
-    |Partition|Description|
-    |---|---|
-    |cpu|This is the *default* partition, meaning this is chosen when no partition is specified. It contains all CPU focused servers of the Cluster.|
-    |gpu|This partitions contains all servers with GPU resources available. You can specify which type with the `--gres` parameter.|
+    |Partition|Description|Nodes|
+    |---|---|---|
+    |cpu|This is the *default* partition, meaning this is chosen when no partition is specified. It contains all CPU focused servers of the Cluster.|`node[011-021,023]`|
+    |mpi|There are four identical servers on Lochan which lend themselves to be used for MPI jobs. use this partition, to guarantee to get onto these nodes for large multi-node mpi jobs.|`node[018-021]`|
+    |gpu|This partitions contains all servers with GPU resources available. You can specify which type with the `--gres` parameter.|`gpu[003-004]`|
 
 
 === "GES-Petrarch"
