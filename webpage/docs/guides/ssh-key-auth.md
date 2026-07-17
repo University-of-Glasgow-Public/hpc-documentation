@@ -40,7 +40,7 @@ type C:\Users\<GUID>\.ssh\id_rsa-Petrarch.pub | ssh <GUID>@ petrarch_esd.hpc.gla
 ### Mac / Linux:
 
 ```
-ssh-copy-id -i ~.ssh/id_rsa-Petrarch <GUID>@petrarch_esd.hpc.gla.ac.uk
+ssh-copy-id -i ~/.ssh/id_rsa-Petrarch <GUID>@petrarch_esd.hpc.gla.ac.uk
 ```
 
 
