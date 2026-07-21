@@ -254,12 +254,10 @@ In addition, when logging into the login node, you should get a warning in the c
 More information on quotas can be found here [Quota](guides/quota.md)
 
 ### Data Transfer
-To transfer data from your local machine (or another system), you can use `SSH`. You can do this either with:
+To transfer data from your local machine (or another system), you have different options:
 
-#### SFTP ####
+#### SFTP 
 Secure File Transfer Protocol (SFTP) is a protocol to transfer data between systems using SSH. There are multiple ways to make use of the protocol:
-
-**Terminal**
 
 If installed, you can use sftp from a command prompt on your personal device:
 
@@ -268,14 +266,12 @@ sftp <guid>@<hostname>
 ```
 After connecting you can use sftp commands in your interactive sessions. More information on that here: [SFTP Manual](https://linux.die.net/man/1/sftp)
 
-**GUI Application**
-
-Other GUI clients of your choice will also work, for example [WinSCP](https://winscp.net). Use the connection details of the login node, mentioned above to connect.
+There are also easy GUI applications, for example [WinSCP](https://winscp.net). Use the connection details of the login node, mentioned above to connect.
 
 You can also use your SSH key to authenticate. More information: [SSH key authentication](https://hpc.gla.ac.uk/guides/ssh-key-auth/) or you can find more info in the manual for the specific software you are using.
 
 
-#### SCP ####
+#### SCP
 
 Use scp (secure copy) to easily copy data between two systems via your console.
 
@@ -293,12 +289,12 @@ scp -i <mykeyfile.pem> <source file> <guid>@<hostname>:<target file>
 - replace `<targetfile>` with the path/name of where you want the file to go on the target device.
 
 
-#### Cloud Storage ####
+#### Cloud Storage
 
 If you need to access cloud storage from the system directly, you can make use of `rclone`. More information can be found in our software manual: [Rclone](https://hpc.gla.ac.uk/guides/rclone/).
 
 
-#### Web File Manager ####
+#### Web File Manager
 
 For certain systems that are managed by Alces [web file access and management can be used](https://hpc.gla.ac.uk/tutorials/web-file-manager).
 
