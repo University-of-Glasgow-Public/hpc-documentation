@@ -2,7 +2,7 @@
 
 RStudio is an integrated development environment (IDE) for R and Python. It includes a console, syntax-highlighting editor that supports direct code execution, and tools for plotting, history, debugging, and workspace management.
 
-We highly encourage the use of RScript for running your R code on the HPC. If you need help setting up your code to be requested through Slurm with RScript, don’t hesitate to [contact us](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945)!
+We highly encourage the use of RScript for running your R code on the HPC. If you need help setting up your code to be requested through Slurm with RScript, don’t hesitate to contact us via Ivanti Support Request!
 
 If you choose to use RStudio on the system, for debugging or code development, we encourage you to still take advantage of the Slurm scheduling system. That way you get enough resources for the code you are developing and don’t hinder other users by overloading the login-node.
 
