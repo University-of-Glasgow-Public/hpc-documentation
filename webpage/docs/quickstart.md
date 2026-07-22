@@ -438,7 +438,7 @@ The QOS associated with a job will affect the job in three key ways: scheduling 
 
     Below a list with all available [Modules](guides/modules.md) on MARS. This list is growing, as we keep installing software our users need for their work on the cluster. Don’t see the software you need? Don’t hesitate to get in contact with us!
 
-    Modules marked with a * are restricted modules. To gain access, please [contact us!](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945)
+    Modules marked with a * are restricted modules. To gain access, please contact us via Ivanti Support Request.
 
     To load a Module on MARS use the following syntax:
     
