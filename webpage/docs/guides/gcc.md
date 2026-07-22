@@ -14,14 +14,14 @@ For usage information run the following command after loading the module:
 
 ## Example
 
-My source code is written in C below and saved to a file called helloMARS.c:
+My source code is written in C below and saved to a file called helloHPC.c:
 
 ```
 #include <stdio.h>
 
 int main (void)
 {
-        printf ("I used GCC version %d.%d to compile this on MARS!\n", __GNUC__, __GNUC_MINOR__);
+        printf ("I used GCC version %d.%d to compile this on HPC!\n", __GNUC__, __GNUC_MINOR__);
         return 0;
 }
 ```
@@ -35,14 +35,14 @@ module load compilers/gcc/13.1.0
 I can now compile my program:
 
 ```
-gcc helloMARS.c -o hello_mars
+gcc helloHPC.c -o hello_hpc
 ```
 
 Now I can run my created executable:
 
 ```
-$ ./hello_mars
-I used GCC version 13.1 to compile this on MARS!
+$ ./hello_hpc
+I used GCC version 13.1 to compile this on HPC!
 ```
 
 ## External Resources
