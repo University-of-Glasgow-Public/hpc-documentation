@@ -44,7 +44,7 @@ load <resource>
 ## Interactive Job
 Interactive jobs are great to install software, prepare your environment or debug your script. For any serious or larger work, please use batch jobs.
 
-Get an allocation with `srun` and open an interactive bash shell with the parameter `--pty bash`. You can use any other [slurm parameters](../references/slurm-parameters.md), to define your allocation, but this parameter has to be the last one. If you require access to a GUI, you can use the `--x11` parameter.
+Get an allocation with `srun` and open an interactive bash shell with the parameter `--pty bash`. You can use any other [slurm parameters](../references/slurm-parameters.md), to define your allocation, but this parameter has to be the last one. 
 
 ```
 srun <slurm_parameters> --pty bash
@@ -58,11 +58,19 @@ If due to a network issue you lose access to this console, there is no way to ge
 
 === "Lochan"
 
-    These configs do not apply for this system as of now.
+    To use any GUI application with an interactive session, just add the parameter `--x11` to your submission.
+
+    ```
+    srun --x11 --pty bash
+    ```
 
 === "GES-Petrarch"
 
-    These configs do not apply for this system as of now.
+    To use any GUI application with an interactive session, just add the parameter `--x11` to your submission.
+
+    ```
+    srun --x11 --pty bash
+    ```
 
 === "MARS"
 
