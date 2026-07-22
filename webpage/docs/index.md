@@ -3,6 +3,20 @@ Welcome to the University of Glasgow HPC documentation.
 
 This website contains helpful user information and learning material about HPC in general and information specific to University fo Glasgow systems.
 
+If there is platform specific information, you can switch between platforms with "Tabs". This will look like below and you can switch them throughout the pages. Your selection will be saved between pages, so you should only have to switch once:
+
+=== "Lochan"
+
+    Here you find information about [Lochan](clusters/lochan.md).
+
+=== "GES-Petrarch"
+
+    Here you find information about [GES-Petrarch](clusters/gespetrarch.md).
+
+=== "MARS"
+
+    Here you find information about [MARS](clusters/mars.md).
+
 You can use the *Next* and *Previous* buttons at the bottom of the page to go through the content in a structured way, or use the left-hand navigation to browse. At the top-right of the page is a search bar, which should help you find the content you are looking for. When on a page with subheadings, you will see a table of contents appear on the right hand side, which can help you navigate larger pages.
 
 In the grid below you can find some quick links to content users are frequently looking for:
