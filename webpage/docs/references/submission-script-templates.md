@@ -10,10 +10,11 @@ If you want to download a specific script you can right click the link below the
 wget <copied-link>
 ```
 
-Important: When you use the templates below please do not increase the values of --nodes, –ntasks, --cpus-per-task or --ntasks-per-node randomly to any value >1, especially if your job can’t run in parallel. Your job may wait longer in the queue for resources you don’t need, also your priority factor will decrease, affecting the start time of your future jobs.
+!!! info "Important"
+
+    Important: When you use the templates below please do not increase the values of `--nodes`, `–ntasks`, `--cpus-per-task` or `--ntasks-per-node` randomly to any value >1, especially if your job can’t run in parallel. Your job may wait longer in the queue for resources you don’t need, also your priority factor will decrease, affecting the start time of your future jobs.
 
 You can comment out (adding another #) or just remove any #SBATCH line you don’t need as long as it’s not mandatory, then the default values will apply.
-
 
 
 ## CPU Job
