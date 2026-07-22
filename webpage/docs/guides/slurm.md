@@ -56,6 +56,8 @@ If due to a network issue you lose access to this console, there is no way to ge
 
 ### Interactive GUI Job
 
+If you intend to use a application with a GUI on a HPC cluster, you can still do this using Slurm.
+
 === "Lochan"
 
     To use any GUI application with an interactive session, just add the parameter `--x11` to your submission.
@@ -73,24 +75,22 @@ If due to a network issue you lose access to this console, there is no way to ge
     ```
 
 === "MARS"
-
-    If you intend to use a application with a GUI on MARS, you can still do this using Slurm.
-    
-    At first you’ll need a [Flight Desktop session](https://hpc.gla.ac.uk/tutorials/flight-desktop/).
+ 
+    At first you’ll need a [Flight Desktop session](../tutorials/alces-flight.md#flight-desktop).
     
     ![MARS Flight Desktop](assets/slurm-interactive-gui-job_open-console-1536x763.png)
     
     You want to open up a console. In the top left of your desktop press “Applications”. And then go to “System Tools” and choose “Terminal”
     
-    In the console that opens you can then start your interactive GUI job. For this you can use the srun-x11 utility. The syntax and parameters are the same as srun, so you can specify the jobs to your needs.
+    In the console that opens you can then start your interactive GUI job. For this you can use the `srun-x11` utility. The syntax and parameters are the same as `srun`, so you can specify the jobs to your needs.
     
     ```
     srun-x11 --account=none --cpus-per-task=4 --mem=8G --time=03:00:00
     ```
     
-    The command you copied gives you a session with 4 CPU cores and 8GB of memory for 3 hours and will be accounted to no project. The parameters are the same like any other job, and can be adjusted to your needs. More information on that here [Slurm Settings](https://hpc.gla.ac.uk/references/slurm-parameters/).
+    The command above gives you a session with 4 CPU cores and 8GB of memory for 3 hours and will be accounted to no project. The parameters are the same like any other job, and can be adjusted to your needs. More information on that here [Slurm Settings](../references/slurm-parameters.md).
     
-    You can tell that you have been connected to a compute node by the change in your console prompt, here from login2 to node01:
+    You can tell that you have been connected to a compute node by the change in your console prompt, here from `login2` to `node01`:
     
     ```
     [<GUID>@login2 [mars] ~]$ srun-x11 --account=none --cpus-per-task=4 --mem=8G --time=03:00:00
@@ -99,8 +99,6 @@ If due to a network issue you lose access to this console, there is no way to ge
     ```
     
     From here you can start your GUI applications. As a test you can try running `xeyes`.
-
-
 
 ## Batch Job Submission
 Batch job submission is the way the cluster is ideally used. You use a "Submission Script" to submit your work to the cluster. This script is usually a `bash` script containing your job specification, environment setup and then your work. Example scripts can  be found here [Submission Script Templates](../references/submission-script-templates.md).
