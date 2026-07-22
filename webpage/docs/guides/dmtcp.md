@@ -2,12 +2,6 @@
 
 DMTCP (Distributed MultiThreaded Checkpointing) transparently checkpoints a single-host or distributed computation in user-space with no modifications to user code or to the OS. It works on most Linux applications, including Python, Matlab, R, GUI desktops, MPI, etc.
 
-A list of all available commands within this module can be found here:
-
-`ls -la $DMTCPBIN`
-
-Use --help on any of them to get more information on the command!
-
 ## Example
 This is a very basic example of the utility for this software.
 
