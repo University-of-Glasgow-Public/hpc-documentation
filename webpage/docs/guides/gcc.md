@@ -6,11 +6,13 @@ Please pay attention to use the right version needed! Dependency to other module
 
 Loading modules with differing GCC versions as dependency could cause problems. Please make sure to use module purge in between working with modules with differing GCC dependencies.
 
-If you need to use a lot of packages with differing GCC versions, you might want to switch to using a conda environment or Apptainer containers instead.
+If you need to use a lot of packages with differing GCC versions, you might want to switch to using [Conda](conda.md) or [Apptainer](apptainer.md) containers instead.
 
-For usage information run the following command after loading the module:
+For usage information run the following command:
 
-`gcc --help`
+```
+gcc --help
+```
 
 ## Example
 
