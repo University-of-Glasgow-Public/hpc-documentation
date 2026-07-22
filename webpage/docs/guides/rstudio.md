@@ -8,11 +8,11 @@ If you choose to use RStudio on the system, for debugging or code development, w
 
 === "Lochan"
 
-    More info is coming soon.
+    You can request an interactive GUI job as described [here](slurm.md#interactive-gui-job)
 
 === "GES-Petrarch"
 
-    More info is coming soon.
+    You can request an interactive GUI job as described [here](slurm.md#interactive-gui-job)
 
 === "MARS"
 
