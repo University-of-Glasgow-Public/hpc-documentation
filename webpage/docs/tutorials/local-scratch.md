@@ -4,15 +4,14 @@ Local scratch, as the name implies, is local to each node. This means the local 
 
 The idea for the local scratch is that you move your data there in the beginning of your job:
 
-1.	You have your data in your home, for example ~/myData. 
+1. You have your data in your `$HOME`, for example `~/myData`. 
 
-2.	At the beginning of your job, you can move the data into the local scratch.
+2. At the beginning of your job, you can move the data into the localscratch.
 
-3.	Then you can run your I/O intensive work and write all the outputs into your localscratch to a directory, for example ~/localscratc/myResults.
+3. Then you can run your I/O intensive work and write all the outputs into your localscratch to a directory, for example `~/localscratc/myResults`.
 
-4.	When your work is done, you can move your results directory back to your normal home area and clean up your localscratch.
+4. When your work is done, you can move your results directory back to your normal `$HOME` area and clean up your localscratch.
 
- 
  
 This could be an example job submission script:
 
