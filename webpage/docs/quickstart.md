@@ -434,19 +434,20 @@ The QOS associated with a job will affect the job in three key ways: scheduling 
 
 === "MARS"
 
-    MARS uses a modular software control system to store and enable applications and tools. This means that we can install multiple versions of the same software and have these work independently for different users. All software currently available on MARS can be listed, loaded, and unloaded, by using the command module.
+    MARS uses a modular software control system to store and enable applications and tools. This means that we can install multiple versions of the same software and have these work independently for different users. All software currently available on MARS can be listed, loaded, and unloaded, by using the command `module`.
 
-    Below a list with all available [Modules](https://hpc.gla.ac.uk/guides/modules/) on MARS. This list is growing, as we keep installing software our users need for their work on the cluster. Don’t see the software you need? Don’t hesitate to get in contact with us!
+    Below a list with all available [Modules](guides/modules.md) on MARS. This list is growing, as we keep installing software our users need for their work on the cluster. Don’t see the software you need? Don’t hesitate to get in contact with us!
 
     Modules marked with a * are restricted modules. To gain access, please [contact us!](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945)
 
     To load a Module on MARS use the following syntax:
+    
+    ```
+    module load <module-type>/<module-name>/<module-version>`
+    ```
 
-    `module load <module-type>/<module-name>/<module-version>`
-
-    ||||
+    |Module Type|Module Name|Module Version|
     |---|---|---|
-    |**Module Type**|**Module Name**|**Module Version**|
     |apps|alphafold*|3.0.1|
     |apps|apptainer|1.3.4|
     |apps|dmtcp|3.1.2|
