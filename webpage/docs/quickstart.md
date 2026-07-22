@@ -465,10 +465,6 @@ The QOS associated with a job will affect the job in three key ways: scheduling 
     |libs|openblas|0.3.28|
     |mpi|openmpi|5.0.5|
 
-
-For more and advanced information on Environment Modules, see the [official documentation](https://modules.readthedocs.io/en/latest/).
-
-
 ### Environment Modules
 This is software that is centrally installed and can be used across the cluster. The full manual of `modules` can be found [here](https://modules.readthedocs.io/en/latest/) or check our [guide](https://hpc.gla.ac.uk/guides/modules/).
 
