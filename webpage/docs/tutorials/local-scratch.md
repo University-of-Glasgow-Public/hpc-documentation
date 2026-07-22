@@ -1,8 +1,7 @@
 # Cluster Local Scratch Use for Jobs
 
-Local scratch, as the name implies, is local to each node. This means the local scratch on headnode01 is not the same as node001. Since the storage is server local, you get the best speed possible for I/O operations. Shared scratch is a space on an NFS server, that is shared across the cluster. This makes it easy to use, with the downside of network latency for I/O operations. If your job is not very I/O heavy, then there is no real need to use the local scratch. But feel free to do some testing, to see what fits best for your work!
+Local scratch, as the name implies, is local to each node. This means the local scratch on a login node is not the same as a compute node. Since the storage is server local, you get the best speed possible for I/O operations. Shared scratch is a space on an separate server, that is shared across the cluster. This makes it easy to use, with the downside of network latency for I/O operations. If your job is not very I/O heavy, then there is no real need to use the local scratch. But feel free to do some testing, to see what fits best for your work!
 
- 
 The idea for the local scratch is that you move your data there in the beginning of your job:
 
 1.	You have your data in your home, for example ~/myData. 
