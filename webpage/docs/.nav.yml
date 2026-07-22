@@ -6,6 +6,7 @@ nav:
   - Tutorials: tutorials
   - Guides: 
     - guides/slurm.md
+    - guides/modules.md
     - guides/*.md
   - References: references
   - Policies: 
