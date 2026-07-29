@@ -301,9 +301,10 @@ For certain systems that are managed by Alces [web file access and management ca
 ---
 
 ## Scheduler
-The scheduler used is **Slurm Workload Manager**, developed by SchedMD. Slurm has a very in depth documentation themselves, which could be useful to read through, for a more in depth understanding of how this software works [Quick Start User Guide](https://slurm.schedmd.com/quickstart.html). 
+The scheduler used is **Slurm Workload Manager**, developed by SchedMD. Slurm has a very in depth documentation themselves, which could be useful to read through, for a more in depth understanding of how this software works [Quick Start User Guide](https://slurm.schedmd.com/quickstart.html). We also have the following two resources which could be useful if you need more help using Slurm:
 
-The information here describes configurations you will need to know to use the specific cluster.
+- [Slurm Tutorial](tutorials/slurm-101.md): A tutorial to work though and learn what job scheduling can.
+- [Slurm Guide](guides/slurm.md): Page explaining different Slurm utilities and how to use them.
 
 ### Resources
 Compute servers - also referred to as nodes - can carry different resource configurations to fit different workloads. For example, some servers might offer high amount of CPU, while others offer GPU resource.
