@@ -4,6 +4,7 @@ nav:
     - clusters/lochan.md
     - clusters/gespetrarch.md
     - clusters/mars.md
+    - clusters/*
   - account-registration.md
   - quickstart.md
   - Tutorials: tutorials
