@@ -1,5 +1,5 @@
 # Quickstart
-This manual will give you all the information you need to use a HPC cluster. You can find more guides in the additional content after this page, you will find more specialised guides, tutorial and references.
+This manual will give you all the information you need to use a HPC cluster. In the additional content after this page, you will find more specialised guides, tutorial and references.
 
 ## Introduction
 HPC stands for High Performance Computing. Commonly this refers to a cluster of servers with resources shared by multiple people. To manage resource allocation a scheduler is used that, based on your definitions, creates an isolated work environment to run code. As the resource is shared and not always available, jobs can be queued for a while before they are run by the scheduler. No instant access to resources is guaranteed.
