@@ -33,5 +33,5 @@
 |Working directory|`-`|`#SBATCH --workdir=/path/to/file`|
 |STDOUT file|`#PBS -o /path/to/file`|`#SBATCH --output=/path/to/file`|
 |STDERR file|`#PBS -e /path/to/file`|`#SBATCH --error=/path/to/file`|
-|Email notifications|`#PBS -m a\|b\|e`|`#SBATCH --mail-type=NONE\|BEGIN\|END\|FAIL\|ALL`|
+|Email notifications|`#PBS -m a|b|e`|`#SBATCH --mail-type=NONE|BEGIN|END|FAIL|ALL`|
 |Email recipient|`#PBS -M <Email>`|`#SBATCH --mail-user=<Email>`|
