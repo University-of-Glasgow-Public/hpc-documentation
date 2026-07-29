@@ -76,7 +76,7 @@ If you intend to use a application with a GUI on a HPC cluster, you can still do
 
 === "MARS"
  
-    At first you’ll need a [Flight Desktop session](../tutorials/alces-flight.md#flight-desktop).
+    At first you’ll need a [Flight Desktop session](alces-flight.md#flight-desktop).
     
     ![MARS Flight Desktop](assets/slurm-interactive-gui-job_open-console-1536x763.png)
     
