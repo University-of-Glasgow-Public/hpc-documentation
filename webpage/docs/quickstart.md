@@ -376,6 +376,43 @@ srun --account=none --partition=cpu --pty bash
     |gpu|GPU Nodes (A40)<br>This partition is intended to be used for GPU jobs.<br>The partition has a higher priority, so jobs in the short partition don’t prevent people from using GPUs. The partition can not be used without a GPU allocation `(--gres=gpu:1)`.|2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>256Gb RAM<br>Nvidia A40 (48GB)|20|gpu[01-20]|
     |gpuplus|GPU+ Nodes (A100)<br>This partition is intended to be used for heavy GPU jobs. The partition is not available to all users of the cluster, as the resource is scarce.<br>The partition can only be used as part of a project with GPU+ permission. Please specify the need for these resources in your [project application](https://hpc.gla.ac.uk/policies/mars/mars-projects).|2x AMD 7763 Processors @2.8Ghz<br>64 cores each CPU<br>512Gb RAM<br>Nvidia HGX – 4x A100 GPU (80GB)|4|gpu[101-104]|
 
+### Default and Maximum Values
+
+To ensure fair use of the system and to facilitate its maintenance, the scheduler is set up to have default and maximum values applied to submitted jobs. We might adjust these values in the future to align with the load and usage of the system.
+
+=== "Lochan"
+
+    |Resource|Default|Maximum|
+    |---|---|---|
+    |Timeout|1 hour|7 days|
+    |CPU|1 core|-|
+    |Memory|4 GB per core|-|
+    |GPU\*|1|-|
+
+    *\*only for “gpu” partition*
+
+=== "GES-Petrarch"
+
+    |Resource|Default|Maximum|
+    |---|---|---|
+    |Timeout|14 days|14 days|
+    |CPU|1 core|-|
+    |Memory|1 GB per core|-|
+
+
+=== "MARS"
+
+    |Resource|Default|Max Single User|Max Project User|
+    |---|---|---|---|
+    |Timeout|1 hour|7 days|7 days|
+    |CPU|1 core|256 cores|*Project limits*|
+    |Memory|8GiB for CPU and CPU+ nodes<br>4GiB for GPU and GPU+ nodes|-|*Project limits*|
+    |GPU\*|0|1|*Project limits*|
+    |Concurrent Jobs|-|-|-|
+    
+    *\*only for “gpu” partition*
+
+
 ### Quality of Service (QOS)
 
 QOS can be specified with with each job submission using the `--qos` parameter. They are defined by administrators in the Slurm database and can be shows on a system using the following command:
