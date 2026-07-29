@@ -1,6 +1,9 @@
 nav: 
   - Welcome: index.md
-  - Clusters: clusters 
+  - Clusters: 
+    - clusters/lochan.md
+    - clusters/gespetrarch.md
+    - clusters/mars.md
   - account-registration.md
   - quickstart.md
   - Tutorials: tutorials
