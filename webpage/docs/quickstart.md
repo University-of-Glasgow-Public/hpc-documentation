@@ -345,7 +345,7 @@ To see the partition configuration of the HPC you are using run this command:
 A specific partition can be requested, by specifying it with the `--partition` parameter for all Slurm submission commands. Example:
 
 ```
-srun --account=none --partition=cpu --pty bash
+srun --partition=cpu --pty bash
 ```
 
 === "Lochan"
