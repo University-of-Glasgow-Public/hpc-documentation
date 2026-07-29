@@ -462,8 +462,6 @@ The QOS associated with a job will affect the job in three key ways: scheduling 
     In some cases software installed will have to be restricted due to license concerns. You will have to contact the admin team via Ivanti to get access to these software. These software include:
     
     - Matlab
-    - NVIDIA HPC SDK
-    - Intel oneAPI
 
 === "GES-Petrarch"
 
