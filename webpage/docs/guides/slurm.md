@@ -44,7 +44,7 @@ load <resource>
 ## Interactive Job
 Interactive jobs are great to install software, prepare your environment or debug your script. For any serious or larger work, please use batch jobs.
 
-Get an allocation with `srun` and open an interactive bash shell with the parameter `--pty bash`. You can use any other [slurm parameters](../references/slurm-parameters.md), to define your allocation, but this parameter has to be the last one. If you require access to a GUI, you can use the `--x11` parameter.
+Get an allocation with `srun` and open an interactive bash shell with the parameter `--pty bash`. You can use any other [slurm parameters](../references/slurm-parameters.md), to define your allocation, but this parameter has to be the last one. 
 
 ```
 srun <slurm_parameters> --pty bash
@@ -56,33 +56,41 @@ If due to a network issue you lose access to this console, there is no way to ge
 
 ### Interactive GUI Job
 
+If you intend to use a application with a GUI on a HPC cluster, you can still do this using Slurm.
+
 === "Lochan"
 
-    These configs do not apply for this system as of now.
+    To use any GUI application with an interactive session, just add the parameter `--x11` to your submission.
+
+    ```
+    srun --x11 --pty bash
+    ```
 
 === "GES-Petrarch"
 
-    These configs do not apply for this system as of now.
+    To use any GUI application with an interactive session, just add the parameter `--x11` to your submission.
+
+    ```
+    srun --x11 --pty bash
+    ```
 
 === "MARS"
-
-    If you intend to use a application with a GUI on MARS, you can still do this using Slurm.
-    
-    At first you’ll need a [Flight Desktop session](https://hpc.gla.ac.uk/tutorials/flight-desktop/).
+ 
+    At first you’ll need a [Flight Desktop session](alces-flight.md#flight-desktop).
     
     ![MARS Flight Desktop](assets/slurm-interactive-gui-job_open-console-1536x763.png)
     
     You want to open up a console. In the top left of your desktop press “Applications”. And then go to “System Tools” and choose “Terminal”
     
-    In the console that opens you can then start your interactive GUI job. For this you can use the srun-x11 utility. The syntax and parameters are the same as srun, so you can specify the jobs to your needs.
+    In the console that opens you can then start your interactive GUI job. For this you can use the `srun-x11` utility. The syntax and parameters are the same as `srun`, so you can specify the jobs to your needs.
     
     ```
     srun-x11 --account=none --cpus-per-task=4 --mem=8G --time=03:00:00
     ```
     
-    The command you copied gives you a session with 4 CPU cores and 8GB of memory for 3 hours and will be accounted to no project. The parameters are the same like any other job, and can be adjusted to your needs. More information on that here [Slurm Settings](https://hpc.gla.ac.uk/references/slurm-parameters/).
+    The command above gives you a session with 4 CPU cores and 8GB of memory for 3 hours and will be accounted to no project. The parameters are the same like any other job, and can be adjusted to your needs. More information on that here [Slurm Settings](../references/slurm-parameters.md).
     
-    You can tell that you have been connected to a compute node by the change in your console prompt, here from login2 to node01:
+    You can tell that you have been connected to a compute node by the change in your console prompt, here from `login2` to `node01`:
     
     ```
     [<GUID>@login2 [mars] ~]$ srun-x11 --account=none --cpus-per-task=4 --mem=8G --time=03:00:00
@@ -91,8 +99,6 @@ If due to a network issue you lose access to this console, there is no way to ge
     ```
     
     From here you can start your GUI applications. As a test you can try running `xeyes`.
-
-
 
 ## Batch Job Submission
 Batch job submission is the way the cluster is ideally used. You use a "Submission Script" to submit your work to the cluster. This script is usually a `bash` script containing your job specification, environment setup and then your work. Example scripts can  be found here [Submission Script Templates](../references/submission-script-templates.md).
@@ -198,48 +204,3 @@ $ sacct -X -o Timelimit,Elapsed -j <JobID>
 ```
 
 There is no easy way to get GPU efficiency, but generally speaking if you don’t need GPU, don’t request it.
-
-
-## Default and Maximum Values
-
-To ensure fair use of the system and to facilitate its maintenance, the scheduler is set up to have default and maximum values applied to submitted jobs. We might adjust these values in the future to align with the load and usage of the system.
-
-=== "Lochan"
-
-    |Resource|Default|Maximum|
-    |---|---|---|
-    |Timeout|1 hour|7 days|
-    |CPU|1 core|256 cores|
-    |Memory|4 GB per core|-|
-    |GPU\*|1|-|
-
-    *\*only for “gpu” partition*
-
-=== "GES-Petrarch"
-
-    More info is coming soon.
-
-=== "MARS"
-
-    |||||
-    |---|---|---|---|
-    |**Resource**|**Default**|**Max Single User**|**Max Project User**|
-    |**Timeout**|1 hour|7 days|7 days|
-    |**CPU**|1 core|256 cores|*Project limits*|
-    |**Memory**|8GiB for CPU and CPU+ nodes<br>4GiB for GPU and GPU+ nodes|-|*Project limits*|
-    |**GPU**\*|0|1|*Project limits*|
-    |**Concurrent Jobs**|-|-|-|
-    
-    *\*only for “gpu” partition*
-
-### Default
-
-The default values are applied to your Slurm job when alternative values are not specified within the submission. Values can be given either through the script or on the command line. For more information on how to set resource values see [Slurm Settings](https://hpc.gla.ac.uk/references/slurm-parameters/).
-
-### Max Single User
-
-The maximum values for single users are enforced when the job’s usage is not charged to a Slurm project. The values are defined to allow users to adequately test the platform for their work, before committing to a [project](https://hpc.gla.ac.uk/policies/mars/mars-projects).
-
-### Max Project User
-
-The maximum values for project users are enforced when a job is charged to with any project within Slurm. The maximum value varies from project to project and is based on the resource allocations that were approved on creation of the project. If you have prematurely consumed your project’s resources, feel free to get in [contact with us!](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945)
