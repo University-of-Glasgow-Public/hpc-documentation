@@ -6,22 +6,24 @@ Please pay attention to use the right version needed! Dependency to other module
 
 Loading modules with differing GCC versions as dependency could cause problems. Please make sure to use module purge in between working with modules with differing GCC dependencies.
 
-If you need to use a lot of packages with differing GCC versions, you might want to switch to using a conda environment or Apptainer containers instead.
+If you need to use a lot of packages with differing GCC versions, you might want to switch to using [Conda](conda.md) or [Apptainer](apptainer.md) containers instead.
 
-For usage information run the following command after loading the module:
+For usage information run the following command:
 
-`gcc --help`
+```
+gcc --help
+```
 
 ## Example
 
-My source code is written in C below and saved to a file called helloMARS.c:
+My source code is written in C below and saved to a file called helloHPC.c:
 
 ```
 #include <stdio.h>
 
 int main (void)
 {
-        printf ("I used GCC version %d.%d to compile this on MARS!\n", __GNUC__, __GNUC_MINOR__);
+        printf ("I used GCC version %d.%d to compile this on HPC!\n", __GNUC__, __GNUC_MINOR__);
         return 0;
 }
 ```
@@ -35,14 +37,14 @@ module load compilers/gcc/13.1.0
 I can now compile my program:
 
 ```
-gcc helloMARS.c -o hello_mars
+gcc helloHPC.c -o hello_hpc
 ```
 
 Now I can run my created executable:
 
 ```
-$ ./hello_mars
-I used GCC version 13.1 to compile this on MARS!
+$ ./hello_hpc
+I used GCC version 13.1 to compile this on HPC!
 ```
 
 ## External Resources

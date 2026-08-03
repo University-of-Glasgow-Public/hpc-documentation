@@ -1,5 +1,5 @@
 # Quickstart
-This manual will give you all the information you need to use a HPC cluster. You can find more guides in the additional content after this page, you will find more specialised guides, tutorial and references.
+This manual will give you all the information you need to use a HPC cluster. In the additional content after this page, you will find more specialised guides, tutorial and references.
 
 ## Introduction
 HPC stands for High Performance Computing. Commonly this refers to a cluster of servers with resources shared by multiple people. To manage resource allocation a scheduler is used that, based on your definitions, creates an isolated work environment to run code. As the resource is shared and not always available, jobs can be queued for a while before they are run by the scheduler. No instant access to resources is guaranteed.
@@ -99,7 +99,7 @@ All storage available is to be used for the duration of your work. It is not exp
 
 We recognise this is an issue for many schools and it is on the radar as a future area that requires attention. 
 
-You can use [Rclone](https://hpc.gla.ac.uk/guides/rclone/) to manage your data.
+You can use [Rclone](guides/rclone.md) to manage your data.
 
 
 ### Storage Spaces
@@ -118,14 +118,18 @@ You can use [Rclone](https://hpc.gla.ac.uk/guides/rclone/) to manage your data.
     |**Size**|100G (quota per user)|
     |**Path**|`/mnt/home/<GUID>`|
     |**Use**|Set up your environments and store all the scripts and data you need for your personal use.|
+    |**Clean-up**|N/A|
+    |**Backup**|Limited backups of home storage is available, please contact via Ivanti Support Request.|
 
     **Shared User Scratch**
 
     |||
     |---|---|
-    |**Size**|280Tb (shared between all cluster users)|
-    |**Path**|`~/sharedscratch` or `/mnt/scratch/users/<GUID>`|
+    |**Size**|240Tb (shared between all cluster users)|
+    |**Path**|`~/sharedscratch` or `/mnt/scratch/<GUID>`|
     |**Use**|This storage is shared between all nodes. Read and write data that you need during your jobs. Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!|
+    |**Clean-up**|Files not accessed for longer than 2 weeks will be automatically deleted.|
+    |**Backup**|N/A|
 
 === "GES-Petrarch"
 
@@ -140,6 +144,8 @@ You can use [Rclone](https://hpc.gla.ac.uk/guides/rclone/) to manage your data.
     |**Size**|100G (quota per user)|
     |**Path**|`/mnt/home/<GUID>`|
     |**Use**|Set up your environments and store all the scripts and data you need for your personal use.|
+    |**Clean-up**|N/A|
+    |**Backup**|Limited backups of home storage is available, please contact via Ivanti Support Request.|
 
     **Shared User Scratch**
 
@@ -148,20 +154,24 @@ You can use [Rclone](https://hpc.gla.ac.uk/guides/rclone/) to manage your data.
     |**Size**|40Tb (shared between all cluster users)|
     |**Path**|`~/sharedscratch` or `/mnt/shared-scratch/<GUID>`|
     |**Use**|This storage is shared between all nodes. Save and write data that you need between your parallel and array jobs that run on multiple nodes simultaneously. Also, if Local Node Scratch is not sufficient, use this instead, as it has a larger capacity.|
+    |**Clean-up**|Files not accessed for longer than 4 weeks will be automatically deleted.|
+    |**Backup**|N/A|
 
     **Local Node Scratch**
 
     |||
     |---|---|
-    |**Path***|`~/localscratch`|
-    |**Use**|Data Processing. All nodes have a scratch storage space that is dedicated to that node and not shared with others. We recommend running your jobs here, if they only run on one node, especially if they are read/write intensive. Don’t forget to move your data to a shared storage within your job, after you are done processing! Data left unused on these storage spaces will be deleted after 2 weeks!|
+    |**Path**|`~/localscratch` of `/tmp/local-scratch/<GUID>`|
+    |**Use**|All nodes have a scratch storage space that is dedicated to that node and not shared with others. We recommend running your jobs here, if they only run on one node, especially if they are read/write intensive. Don’t forget to move your data to a shared storage within your job, after you are done processing!|
+    |**Clean-up**|Files not accessed for longer than 2 weeks will be automatically deleted.|
+    |**Backup**|N/A|
 
 
 === "MARS"
 
     !!! warning
 
-        **This is not a trusted research environment**, therefore all research data must be anonymised prior to transferring it onto the system. More information on the can be found here [Research Data on MARS: What to Know](https://hpc.gla.ac.uk/policies/mars/research-data/).
+        **This is not a trusted research environment**, therefore all research data must be anonymised prior to transferring it onto the system. More information on the can be found here [Research Data on MARS: What to Know](policies/mars/research-data.md).
 
 
 
@@ -172,6 +182,8 @@ You can use [Rclone](https://hpc.gla.ac.uk/guides/rclone/) to manage your data.
     |**Size**|40Gb (quota per user)|
     |**Path**|`/users/<GUID>`|
     |**Use**|**Data Storing**<br>Set up your environments and store all the scripts and data you need for your personal use.|
+    |**Clean-up**|N/A|
+    |**Backup**|N/A|
     
     
     **Project Storage**
@@ -180,7 +192,9 @@ You can use [Rclone](https://hpc.gla.ac.uk/guides/rclone/) to manage your data.
     |---|---|
     |**Size**|As requested in application (2.6Pb in total)|
     |**Path**|`/mnt/data/project<ProjectNumber>`|
-    |**Use**|**Data Storing**<br>Save scripts and data you and the colleagues in your project use together. Each project is assigned dedicated space. The size of this space is dependent on what was requested in the original Project application, but can be extended on request. You will be told the <ProjectNumber> when the project has been created on MARS.|
+    |**Use**|**Data Storing**<br>Save scripts and data you and the colleagues in your project use together. Each project is assigned dedicated space. The size of this space is dependent on what was requested in the original Project application, but can be extended on request. You will be told the "ProjectNumber" when the project has been created on MARS.|
+    |**Clean-up**|N/A|
+    |**Backup**|N/A|
     
     
     **Shared User Scratch**
@@ -190,6 +204,8 @@ You can use [Rclone](https://hpc.gla.ac.uk/guides/rclone/) to manage your data.
     |**Size**|~180Tb (shared between all cluster users)|
     |**Path**|`~/sharedscratch` or `/mnt/scratch/users/<GUID>`|
     |**Use**|**Data Processing**<br>This storage is shared between all nodes. Read and write data that you need during your jobs.<br>Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!|
+    |**Clean-up**|Unused data may be deleted at any time by an administrator.|
+    |**Backup**|N/A|
     
     
     **Local Node Scratch**
@@ -198,19 +214,18 @@ You can use [Rclone](https://hpc.gla.ac.uk/guides/rclone/) to manage your data.
     |---|---|
     |**Size**|Varies depending on the node type (shared between all node users):<br>CPU Nodes: 400Gb<br>CPU+ Nodes: 400Gb<br>GPU Nodes:  700Gb<br>GPU+ Nodes: 1.7Tb|
     |**Path**|`~/localscratch` or `/tmp/users/<GUID>`|
-    |**Use**|**Data Processing**<br>This storage is local to the node and can’t be accessed outside of it. Read and write here for the best possible storage performance. If you drop files into the localscratch of the login node it won’t be available to you on the compute nodes, so the moving of data has to be part of your workflow /submission script.<br>Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!|
+    |**Use**|**Data Processing**<br>This storage is local to the node and can’t be accessed outside of it. Read and write here for the best possible storage performance. If you drop files into the localscratch of the login node it won’t be available to you on the compute nodes, so the moving of data has to be part of your workflow / submission script.<br>Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!|
+    |**Clean-up**|Unused data may be deleted at any time by an administrator.|
+    |**Backup**|N/A|
     
-
-
-### Storage Quotas
+#### Storage Quotas
 
 There are quotas set up across the cluster for different filesystems / shares. A quota means you are unable to write data after that quota is reached. These quotas are set up, to prevent users from using the cluster as data storage. The cluster should only be used to process data, any results or unused data should be moved off, after a job has finished running. The login node and all compute nodes, can connect to other campus systems or the internet, to perform data transfers.
 
 === "Lochan"
 
-    |||||
+    |Name|Path|Soft Limit|Hard Limit|
     |---|---|---|---|
-    |**Name**|**Path**|**Soft Limit**|**Hard Limit**|
     |User Home|/mnt/home|100GiB|120GiB|
 
 
@@ -219,159 +234,30 @@ There are quotas set up across the cluster for different filesystems / shares. A
 
     **Filesystem Quotas**
 
-    ||||||
+    |Name|Path|Soft Limit|Hard Limit|Grace Period|
     |---|---|---|---|---|
-    |**Name**|**Path**|**Soft Limit**|**Hard Limit**|**Grace Period**|
     |User Home|/mnt/home|100GiB|120GiB|7 days|
-    |Shared Scratch|/mnt/shared-scratch or ~/sharedscratch|2000GiB|2100GiB|7 days|
+    |Shared Scratch|/mnt/shared-scratch|2000GiB|2100GiB|7 days|
 
 
 === "MARS"
 
-    |||||
+    |Name|Path|Soft Limit|Hard Limit|
     |---|---|---|---|
-    |**Name**|**Path**|**Soft Limit**|**Hard Limit**|
     |User Home|/users|40GiB|50GiB|
 
 
-We also set up the clean-up scratch as:
+If you are over your quota's hard limit or past your grace period exceeding the soft limit you will get the following errors when working on the system: `Disk quota exceeded`
 
-=== "Lochan"
-    
-    |||
-    |---|---|
-    |**Filesystem**|**Retention Time**|
-    |/mnt/scratch|2 weeks|
+In addition, when logging into the login node, you should get a warning in the console
 
-=== "GES-Petrarch"
-
-    ||||
-    |---|---|---|
-    |**Filesystem**|**Retention Time**|**Note**|
-    |/tmp/local-scratch|2 weeks|Exceptions Sebastian: 2 months, Todd: 2 months|
-    |/mnt/shared-scratch|4 weeks||
-
-=== "MARS"
-
-    More info is coming soon.
-
- 
-**Quota Terminology**
-
-|||
-|---|---|
-|**Term**|**Explanation**|
-|**Soft Limit**|•	Users are still able to use the system normally and write files until either the Grace period runs out or they reach the hard limit, whichever comes first.<br>•	Referred to as "quota" in the quota command output.|
-|**Hard Limit**|•	When reached users won't be able to further write files. <br>•	Referred to as "limit" in the quota command output.|
-|**Grace Period**|Time until the user's quota turns from a soft limit to a hard limit. You have to act during this period on reducing your quota to be lower than the soft limit again to avoid any issues logging into or using the system.|
-
-
-**Quota Warning**
-
-If you are over your quota's hard limit or past your grace period exceeding the soft limit you will get the following errors when working on the system:
-`Disk quota exceeded`
-In addition, when logging into the login node, you should get a warning, that looks something like this:
-```
---------- Warning: Quota violation! ---------
-You are violating the following quotas:
-In block grace period on /mnt/shared-scratch
-Block limit reached on /mnt/home
- 
-use command "quota -s" for more information
----------------------------------------------
-[<GUID>@headnode01 ~]$
-```
-
-In block grace period... --> Quota is reached and grace period has started
-
-Block limit reached... --> Limit (hard) is reached
-
-
-**Analyse your storage usage**
-
-To see if or how close you are to reaching your quota, you can use the following command on the login node:
-
-```
-[<GUID>@headnode01 ~]$ quota -s
-[<GUID>@headnode01 ~]$ quota -s
-Disk quotas for user <GUID> (uid <UID>):
-     Filesystem   space   quota   limit   grace   files   quota   limit   grace
-10.3.95.31:/exports/home
-                  8280K    100G    120G            1775       0       0
-10.3.95.31:/exports/scratch
-                   291G    500G    550G              16       0       0
-
-```
-In the first column "Filesystem" you see the name of the filesystem. Since it is a mounted share, you will see the mount information. If you want to see which local filesystem this equates to, you can add the --show-mntpoint parameter.
- 
-The second column "space" shows the currently used space on the filesystem by your user. This will give you an idea of how close you are to reaching either your quota or your limit. If you are over your quota, you will see an asterisk "*" next to the number too.
- 
-The sixth column "files" shows you the number of files on the filesystem. This currently does not matter, as file count quotas are not set up. You can tell by the last three columns being either empty or set to 0.
- 
-If you have an elaborate directory structure and you are unsure where the bulk of your data is the command du (from disk usage) can help you narrow that down. Here a couple of helpful commands:
- 
-Show size of all subdirectories in a directory:
-
-```
-[<GUID>@headnode01 ~]$ du -h -d 1  ~/sharedscratch/
-121G    /mnt/home/<GUID>/sharedscratch/catPictures
-111G    /mnt/home/<GUID>/sharedscratch/mydata
-61G     /mnt/home/<GUID>/sharedscratch/myResults
-291G    /mnt/home/<GUID>/sharedscratch/
-```
-
-Show all directories and files over 50GiB throughout a whole filesystem:
-```
-[<GUID>@headnode01 ~]$ du -h -t 50G -a ~/sharedscratch/
-121G    /mnt/home/<GUID>/sharedscratch/catPictures/file
-121G    /mnt/home/<GUID>/sharedscratch/catPictures
-76G     /mnt/home/<GUID>/sharedscratch/mydata/dataset1
-111G    /mnt/home/<GUID>/sharedscratch/mydata
-61G     /mnt/home/<GUID>/sharedscratch/myResults/file1
-61G     /mnt/home/<GUID>/sharedscratch/myResults
-291G    /mnt/home/<GUID>/sharedscratch/
-```
-
-For both of these command you can pipe the result to sort –h to sort them by size. To reverse this sort also use the -r parameter:
-```
-[<GUID>@headnode01 ~]$ du -h -d 1  ~/sharedscratch/ | sort -h
-61G     /mnt/home/<GUID>/sharedscratch/myResults
-111G    /mnt/home/<GUID>/sharedscratch/mydata
-121G    /mnt/home/<GUID>/sharedscratch/catPictures
-291G    /mnt/home/<GUID>/sharedscratch/
-```
-
-### Data Backup
-Below are the types of data found on the cluster filesystems, with information if they are backed up, where they are not backed up, a comment explains why.
-The backups are done using the Rubrik backup system, managed by Central IT. 
-
-=== "Lochan"
-
-    More info is coming soon.
-
-
-=== "GES-Petrarch"
-    ||||||
-    |---|---|---|---|---|
-    |**Name**|**Path**|**Owner**|**Backed-up**|**Comment**|
-    |Homes|/exports/home|Individual user|Yes||
-    |Software Catalogue|/exports/software|Administrators|Yes||
-    |Shared-Scratch|/exports/scratch|Individual user|No|Data is not meant to be persistent|
-    |Local-Scratch|/tmp/local-scratch|Individual user|No|Data is not meant to be persistent|
-
-
-=== "MARS"
-
-    While there is significant redundancy in the hardware, there is no backup.
-
+More information on quotas can be found here [Quota](guides/quota.md)
 
 ### Data Transfer
-To transfer data from your local machine (or another system), you can use `SSH`. You can do this either with:
+To transfer data from your local machine (or another system), you have different options:
 
-#### SFTP ####
+#### SFTP 
 Secure File Transfer Protocol (SFTP) is a protocol to transfer data between systems using SSH. There are multiple ways to make use of the protocol:
-
-**Terminal**
 
 If installed, you can use sftp from a command prompt on your personal device:
 
@@ -380,14 +266,12 @@ sftp <guid>@<hostname>
 ```
 After connecting you can use sftp commands in your interactive sessions. More information on that here: [SFTP Manual](https://linux.die.net/man/1/sftp)
 
-**GUI Application**
-
-Other GUI clients of your choice will also work, for example [WinSCP](https://winscp.net). Use the connection details of the login node, mentioned above to connect.
+There are also easy GUI applications, for example [WinSCP](https://winscp.net). Use the connection details of the login node, mentioned above to connect.
 
 You can also use your SSH key to authenticate. More information: [SSH key authentication](https://hpc.gla.ac.uk/guides/ssh-key-auth/) or you can find more info in the manual for the specific software you are using.
 
 
-#### SCP ####
+#### SCP
 
 Use scp (secure copy) to easily copy data between two systems via your console.
 
@@ -405,21 +289,22 @@ scp -i <mykeyfile.pem> <source file> <guid>@<hostname>:<target file>
 - replace `<targetfile>` with the path/name of where you want the file to go on the target device.
 
 
-#### Cloud Storage ####
+#### Cloud Storage
 
 If you need to access cloud storage from the system directly, you can make use of `rclone`. More information can be found in our software manual: [Rclone](https://hpc.gla.ac.uk/guides/rclone/).
 
 
-#### Web File Manager ####
+#### Web File Manager
 
 For certain systems that are managed by Alces [web file access and management can be used](https://hpc.gla.ac.uk/tutorials/web-file-manager).
 
 ---
 
 ## Scheduler
-The scheduler used is **Slurm Workload Manager**, developed by SchedMD. Slurm has a very in depth documentation themselves, which could be useful to read through, for a more in depth understanding of how this software works [Quick Start User Guide](https://slurm.schedmd.com/quickstart.html). 
+The scheduler used is **Slurm Workload Manager**, developed by SchedMD. Slurm has a very in depth documentation themselves, which could be useful to read through, for a more in depth understanding of how this software works [Quick Start User Guide](https://slurm.schedmd.com/quickstart.html). We also have the following two resources which could be useful if you need more help using Slurm:
 
-The information here describes configurations you will need to know to use the specific cluster.
+- [Slurm Tutorial](tutorials/slurm-101.md): A tutorial to work though and learn what job scheduling can.
+- [Slurm Guide](guides/slurm.md): Page explaining different Slurm utilities and how to use them.
 
 ### Resources
 Compute servers - also referred to as nodes - can carry different resource configurations to fit different workloads. For example, some servers might offer high amount of CPU, while others offer GPU resource.
@@ -460,7 +345,7 @@ To see the partition configuration of the HPC you are using run this command:
 A specific partition can be requested, by specifying it with the `--partition` parameter for all Slurm submission commands. Example:
 
 ```
-srun --account=none --partition=cpu --pty bash
+srun --partition=cpu --pty bash
 ```
 
 === "Lochan"
@@ -490,6 +375,43 @@ srun --account=none --partition=cpu --pty bash
     |short|This partition is intended to be used for short CPU based jobs and interactive sessions. This allows users to always have resource available for installations or tests, even when the cluster is full of long running jobs. The partition uses the CPU capacity of GPU nodes, which is usually not in high use.<br>The partition has a max runtime of 2h and can only use up to 48 CPUs per server, to prevent blocking of GPU jobs. A singe user can not request more than 256 CPUs in this partition. GPU resources can not be requested in this partition.|2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>256Gb RAM<br>Nvidia A40 (48GB)|20|gpu[01-20]|
     |gpu|GPU Nodes (A40)<br>This partition is intended to be used for GPU jobs.<br>The partition has a higher priority, so jobs in the short partition don’t prevent people from using GPUs. The partition can not be used without a GPU allocation `(--gres=gpu:1)`.|2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>256Gb RAM<br>Nvidia A40 (48GB)|20|gpu[01-20]|
     |gpuplus|GPU+ Nodes (A100)<br>This partition is intended to be used for heavy GPU jobs. The partition is not available to all users of the cluster, as the resource is scarce.<br>The partition can only be used as part of a project with GPU+ permission. Please specify the need for these resources in your [project application](https://hpc.gla.ac.uk/policies/mars/mars-projects).|2x AMD 7763 Processors @2.8Ghz<br>64 cores each CPU<br>512Gb RAM<br>Nvidia HGX – 4x A100 GPU (80GB)|4|gpu[101-104]|
+
+### Default and Maximum Values
+
+To ensure fair use of the system and to facilitate its maintenance, the scheduler is set up to have default and maximum values applied to submitted jobs. We might adjust these values in the future to align with the load and usage of the system.
+
+=== "Lochan"
+
+    |Resource|Default|Maximum|
+    |---|---|---|
+    |Timeout|1 hour|7 days|
+    |CPU|1 core|-|
+    |Memory|4 GB per core|-|
+    |GPU\*|1|-|
+
+    *\*only for “gpu” partition*
+
+=== "GES-Petrarch"
+
+    |Resource|Default|Maximum|
+    |---|---|---|
+    |Timeout|14 days|14 days|
+    |CPU|1 core|-|
+    |Memory|1 GB per core|-|
+
+
+=== "MARS"
+
+    |Resource|Default|Max Single User|Max Project User|
+    |---|---|---|---|
+    |Timeout|1 hour|7 days|7 days|
+    |CPU|1 core|256 cores|*Project limits*|
+    |Memory|8GiB for CPU and CPU+ nodes<br>4GiB for GPU and GPU+ nodes|-|*Project limits*|
+    |GPU\*|0|1|*Project limits*|
+    |Concurrent Jobs|-|-|-|
+    
+    *\*only for “gpu” partition*
+
 
 ### Quality of Service (QOS)
 
@@ -540,8 +462,6 @@ The QOS associated with a job will affect the job in three key ways: scheduling 
     In some cases software installed will have to be restricted due to license concerns. You will have to contact the admin team via Ivanti to get access to these software. These software include:
     
     - Matlab
-    - NVIDIA HPC SDK
-    - Intel oneAPI
 
 === "GES-Petrarch"
 
@@ -550,19 +470,20 @@ The QOS associated with a job will affect the job in three key ways: scheduling 
 
 === "MARS"
 
-    MARS uses a modular software control system to store and enable applications and tools. This means that we can install multiple versions of the same software and have these work independently for different users. All software currently available on MARS can be listed, loaded, and unloaded, by using the command module.
+    MARS uses a modular software control system to store and enable applications and tools. This means that we can install multiple versions of the same software and have these work independently for different users. All software currently available on MARS can be listed, loaded, and unloaded, by using the command `module`.
 
-    Below a list with all available [Modules](https://hpc.gla.ac.uk/guides/modules/) on MARS. This list is growing, as we keep installing software our users need for their work on the cluster. Don’t see the software you need? Don’t hesitate to get in contact with us!
+    Below a list with all available [Modules](guides/modules.md) on MARS. This list is growing, as we keep installing software our users need for their work on the cluster. Don’t see the software you need? Don’t hesitate to get in contact with us!
 
-    Modules marked with a * are restricted modules. To gain access, please [contact us!](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945)
+    Modules marked with a * are restricted modules. To gain access, please contact us via Ivanti Support Request.
 
     To load a Module on MARS use the following syntax:
+    
+    ```
+    module load <module-type>/<module-name>/<module-version>`
+    ```
 
-    `module load <module-type>/<module-name>/<module-version>`
-
-    ||||
+    |Module Type|Module Name|Module Version|
     |---|---|---|
-    |**Module Type**|**Module Name**|**Module Version**|
     |apps|alphafold*|3.0.1|
     |apps|apptainer|1.3.4|
     |apps|dmtcp|3.1.2|
@@ -580,10 +501,6 @@ The QOS associated with a job will affect the job in three key ways: scheduling 
     |libs|gcc|8.5.0,|14.2.0|
     |libs|openblas|0.3.28|
     |mpi|openmpi|5.0.5|
-
-
-For more and advanced information on Environment Modules, see the [official documentation](https://modules.readthedocs.io/en/latest/).
-
 
 ### Environment Modules
 This is software that is centrally installed and can be used across the cluster. The full manual of `modules` can be found [here](https://modules.readthedocs.io/en/latest/) or check our [guide](https://hpc.gla.ac.uk/guides/modules/).
