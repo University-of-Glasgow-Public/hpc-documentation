@@ -332,13 +332,14 @@ Compute servers - also referred to as nodes - can carry different resource confi
     Lochan is very heterogeneous, meaning it is comprised of a vast variety of hardware! You can  get an overview of all servers and their available resources by running the command below on  the system:
 
     ```
-    sinfo -o "%20n %10c %20m %30G"
+    sinfo -o "%20n %10c %15m %15d %30G"
     ```
 
     ??? info "Explanation of command output"
 
         - **CPUS:** Number of CPUs available on the node.
-        - **MEMORY:** Amount of memory / RAM available on the node in MB.
+        - **MEMORY:** Amount of memory / RAM available on the node in MiB.
+        - **TMP_DISK:** Available localscratch on node in MiB.
         - **GRES:** GPU resources available on the node. `gpu:<type>:<amount>`.
 
 === "GES-Petrarch"
