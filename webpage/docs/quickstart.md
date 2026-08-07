@@ -131,6 +131,24 @@ You can use [Rclone](guides/rclone.md) to manage your data.
     |**Clean-up**|Files not accessed for longer than 2 weeks will be automatically deleted.|
     |**Backup**|N/A|
 
+    **Localscratch**
+
+    As the cluster is very heterogeneous, the localscratch also varies between nodes. To get an overview how much is available on each node, see the output of the command below. The value for `TMP_DISK` is in MiB.
+
+    ```
+    sinfo show node -O nodehost,disk
+    ``` 
+
+    To ensure you get a node with enough localscratch, use the `--tmp` parameter in your Slurm submission!
+
+    |||
+    |---|---|
+    |**Size**|Up to ~5Tb per node|
+    |**Path**|`~/localscratch` or `/tmp/localscratch/<GUID>`|
+    |**Use**|All nodes have a scratch storage space that is dedicated to that node and not shared with others. We recommend running your jobs here, if they only run on one node, especially if they are read/write intensive. Don’t forget to move your data to a shared storage within your job, after you are done processing!|
+    |**Clean-up**|Files left abandoned after a job has finished, may be deleted by administrators.|
+    |**Backup**|N/A|
+
 === "GES-Petrarch"
 
     !!! warning
@@ -314,13 +332,14 @@ Compute servers - also referred to as nodes - can carry different resource confi
     Lochan is very heterogeneous, meaning it is comprised of a vast variety of hardware! You can  get an overview of all servers and their available resources by running the command below on  the system:
 
     ```
-    sinfo -o "%20n %10c %20m %30G"
+    sinfo -o "%20n %10c %15m %15d %30G"
     ```
 
     ??? info "Explanation of command output"
 
         - **CPUS:** Number of CPUs available on the node.
-        - **MEMORY:** Amount of memory / RAM available on the node in MB.
+        - **MEMORY:** Amount of memory / RAM available on the node in MiB.
+        - **TMP_DISK:** Available localscratch on node in MiB.
         - **GRES:** GPU resources available on the node. `gpu:<type>:<amount>`.
 
 === "GES-Petrarch"
