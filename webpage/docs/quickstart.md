@@ -316,6 +316,40 @@ If you need to access cloud storage from the system directly, you can make use o
 
 For certain systems that are managed by Alces [web file access and management can be used](https://hpc.gla.ac.uk/tutorials/web-file-manager).
 
+### Datasets
+
+=== "Lochan"
+
+    *There are currently no managed data sets on Lochan*
+
+
+=== "GES-Petrarch"
+
+    *There are currently no managed data sets on GES-Petrarch*
+
+
+=== "MARS"
+
+    **Blast `nr` database**
+
+    |||
+    |---|---|
+    |Path|`/mnt/data/datasets/blast/nr/latest` or<br>`/mnt/data/datasets/blast/nr/<YYYY-MM-dd>`|
+    |Source|[NCBI](https://ftp.ncbi.nlm.nih.gov/blast/db/)|
+    |Update|Weekly, Saturday 07:00|
+    |Retention|30 days|
+    Description|The most recent version of the "nr" database on MARS can be found in a link called "latest" otherwise the dated versions can be found in the base directory. A new version of the database is downloaded every week on Saturday 07:00, but the download takes hours, and the "latest" link is only updated once the download is complete. Versions older than 30 days will be deleted.| 
+
+    **Blast `nt` database**
+    
+    |||
+    |---|---|
+    |Path|`/mnt/data/datasets/blast/nt/latest` or<br>`/mnt/data/datasets/blast/nt/<YYYY-MM-dd>`|
+    |Source|[NCBI](https://ftp.ncbi.nlm.nih.gov/blast/db/)|
+    |Update|Weekly, Saturday 07:00|
+    |Retention|30 days|
+    Description|The most recent version of the "nt" database on MARS can be found in a link called "latest" otherwise the dated versions can be found in the base directory. A new version of the database is downloaded every week on Saturday 07:00, but the download takes hours, and the "latest" link is only updated once the download is complete. Versions older than 30 days will be deleted.| 
+
 ---
 
 ## Scheduler
