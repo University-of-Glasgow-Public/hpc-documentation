@@ -1,0 +1,3780 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../account-registration/">
+      
+      
+        <link rel="next" href="../tutorials/build-from-source/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Quickstart - UofG HPC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quickstart" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="UofG HPC" class="md-header__button md-logo" aria-label="UofG HPC" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UofG HPC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quickstart
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="UofG HPC" class="md-nav__button md-logo" aria-label="UofG HPC" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    UofG HPC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clusters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Clusters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clusters/lochan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lochan HPC Cluster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clusters/gespetrarch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GES Petrarch HPC Cluster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clusters/mars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MVLS Advanced Research System (MARS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account-registration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting an Account
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-can-hpc-help-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How can HPC help you?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-hpc-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does HPC work?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-the-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access the Cluster
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Access the Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Information
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-via-ssh-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connecting via SSH Command
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Spaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage Spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage-quotas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Quotas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Transfer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Transfer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SFTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-file-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web File Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scheduler
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partitions-queues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partitions / Queues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-and-maximum-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default and Maximum Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-of-service-qos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quality of Service (QOS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Modules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/build-from-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building Software from Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/slurm-101/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slurm for Beginners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/unix-101/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIX for Beginners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/slurm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slurm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/alces-flight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alces Flight
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/apptainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apptainer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/conda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/cuda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nvidia CUDA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/dmtcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DMTCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/gcc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GCC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/gui-apps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GUI / X applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/java/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/juliaup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Juliaup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/jupyter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jupyter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/local-scratch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cluster Local Scratch Use for Jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/matlab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MATLAB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/nvidiasdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nvidia HPC SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/oneapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intel oneAPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/openblas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenBLAS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/openmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Open MPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/parallel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parallel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/python3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/quota/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quota
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/r/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    R
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/rclone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rclone
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/rstudio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RStudio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guides/ssh-key-auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH Key Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    References
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/pbs-2-slurm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PBS to Slurm Cheat Sheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/slurm-parameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slurm Parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/submission-script-templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Submission Script Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Policies
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Policies
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lochan
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lochan
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/lochan/cluster-usage-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lochan: Cluster Usage Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mars
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mars
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/mars/cluster-usage-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MARS Usage Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/mars/governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MARS Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/mars/hpc-etiquette/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HPC Etiquette
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/mars/mars-projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MARS Projects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/mars/research-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Research Data on MARS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/mars/user-eligibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Eligibility and Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/website-privacy-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Website Privacy Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-can-hpc-help-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How can HPC help you?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-hpc-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does HPC work?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-the-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access the Cluster
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Access the Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Information
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-via-ssh-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connecting via SSH Command
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Spaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage Spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage-quotas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Quotas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Transfer
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Transfer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SFTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-file-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web File Manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scheduler
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partitions-queues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partitions / Queues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-and-maximum-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default and Maximum Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-of-service-qos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quality of Service (QOS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Modules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="quickstart">Quickstart<a class="headerlink" href="#quickstart" title="Permanent link">&para;</a></h1>
+<p>This manual will give you all the information you need to use a HPC cluster. In the additional content after this page, you will find more specialised guides, tutorial and references.</p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>HPC stands for High Performance Computing. Commonly this refers to a cluster of servers with resources shared by multiple people. To manage resource allocation a scheduler is used that, based on your definitions, creates an isolated work environment to run code. As the resource is shared and not always available, jobs can be queued for a while before they are run by the scheduler. No instant access to resources is guaranteed.</p>
+<h3 id="how-can-hpc-help-you">How can HPC help you?<a class="headerlink" href="#how-can-hpc-help-you" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Your work has outgrown your personal device's resources.</li>
+<li>Your work runs for hours or days and prevents you from using your personal device for other work.</li>
+<li>You do not have the right resources, like GPU, available to you in your personal device.</li>
+<li>You don't have the resources to acquire an own powerful computer and maintain it.</li>
+</ul>
+<h3 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h3>
+<p>HPC can be built in in different configurations. This configuration is very popular and you will see it in many HPCs:</p>
+<p><img alt="Architecture Diagram" src="../assets/quickstart_imgs/architecture.svg" /></p>
+<p>The HPC is made up of these components:</p>
+<ul>
+<li><strong>Login Node</strong>: This is the system all users interact with. If you want to use any of the other components, it has to be through the login node.</li>
+<li><strong>Scheduler</strong>: This is the brain of the cluster. All your scheduling and status requests from the login node go to this system. </li>
+<li><strong>Compute Servers</strong>: This symbolises all compute servers you could get allocations from through the scheduler. You should not access the servers directly unless you have an allocation. </li>
+<li><strong>Shared Storage</strong>: Most of the storage you interact with on the cluster is shared between the login node and all available compute servers. Therefore you can manage the data you need within your jobs from the login node.</li>
+<li><strong>HPC Network</strong>: The network is shut off from the Campus network and therefore systems within it, will not be accessible to users outside of the login node.</li>
+</ul>
+<h3 id="how-does-hpc-work">How does HPC work?<a class="headerlink" href="#how-does-hpc-work" title="Permanent link">&para;</a></h3>
+<p>You will be submitting "work packages" in form of submission scripts, that define your resource requirement, an educated estimation of how long your job will run, and the workflow you want to run. Your work should run fully autonomous, this means no human interaction like GUI or console inputs. You can also have interactive sessions through HPC, these are useful for environment preparations, tests and debugging, but should be avoided for large production work. </p>
+<p>Your work package will be queued by the scheduler. The scheduler will decide where your job can run, based on your resource requirements described. Multiple jobs can run on one server. If there is enough resource available your job might run right away, otherwise it will be queued and run at a later time. You should be able to provide contact information, and the scheduler will keep you in the loop if your job has started, finished or failed. </p>
+<p><img alt="&quot;How does HPC work?&quot; Diagram" src="../assets/quickstart_imgs/how_does_hpc_work.svg" /></p>
+<p>Scheduling is a complicated matter, and multiple factors play into the priority of your job, however generally, the smaller your job, the faster it will run, so it pays out to be efficient!</p>
+<hr />
+<h2 id="access-the-cluster">Access the Cluster<a class="headerlink" href="#access-the-cluster" title="Permanent link">&para;</a></h2>
+<p>After you got your account, you can log into the login node. The login node is the central point of access to the cluster for all users. This server is not very powerful and should therefore not be used for computational work. Any computational work should go through a job allocation on the scheduler.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You have to be connected to the Campus network either via LAN, <a href="https://www.gla.ac.uk/myglasgow/it/eduroam/">eduroam</a> or <a href="https://www.gla.ac.uk/myglasgow/it/vpn/">VPN</a> to access the cluster.</p>
+</div>
+<h3 id="connection-information">Connection Information<a class="headerlink" href="#connection-information" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Lochan</label><label for="__tabbed_1_2">GES-Petrarch</label><label for="__tabbed_1_3">MARS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>Hostname</strong>: <code>lochan.hpc.gla.ac.uk</code></li>
+<li><strong>Port</strong>: 22</li>
+<li><strong>Username</strong>: <em>University of Glasgow GUID</em></li>
+<li><strong>Password</strong>: <em>GUID Password</em></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Hostname</strong>: <code>petrarch_esd.hpc.gla.ac.uk</code></li>
+<li><strong>Port</strong>: 22</li>
+<li><strong>Username</strong>: <em>University of Glasgow GUID</em></li>
+<li><strong>Password</strong>: <em>On first login provided by Administrator</em></li>
+</ul>
+<p>Please change your password upon first login using the command <code>passwd</code></p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Hostname</strong>: <code>mars-login.ice.gla.ac.uk</code></li>
+<li><strong>Port</strong>: 22</li>
+<li><strong>Username</strong>: <em>University of Glasgow GUID</em></li>
+<li><strong>Password</strong>: <em>The password to your University of Glasgow account</em></li>
+</ul>
+<p><strong>Access through Browser</strong></p>
+<p>You can access the Cluster through the Alces Flight Website. Just open a browser of your choice, for example Chrome, and go to <a href="https://mars-login.ice.gla.ac.uk">https://mars-login.ice.gla.ac.uk</a>.    </p>
+<p>At the top right of the site you will see a log in button. If you already have an account, you can authenticate with your University of Glasgow GUID + Password. </p>
+<p>As described on the site you can access a console, interactive desktop, file manager and job manager from there. More information on the usage of these tools follows soon!</p>
+</div>
+</div>
+</div>
+<p>GUID must be in lowercase ex: 999999x or xx999x</p>
+<p>We recommend setting up SSH key authentication. See <a href="https://hpc.gla.ac.uk/guides/ssh-key-auth/">SSH Key Authentication</a> for help.</p>
+<p>The same information can also be used to log in via SFTP to copy files from your local device onto the system.</p>
+<h3 id="connecting-via-ssh-command">Connecting via SSH Command<a class="headerlink" href="#connecting-via-ssh-command" title="Permanent link">&para;</a></h3>
+<p>You will need to use <code>SSH</code> to connect to the login node and use the HPC. The simplest way to connect is by opening a console or a terminal program and connect using the preinstalled <code>SSH</code> utility of your device (If you are prompted for a password, it will not show up while typing):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh &lt;username&gt;@&lt;hostaname&gt;
+</span></code></pre></div>
+<p>We would recommend you use a SSH GUI client for regular access to the platform, as it allows you to save sessions, and <code>copy+paste</code> more easily. Example software are <a href="https://www.putty.org/">PuTTY</a> and <a href="https://mobaxterm.mobatek.net/">MobaXterm</a>, however you can use whatever you prefer. </p>
+<hr />
+<h2 id="data-management">Data Management<a class="headerlink" href="#data-management" title="Permanent link">&para;</a></h2>
+<p>Data is an important part of HPC. Where and how to store your data is important for efficient usage of the platform. </p>
+<p>All storage available is to be used for the duration of your work. It is not expected to provide long term/primary storage. The data will assumed to be transient with only limited protection. As the HPC is not a primary storage solution, we recommend storing all HPC data you can’t afford to lose in a primary, safe location like a centralised storage system provided by your school or a Team within Microsoft Teams. </p>
+<p>We recognise this is an issue for many schools and it is on the radar as a future area that requires attention. </p>
+<p>You can use <a href="../guides/rclone/">Rclone</a> to manage your data.</p>
+<h3 id="storage-spaces">Storage Spaces<a class="headerlink" href="#storage-spaces" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Lochan</label><label for="__tabbed_2_2">GES-Petrarch</label><label for="__tabbed_2_3">MARS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>This is not a trusted research environment</strong>, therefore all research data must be anonymised prior to transferring it onto the system.</p>
+</div>
+<p><strong>User Home</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Size</strong></td>
+<td>100G (quota per user)</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>/mnt/home/&lt;GUID&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Use</strong></td>
+<td>Set up your environments and store all the scripts and data you need for your personal use.</td>
+</tr>
+<tr>
+<td><strong>Clean-up</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>Limited backups of home storage is available, please contact via Ivanti Support Request.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Shared User Scratch</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Size</strong></td>
+<td>240Tb (shared between all cluster users)</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>~/sharedscratch</code> or <code>/mnt/scratch/&lt;GUID&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Use</strong></td>
+<td>This storage is shared between all nodes. Read and write data that you need during your jobs. Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!</td>
+</tr>
+<tr>
+<td><strong>Clean-up</strong></td>
+<td>Files not accessed for longer than 2 weeks will be automatically deleted.</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Localscratch</strong></p>
+<p>As the cluster is very heterogeneous, the localscratch also varies between nodes. To get an overview how much is available on each node, see the output of the command below. The value for <code>TMP_DISK</code> is in MiB.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sinfo show node -O nodehost,disk
+</span></code></pre></div>
+<p>To ensure you get a node with enough localscratch, use the <code>--tmp</code> parameter in your Slurm submission!</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Size</strong></td>
+<td>Up to ~5Tb per node</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>~/localscratch</code> or <code>/tmp/localscratch/&lt;GUID&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Use</strong></td>
+<td>All nodes have a scratch storage space that is dedicated to that node and not shared with others. We recommend running your jobs here, if they only run on one node, especially if they are read/write intensive. Don’t forget to move your data to a shared storage within your job, after you are done processing!</td>
+</tr>
+<tr>
+<td><strong>Clean-up</strong></td>
+<td>Files left abandoned after a job has finished, may be deleted by administrators.</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>This is not a trusted research environment</strong>, therefore all research data must be anonymised prior to transferring it onto the system.</p>
+</div>
+<p><strong>User Home</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Size</strong></td>
+<td>100G (quota per user)</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>/mnt/home/&lt;GUID&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Use</strong></td>
+<td>Set up your environments and store all the scripts and data you need for your personal use.</td>
+</tr>
+<tr>
+<td><strong>Clean-up</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>Limited backups of home storage is available, please contact via Ivanti Support Request.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Shared User Scratch</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Size</strong></td>
+<td>40Tb (shared between all cluster users)</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>~/sharedscratch</code> or <code>/mnt/shared-scratch/&lt;GUID&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Use</strong></td>
+<td>This storage is shared between all nodes. Save and write data that you need between your parallel and array jobs that run on multiple nodes simultaneously. Also, if Local Node Scratch is not sufficient, use this instead, as it has a larger capacity.</td>
+</tr>
+<tr>
+<td><strong>Clean-up</strong></td>
+<td>Files not accessed for longer than 4 weeks will be automatically deleted.</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Local Node Scratch</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>~/localscratch</code> of <code>/tmp/local-scratch/&lt;GUID&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Use</strong></td>
+<td>All nodes have a scratch storage space that is dedicated to that node and not shared with others. We recommend running your jobs here, if they only run on one node, especially if they are read/write intensive. Don’t forget to move your data to a shared storage within your job, after you are done processing!</td>
+</tr>
+<tr>
+<td><strong>Clean-up</strong></td>
+<td>Files not accessed for longer than 2 weeks will be automatically deleted.</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>This is not a trusted research environment</strong>, therefore all research data must be anonymised prior to transferring it onto the system. More information on the can be found here <a href="../policies/mars/research-data/">Research Data on MARS: What to Know</a>.</p>
+</div>
+<p><strong>Home Storage</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Size</strong></td>
+<td>40Gb (quota per user)</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>/users/&lt;GUID&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Use</strong></td>
+<td><strong>Data Storing</strong><br>Set up your environments and store all the scripts and data you need for your personal use.</td>
+</tr>
+<tr>
+<td><strong>Clean-up</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Project Storage</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Size</strong></td>
+<td>As requested in application (2.6Pb in total)</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>/mnt/data/project&lt;ProjectNumber&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Use</strong></td>
+<td><strong>Data Storing</strong><br>Save scripts and data you and the colleagues in your project use together. Each project is assigned dedicated space. The size of this space is dependent on what was requested in the original Project application, but can be extended on request. You will be told the "ProjectNumber" when the project has been created on MARS.</td>
+</tr>
+<tr>
+<td><strong>Clean-up</strong></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Shared User Scratch</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Size</strong></td>
+<td>~180Tb (shared between all cluster users)</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>~/sharedscratch</code> or <code>/mnt/scratch/users/&lt;GUID&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Use</strong></td>
+<td><strong>Data Processing</strong><br>This storage is shared between all nodes. Read and write data that you need during your jobs.<br>Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!</td>
+</tr>
+<tr>
+<td><strong>Clean-up</strong></td>
+<td>Unused data may be deleted at any time by an administrator.</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Local Node Scratch</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Size</strong></td>
+<td>Varies depending on the node type (shared between all node users):<br>CPU Nodes: 400Gb<br>CPU+ Nodes: 400Gb<br>GPU Nodes:  700Gb<br>GPU+ Nodes: 1.7Tb</td>
+</tr>
+<tr>
+<td><strong>Path</strong></td>
+<td><code>~/localscratch</code> or <code>/tmp/users/&lt;GUID&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Use</strong></td>
+<td><strong>Data Processing</strong><br>This storage is local to the node and can’t be accessed outside of it. Read and write here for the best possible storage performance. If you drop files into the localscratch of the login node it won’t be available to you on the compute nodes, so the moving of data has to be part of your workflow / submission script.<br>Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!</td>
+</tr>
+<tr>
+<td><strong>Clean-up</strong></td>
+<td>Unused data may be deleted at any time by an administrator.</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<h4 id="storage-quotas">Storage Quotas<a class="headerlink" href="#storage-quotas" title="Permanent link">&para;</a></h4>
+<p>There are quotas set up across the cluster for different filesystems / shares. A quota means you are unable to write data after that quota is reached. These quotas are set up, to prevent users from using the cluster as data storage. The cluster should only be used to process data, any results or unused data should be moved off, after a job has finished running. The login node and all compute nodes, can connect to other campus systems or the internet, to perform data transfers.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Lochan</label><label for="__tabbed_3_2">GES-Petrarch</label><label for="__tabbed_3_3">MARS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Path</th>
+<th>Soft Limit</th>
+<th>Hard Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User Home</td>
+<td>/mnt/home</td>
+<td>100GiB</td>
+<td>120GiB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p><strong>Filesystem Quotas</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Path</th>
+<th>Soft Limit</th>
+<th>Hard Limit</th>
+<th>Grace Period</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User Home</td>
+<td>/mnt/home</td>
+<td>100GiB</td>
+<td>120GiB</td>
+<td>7 days</td>
+</tr>
+<tr>
+<td>Shared Scratch</td>
+<td>/mnt/shared-scratch</td>
+<td>2000GiB</td>
+<td>2100GiB</td>
+<td>7 days</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Path</th>
+<th>Soft Limit</th>
+<th>Hard Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User Home</td>
+<td>/users</td>
+<td>40GiB</td>
+<td>50GiB</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>If you are over your quota's hard limit or past your grace period exceeding the soft limit you will get the following errors when working on the system: <code>Disk quota exceeded</code></p>
+<p>In addition, when logging into the login node, you should get a warning in the console</p>
+<p>More information on quotas can be found here <a href="../guides/quota/">Quota</a></p>
+<h3 id="data-transfer">Data Transfer<a class="headerlink" href="#data-transfer" title="Permanent link">&para;</a></h3>
+<p>To transfer data from your local machine (or another system), you have different options:</p>
+<h4 id="sftp">SFTP<a class="headerlink" href="#sftp" title="Permanent link">&para;</a></h4>
+<p>Secure File Transfer Protocol (SFTP) is a protocol to transfer data between systems using SSH. There are multiple ways to make use of the protocol:</p>
+<p>If installed, you can use sftp from a command prompt on your personal device:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sftp &lt;guid&gt;@&lt;hostname&gt;
+</span></code></pre></div>
+After connecting you can use sftp commands in your interactive sessions. More information on that here: <a href="https://linux.die.net/man/1/sftp">SFTP Manual</a></p>
+<p>There are also easy GUI applications, for example <a href="https://winscp.net">WinSCP</a>. Use the connection details of the login node, mentioned above to connect.</p>
+<p>You can also use your SSH key to authenticate. More information: <a href="https://hpc.gla.ac.uk/guides/ssh-key-auth/">SSH key authentication</a> or you can find more info in the manual for the specific software you are using.</p>
+<h4 id="scp">SCP<a class="headerlink" href="#scp" title="Permanent link">&para;</a></h4>
+<p>Use scp (secure copy) to easily copy data between two systems via your console.</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>scp &lt;source file&gt; &lt;guid&gt;@&lt;hostname&gt;:&lt;target file&gt;
+</span></code></pre></div>
+or
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>scp -i &lt;mykeyfile.pem&gt; &lt;source file&gt; &lt;guid&gt;@&lt;hostname&gt;:&lt;target file&gt;
+</span></code></pre></div></p>
+<ul>
+<li>replace <code>&lt;mykeyfile.pem&gt;</code> with the name of your SSH public key (if you dont have SSH key authentication set up, ignore the -i parameter). More information on creating an SSH key can be found here <a href="https://hpc.gla.ac.uk/guides/ssh-key-auth/">SSH Key Authentication</a>.</li>
+<li>replace <code>&lt;source file&gt;</code> with the path/name of the file you want to transfer from your local device.</li>
+<li>replace <code>&lt;guid&gt;</code> with your username</li>
+<li>replace <code>&lt;targetfile&gt;</code> with the path/name of where you want the file to go on the target device.</li>
+</ul>
+<h4 id="cloud-storage">Cloud Storage<a class="headerlink" href="#cloud-storage" title="Permanent link">&para;</a></h4>
+<p>If you need to access cloud storage from the system directly, you can make use of <code>rclone</code>. More information can be found in our software manual: <a href="https://hpc.gla.ac.uk/guides/rclone/">Rclone</a>.</p>
+<h4 id="web-file-manager">Web File Manager<a class="headerlink" href="#web-file-manager" title="Permanent link">&para;</a></h4>
+<p>For certain systems that are managed by Alces <a href="https://hpc.gla.ac.uk/tutorials/web-file-manager">web file access and management can be used</a>.</p>
+<h3 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Lochan</label><label for="__tabbed_4_2">GES-Petrarch</label><label for="__tabbed_4_3">MARS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><em>There are currently no managed data sets on Lochan</em></p>
+</div>
+<div class="tabbed-block">
+<p><em>There are currently no managed data sets on GES-Petrarch</em></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Blast <code>nr</code> database</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Path</td>
+<td><code>/mnt/data/datasets/blast/nr/latest</code> or<br><code>/mnt/data/datasets/blast/nr/&lt;YYYY-MM-dd&gt;</code></td>
+</tr>
+<tr>
+<td>Source</td>
+<td><a href="https://ftp.ncbi.nlm.nih.gov/blast/db/">NCBI</a></td>
+</tr>
+<tr>
+<td>Update</td>
+<td>Weekly, Saturday 07:00</td>
+</tr>
+<tr>
+<td>Retention</td>
+<td>30 days</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>The most recent version of the "nr" database on MARS can be found in a link called "latest" otherwise the dated versions can be found in the base directory. A new version of the database is downloaded every week on Saturday 07:00, but the download takes hours, and the "latest" link is only updated once the download is complete. Versions older than 30 days will be deleted.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Blast <code>nt</code> database</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Path</td>
+<td><code>/mnt/data/datasets/blast/nt/latest</code> or<br><code>/mnt/data/datasets/blast/nt/&lt;YYYY-MM-dd&gt;</code></td>
+</tr>
+<tr>
+<td>Source</td>
+<td><a href="https://ftp.ncbi.nlm.nih.gov/blast/db/">NCBI</a></td>
+</tr>
+<tr>
+<td>Update</td>
+<td>Weekly, Saturday 07:00</td>
+</tr>
+<tr>
+<td>Retention</td>
+<td>30 days</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>The most recent version of the "nt" database on MARS can be found in a link called "latest" otherwise the dated versions can be found in the base directory. A new version of the database is downloaded every week on Saturday 07:00, but the download takes hours, and the "latest" link is only updated once the download is complete. Versions older than 30 days will be deleted.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="scheduler">Scheduler<a class="headerlink" href="#scheduler" title="Permanent link">&para;</a></h2>
+<p>The scheduler used is <strong>Slurm Workload Manager</strong>, developed by SchedMD. Slurm has a very in depth documentation themselves, which could be useful to read through, for a more in depth understanding of how this software works <a href="https://slurm.schedmd.com/quickstart.html">Quick Start User Guide</a>. We also have the following two resources which could be useful if you need more help using Slurm:</p>
+<ul>
+<li><a href="../tutorials/slurm-101/">Slurm Tutorial</a>: A tutorial to work though and learn what job scheduling can.</li>
+<li><a href="../guides/slurm/">Slurm Guide</a>: Page explaining different Slurm utilities and how to use them.</li>
+</ul>
+<h3 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h3>
+<p>Compute servers - also referred to as nodes - can carry different resource configurations to fit different workloads. For example, some servers might offer high amount of CPU, while others offer GPU resource.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Lochan</label><label for="__tabbed_5_2">GES-Petrarch</label><label for="__tabbed_5_3">MARS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Lochan is very heterogeneous, meaning it is comprised of a vast variety of hardware! You can  get an overview of all servers and their available resources by running the command below on  the system:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sinfo -o "%20n %10c %15m %15d %30G"
+</span></code></pre></div>
+<details class="info">
+<summary>Explanation of command output</summary>
+<ul>
+<li><strong>CPUS:</strong> Number of CPUs available on the node.</li>
+<li><strong>MEMORY:</strong> Amount of memory / RAM available on the node in MiB.</li>
+<li><strong>TMP_DISK:</strong> Available localscratch on node in MiB.</li>
+<li><strong>GRES:</strong> GPU resources available on the node. <code>gpu:&lt;type&gt;:&lt;amount&gt;</code>.</li>
+</ul>
+</details>
+</div>
+<div class="tabbed-block">
+<p>More info is coming soon.</p>
+</div>
+<div class="tabbed-block">
+<p>More info is coming soon.</p>
+</div>
+</div>
+</div>
+<h3 id="partitions-queues">Partitions / Queues<a class="headerlink" href="#partitions-queues" title="Permanent link">&para;</a></h3>
+<p>Partitions, also known as queues on other scheduling systems, are used to determine which nodes you want your job to run. Partitions are used to categorise jobs. Different partitions in Slurm can have different resources, and boundaries configured, this is to support different workloads.</p>
+<p>To see the partition configuration of the HPC you are using run this command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>scontrol show partition
+</span></code></pre></div>
+<p>A specific partition can be requested, by specifying it with the <code>--partition</code> parameter for all Slurm submission commands. Example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>srun --partition=cpu --pty bash
+</span></code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Lochan</label><label for="__tabbed_6_2">GES-Petrarch</label><label for="__tabbed_6_3">MARS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Partition</th>
+<th>Description</th>
+<th>Nodes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cpu</td>
+<td>This is the <em>default</em> partition, meaning this is chosen when no partition is specified. It contains all CPU focused servers of the Cluster.</td>
+<td><code>node[011-021,023]</code></td>
+</tr>
+<tr>
+<td>mpi</td>
+<td>There are four identical servers on Lochan which lend themselves to be used for MPI jobs. Use this partition, to guarantee to get onto these nodes for large multi-node mpi jobs.</td>
+<td><code>node[018-021]</code></td>
+</tr>
+<tr>
+<td>gpu</td>
+<td>This partitions contains all servers with GPU resources available. You can specify which type with the <code>--gres</code> parameter.</td>
+<td><code>gpu[003-004]</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Partition</th>
+<th>Description</th>
+<th>Node List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cpu</td>
+<td>All Small Nodes servers. This is the default partition if none is defined.</td>
+<td>node[001-006]</td>
+</tr>
+<tr>
+<td>cpuplus</td>
+<td>All Large Nodes servers</td>
+<td>node[007-008]</td>
+</tr>
+<tr>
+<td>cpuall</td>
+<td>Both Small Nodes and Large Nodes servers</td>
+<td>node[001-008]</td>
+</tr>
+<tr>
+<td>gpu</td>
+<td>All GPU Nodes</td>
+<td>node[009-010]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Partition</th>
+<th>Description</th>
+<th>Specifications</th>
+<th>Count</th>
+<th>Node List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nodes</td>
+<td>This is the default partition if none is defined</td>
+<td>2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>512Gb RAM</td>
+<td>9</td>
+<td>node[01-09]</td>
+</tr>
+<tr>
+<td>smp</td>
+<td>CPU+ Nodes<br>This partition offers the same resource as the <code>nodes</code> partition, just in larger quantities per node. This can be useful if your jobs can not be parallel over multiple nodes but require large amounts of resources.</td>
+<td>2x AMD 7763 Processors @2.45Ghz<br>64 cores each CPU<br>1Tb RAM</td>
+<td>6</td>
+<td>node[101-106]</td>
+</tr>
+<tr>
+<td>short</td>
+<td>This partition is intended to be used for short CPU based jobs and interactive sessions. This allows users to always have resource available for installations or tests, even when the cluster is full of long running jobs. The partition uses the CPU capacity of GPU nodes, which is usually not in high use.<br>The partition has a max runtime of 2h and can only use up to 48 CPUs per server, to prevent blocking of GPU jobs. A singe user can not request more than 256 CPUs in this partition. GPU resources can not be requested in this partition.</td>
+<td>2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>256Gb RAM<br>Nvidia A40 (48GB)</td>
+<td>20</td>
+<td>gpu[01-20]</td>
+</tr>
+<tr>
+<td>gpu</td>
+<td>GPU Nodes (A40)<br>This partition is intended to be used for GPU jobs.<br>The partition has a higher priority, so jobs in the short partition don’t prevent people from using GPUs. The partition can not be used without a GPU allocation <code>(--gres=gpu:1)</code>.</td>
+<td>2x AMD 7543 Processors @2.8Ghz<br>32 cores each CPU<br>256Gb RAM<br>Nvidia A40 (48GB)</td>
+<td>20</td>
+<td>gpu[01-20]</td>
+</tr>
+<tr>
+<td>gpuplus</td>
+<td>GPU+ Nodes (A100)<br>This partition is intended to be used for heavy GPU jobs. The partition is not available to all users of the cluster, as the resource is scarce.<br>The partition can only be used as part of a project with GPU+ permission. Please specify the need for these resources in your <a href="https://hpc.gla.ac.uk/policies/mars/mars-projects">project application</a>.</td>
+<td>2x AMD 7763 Processors @2.8Ghz<br>64 cores each CPU<br>512Gb RAM<br>Nvidia HGX – 4x A100 GPU (80GB)</td>
+<td>4</td>
+<td>gpu[101-104]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<h3 id="default-and-maximum-values">Default and Maximum Values<a class="headerlink" href="#default-and-maximum-values" title="Permanent link">&para;</a></h3>
+<p>To ensure fair use of the system and to facilitate its maintenance, the scheduler is set up to have default and maximum values applied to submitted jobs. We might adjust these values in the future to align with the load and usage of the system.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Lochan</label><label for="__tabbed_7_2">GES-Petrarch</label><label for="__tabbed_7_3">MARS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Default</th>
+<th>Maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Timeout</td>
+<td>1 hour</td>
+<td>7 days</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>1 core</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>4 GB per core</td>
+<td>-</td>
+</tr>
+<tr>
+<td>GPU*</td>
+<td>1</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><em>*only for “gpu” partition</em></p>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Default</th>
+<th>Maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Timeout</td>
+<td>14 days</td>
+<td>14 days</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>1 core</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>1 GB per core</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Default</th>
+<th>Max Single User</th>
+<th>Max Project User</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Timeout</td>
+<td>1 hour</td>
+<td>7 days</td>
+<td>7 days</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>1 core</td>
+<td>256 cores</td>
+<td><em>Project limits</em></td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>8GiB for CPU and CPU+ nodes<br>4GiB for GPU and GPU+ nodes</td>
+<td>-</td>
+<td><em>Project limits</em></td>
+</tr>
+<tr>
+<td>GPU*</td>
+<td>0</td>
+<td>1</td>
+<td><em>Project limits</em></td>
+</tr>
+<tr>
+<td>Concurrent Jobs</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><em>*only for “gpu” partition</em></p>
+</div>
+</div>
+</div>
+<h3 id="quality-of-service-qos">Quality of Service (QOS)<a class="headerlink" href="#quality-of-service-qos" title="Permanent link">&para;</a></h3>
+<p>QOS can be specified with with each job submission using the <code>--qos</code> parameter. They are defined by administrators in the Slurm database and can be shows on a system using the following command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sacctmgr show qos
+</span></code></pre></div>
+<p>The QOS associated with a job will affect the job in three key ways: scheduling priority, preemption, and resource limits. More information on this can be found in the official Slurm documentation <a href="https://slurm.schedmd.com/qos.html#priority">here</a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Lochan</label><label for="__tabbed_8_2">GES-Petrarch</label><label for="__tabbed_8_3">MARS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Properties</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default</code></td>
+<td>-</td>
+<td>This is the default QOS, that is applied to every job, unless it is defined differently.</td>
+</tr>
+<tr>
+<td><code>priority</code></td>
+<td>Priority=100, Preempt=default</td>
+<td>To be used by select users. Jobs scheduled with this QOS have higher priority and can preempt jobs of the <code>default</code> QOS.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p><em>There are no QOS configured on GES-Petrarch</em></p>
+</div>
+<div class="tabbed-block">
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Some QOS on MARS do not have to be set, so are not mentioned here.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Properties</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>normal</code></td>
+<td>-</td>
+<td>This is the default QOS, that is applied to every job, unless it is defined differently.</td>
+</tr>
+<tr>
+<td><code>highpri</code></td>
+<td>Priority=10</td>
+<td>Used by administrators to schedule jobs with higher priority</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Lochan</label><label for="__tabbed_9_2">GES-Petrarch</label><label for="__tabbed_9_3">MARS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>On Lochan, users are responsible for their own software. Though we offer some tools through modules, that make it easier for users to manage their own software. We also offer modules for software, that have a shared license, that is managed by the University of Glasgow.</p>
+<div class="admonition tip">
+<p class="admonition-title">Manage shared software</p>
+<p>If you are looking to manage shared software on Lochan, either exclusive for a specialist group or available for all Lochan users, please get in contact with the admins about requesting a domain software space.</p>
+</div>
+<p>In some cases software installed will have to be restricted due to license concerns. You will have to contact the admin team via Ivanti to get access to these software. These software include:</p>
+<ul>
+<li>Matlab</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>More info coming soon.</p>
+</div>
+<div class="tabbed-block">
+<p>MARS uses a modular software control system to store and enable applications and tools. This means that we can install multiple versions of the same software and have these work independently for different users. All software currently available on MARS can be listed, loaded, and unloaded, by using the command <code>module</code>.</p>
+<p>Below a list with all available <a href="../guides/modules/">Modules</a> on MARS. This list is growing, as we keep installing software our users need for their work on the cluster. Don’t see the software you need? Don’t hesitate to get in contact with us!</p>
+<p>Modules marked with a * are restricted modules. To gain access, please contact us via Ivanti Support Request.</p>
+<p>To load a Module on MARS use the following syntax:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>module load &lt;module-type&gt;/&lt;module-name&gt;/&lt;module-version&gt;`
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Module Type</th>
+<th>Module Name</th>
+<th>Module Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apps</td>
+<td>alphafold*</td>
+<td>3.0.1</td>
+</tr>
+<tr>
+<td>apps</td>
+<td>apptainer</td>
+<td>1.3.4</td>
+</tr>
+<tr>
+<td>apps</td>
+<td>dmtcp</td>
+<td>3.1.2</td>
+</tr>
+<tr>
+<td>apps</td>
+<td>java</td>
+<td>23.0.1</td>
+</tr>
+<tr>
+<td>apps</td>
+<td>juliaup</td>
+<td>1.18.9</td>
+</tr>
+<tr>
+<td>apps</td>
+<td>matlab*</td>
+<td>r2024b</td>
+</tr>
+<tr>
+<td>apps</td>
+<td>miniforge</td>
+<td>24.7.1</td>
+</tr>
+<tr>
+<td>apps</td>
+<td>nvhpc*</td>
+<td>24.9</td>
+</tr>
+<tr>
+<td>apps</td>
+<td>nvidia-cuda</td>
+<td>12.6.2</td>
+</tr>
+<tr>
+<td>apps</td>
+<td>oneapi*</td>
+<td>2024.2.1</td>
+</tr>
+<tr>
+<td>apps</td>
+<td>python3</td>
+<td>3.12.7</td>
+</tr>
+<tr>
+<td>apps</td>
+<td>R</td>
+<td>4.4.1</td>
+</tr>
+<tr>
+<td>apps</td>
+<td>rstudio</td>
+<td>2024.09.0</td>
+</tr>
+<tr>
+<td>compilers</td>
+<td>gcc</td>
+<td>8.5.0,</td>
+</tr>
+<tr>
+<td>libs</td>
+<td>gcc</td>
+<td>8.5.0,</td>
+</tr>
+<tr>
+<td>libs</td>
+<td>openblas</td>
+<td>0.3.28</td>
+</tr>
+<tr>
+<td>mpi</td>
+<td>openmpi</td>
+<td>5.0.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<h3 id="environment-modules">Environment Modules<a class="headerlink" href="#environment-modules" title="Permanent link">&para;</a></h3>
+<p>This is software that is centrally installed and can be used across the cluster. The full manual of <code>modules</code> can be found <a href="https://modules.readthedocs.io/en/latest/">here</a> or check our <a href="https://hpc.gla.ac.uk/guides/modules/">guide</a>.</p>
+<p>The most used commands are listed below:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>module available</code></td>
+<td>List all available modules on the system.</td>
+</tr>
+<tr>
+<td><code>module load &lt;name&gt;</code></td>
+<td>Activate module for use in your current session.</td>
+</tr>
+<tr>
+<td><code>module unload &lt;name&gt;</code></td>
+<td>Deactivate module from your current session.</td>
+</tr>
+<tr>
+<td><code>module search &lt;search_term&gt;</code></td>
+<td>Search for modules by name or description.</td>
+</tr>
+<tr>
+<td><code>module list</code></td>
+<td>List all active modules in your current session.</td>
+</tr>
+<tr>
+<td><code>module purge</code></td>
+<td>Deactivate all modules loaded in your current session.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p>The RCaaS HPC Admin team is happy to help where possible, no matter if you are a novice or experienced user. Feel free to get in touch! All our services can be found through Ivanti:</p>
+<p><a class="md-button" href="https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945">Ivanti Help Desk</a></p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../account-registration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting an Account">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Getting an Account
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../tutorials/build-from-source/" class="md-footer__link md-footer__link--next" aria-label="Next: Building Software from Source">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Building Software from Source
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.view", "navigation.footer", "navigation.path", "navigation.top", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
