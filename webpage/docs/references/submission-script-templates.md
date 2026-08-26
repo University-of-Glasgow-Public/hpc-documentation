@@ -41,10 +41,10 @@ wget <copied-link>
 === "MARS"
 
     ``` MARS
-    --8<-- "https://github.com/University-of-Glasgow-Public/hpc-documentation/raw/refs/heads/main/downloads/mars-script-templates/mars-gpu-job.sh"
+    --8<-- "https://github.com/University-of-Glasgow-Public/hpc-documentation/raw/refs/heads/main/downloads/mars-script-templates/mars-cpu-job.sh"
     ```
 
-    [Download :material-mouse-right-click:](https://github.com/University-of-Glasgow-Public/hpc-documentation/raw/refs/heads/main/downloads/mars-script-templates/mars-gpu-job.sh){:target="_blank"}
+    [Download :material-mouse-right-click:](https://github.com/University-of-Glasgow-Public/hpc-documentation/raw/refs/heads/main/downloads/mars-script-templates/mars-cpu-job.sh){:target="_blank"}
 
 
 
