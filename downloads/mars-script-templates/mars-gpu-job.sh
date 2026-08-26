@@ -1,12 +1,10 @@
 #!/bin/bash -l
 
 ############# SLURM SETTINGS #############
-#SBATCH --account=project1234   # account name (mandatory), if the job runs under a project then it'll be the project name, if not then it should =none
+#SBATCH --account=none          # account name (mandatory), if the job runs under a project then it'll be the project name, if not then it should =none
 #SBATCH --job-name=myjob        # some descriptive job name of your choice
-#SBATCH --output=%x-%j.out      # output file name will contain job name + job ID
-#SBATCH --error=%x-%j.err       # error file name will contain job name + job ID
 #SBATCH --partition=gpu         # which partition to use, default on MARS is “nodes", "gpu" partition is for A40 GPUs, "gpuplus" is for A100 GPUs (if you've got access to)
-#SBATCH --gres=gpu
+#SBATCH --gres=gpu:a40:1        # type and number of GPU, in the format gpu:[type]:[num]
 #SBATCH --time=0-01:00:00       # time limit for the whole run, in the form of d-hh:mm:ss, also accepts mm, mm:ss, hh:mm:ss, d-hh, d-hh:mm
 #SBATCH --mem=1G                # memory required per node, in the form of [num][M|G|T]
 #SBATCH --nodes=1               # number of nodes to allocate, default is 1
@@ -20,4 +18,4 @@
 
 ############# MY CODE #############
 echo "Hello from $SLURM_JOB_NODELIST"
-
+nvidia-smi
