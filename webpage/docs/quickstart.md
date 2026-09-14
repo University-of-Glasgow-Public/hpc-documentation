@@ -125,7 +125,7 @@ You can use [Rclone](guides/rclone.md) to manage your data.
 
     |||
     |---|---|
-    |**Size**|240Tb (shared between all cluster users)|
+    |**Size**|145Tb (shared between all cluster users)|
     |**Path**|`~/sharedscratch` or `/mnt/scratch/<GUID>`|
     |**Use**|This storage is shared between all nodes. Read and write data that you need during your jobs. Please ensure to clean up your scratch space after you are done processing your job, to make the space available for other users to use!|
     |**Clean-up**|Files not accessed for longer than 2 weeks will be automatically deleted.|
