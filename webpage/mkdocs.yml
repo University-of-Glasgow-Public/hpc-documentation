@@ -3,6 +3,9 @@ theme:
   name: material
   logo: assets/logo.png
   favicon: assets/favicon.png
+  font: 
+    text: Noto Sans
+    code: Noto Sans Mono
   features:
     - content.action.view
     - navigation.footer
