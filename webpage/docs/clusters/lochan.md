@@ -17,6 +17,6 @@ The cluster's scheduler is the Slurm Workload Manager, developed by SchedMD. Thi
 
 The cluster and storage mounted on to the system are located in Saughfield House on the University of Glasgow Campus next to the Library.
 
-## Acknowlegement
+## Acknowledgement
 Where Lochan is used in the development of research outputs the following attribution should be used:
 > This research utilised the University of Glasgow’s Lochan HPC, supported by University of Glasgow Research Computing as a Service. (https://hpc.gla.ac.uk/clusters/lochan/)
