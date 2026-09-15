@@ -3,7 +3,7 @@ extra_css:
   - stylesheets/digital_experience_template.css
 theme:
   name: material
-  logo: assets/logo.png
+  logo: assets/logo-white.svg
   favicon: assets/favicon.png
   font: 
     text: Noto Sans
