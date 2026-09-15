@@ -3,22 +3,6 @@ of default Material elements.
 
 See here for more information: https://squidfunk.github.io/mkdocs-material/customization/#additional-css */
 
-
-/* CHANGE HEADER COLOUR */
-[data-md-color-scheme="default"] .md-header {
-background-color: #011451;
-}
-[data-md-color-scheme="slate"] .md-header {
-background-color: #011451;
-}
-
-
-/* MAKE NAVIGATION ITEM BOLD */
-.md-nav__item .md-nav__link--active {
-  font-weight: 700;
-}
-
-
 /* EXPAND HEADER LOGO */
 .md-header__button.md-logo img {
   height: 2rem;
@@ -27,6 +11,24 @@ background-color: #011451;
 }
 .md-header__title {
   margin-left: 1rem;
+}
+
+
+/* CHANGE HEADER LIGHT THEME */
+[data-md-color-scheme="default"] .md-header {
+  background-color: #011451;
+}
+
+
+/* CHANGE HEADER DARK THEME */
+[data-md-color-scheme="slate"] .md-header {
+  background-color: #344374; 
+}
+
+
+/* MAKE NAVIGATION ITEM BOLD */
+.md-nav__item .md-nav__link--active {
+  font-weight: 700;
 }
 
 
