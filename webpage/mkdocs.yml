@@ -1,8 +1,13 @@
-site_name: "UofG HPC"
+site_name: "HPC"
+extra_css:
+  - stylesheets/digital_experience_template.css
 theme:
   name: material
-  logo: assets/logo.png
+  logo: assets/logo-white.svg
   favicon: assets/favicon.png
+  font: 
+    text: Noto Sans
+    code: Noto Sans Mono
   features:
     - content.action.view
     - navigation.footer
@@ -17,15 +22,15 @@ theme:
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: 'teal'
-      accent: 'teal'
+      primary: 'indigo'
+      accent: 'indigo'
       toggle:
         icon: material/brightness-5
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: 'teal'
-      accent: 'teal'
+      primary: 'indigo'
+      accent: 'indigo'
       toggle:
         icon: material/brightness-7
         name: Switch to system preference
