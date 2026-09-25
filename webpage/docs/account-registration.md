@@ -6,11 +6,9 @@ Use the University of Glasgow’s self-service portal Ivanti to request your acc
 
 === "Lochan"
 
-    Any staff, student and affiliate user within the University of Glasgow is eligible to use Lochan. 
+    Any staff, student and affiliate user within the University of Glasgow is eligible to use Lochan. Please note that students and affiliates need supervisor or manager approval. 
     
-    As student you will need to provide a supervisor, that will have to approve your access.
-    
-    As affiliate / honorary you’ll need a University of Glasgow email address, which you can request through the Ivanti help desk portal. 
+    As affiliate you’ll need a University of Glasgow email address, which you can request through the Ivanti help desk portal. 
 
     The account will be bound to your University of Glasgow GUID, and therefore will have the same credentials and be disabled when you leave the organisation. 
 
