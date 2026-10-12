@@ -1,0 +1,22 @@
+# Lochan HPC Cluster
+Information Services run a High Performance Compute (HPC) cluster called **Lochan**, that is available to use by all staff, students and affiliates of the University of Glasgow.
+
+The platform and team around it have been supporting researchers in all colleges since 2014. Managed by Research Computing as a Service (RCaaS) and motivated by the needs of the community, Lochan is here for people with large upscaling needs but also users who are just starting their HPC journey.
+
+## Technology
+Lochan offers the following compute resources:
+
+- 680 CPU cores
+- 3 NVIDIA Tesla V100 GPUs - 32 GB
+- 1 Nvidia L40S GPUs - 48 GB
+- ~11 TB of memory with up to 2 TB per node
+
+All servers of the cluster run on Rocky Linux 9. Rocky Linux (RL) is a Red Hat based open-source operating system.
+
+The cluster's scheduler is the Slurm Workload Manager, developed by SchedMD. This software is crucial for HPC and helps achieve fair usage of all available compute resources.
+
+The cluster and storage mounted on to the system are located in Glasgow.
+
+## Acknowledgement
+Where Lochan is used in the development of research outputs the following attribution should be used:
+> This research utilised the University of Glasgow’s Lochan HPC, supported by University of Glasgow Research Computing as a Service. (https://hpc.gla.ac.uk/clusters/lochan/)

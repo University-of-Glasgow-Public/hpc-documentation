@@ -130,15 +130,3 @@ Below are total numbers for MARS for the year 2025. We included the CO2 emission
 ## University of Glasgow Sustainability
 
 A collection of resources about sustainability at the University of Glasgow can be found [here](https://www.gla.ac.uk/myglasgow/sustainability/).
-
-
-
-Find US
-
-Address
-ICE Building
-QEUH
-Langlands Dr,
-Glasgow G51 4LB
-
-
