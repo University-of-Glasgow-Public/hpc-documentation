@@ -458,7 +458,7 @@ To ensure fair use of the system and to facilitate its maintenance, the schedule
     |Resource|Default|Max Single User|Max Project User|
     |---|---|---|---|
     |Timeout|1 hour|7 days|7 days|
-    |CPU|1 core|256 cores|*Project limits*|
+    |CPU|1 core|-|*Project limits*|
     |Memory|8GiB for CPU and CPU+ nodes<br>4GiB for GPU and GPU+ nodes|-|*Project limits*|
     |GPU\*|0|1|*Project limits*|
     |Concurrent Jobs|-|-|-|
