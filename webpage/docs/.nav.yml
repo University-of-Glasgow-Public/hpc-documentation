@@ -16,4 +16,4 @@ nav:
   - Policies: 
     - policies/*
     - policies/website-privacy-policy.md
-  
+    - policies/website-accessibility-statement.md
