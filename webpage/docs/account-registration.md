@@ -20,9 +20,8 @@ Use the University of Glasgow’s self-service portal Ivanti to request your acc
 
 === "GES-Petrarch"
 
-    GES-Petrarch has an Ivanti presence for the system. We are using the same HPC tiles that are used for other clusters within the university. You will see Petrarch in the dropdown:
+    Eligible for this cluster are users within the School of Geographical and Earth Sciences. Other users may be permitted access, if approved by the owner of the platform / head of the school.
 
-    ![Ivanti Request](assets/account_reg_imgs/gesp_ivanti_request.svg)
 
 
 === "MARS"
@@ -33,6 +32,6 @@ Use the University of Glasgow’s self-service portal Ivanti to request your acc
     
     If you want to start a larger scale project or collaborate with colleagues, please see [MARS Projects](./policies/mars/mars-projects.md) for more information!
     
-    We expect users to request their own account. A user account request should not be submitted by another person on behalf of that user. If you have a request for a bulk account creation of more than 10 accounts, please [contact us](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945)!
+    We expect users to request their own account. A user account request should not be submitted by another person on behalf of that user. If you have a request for a bulk account creation of more than 10 accounts, please contact us via a support request, also using the form linked above!
     
     Use the University of Glasgow’s self-service portal Ivanti to request your account. Choose MARS in the “Cluster name” dropdown.
