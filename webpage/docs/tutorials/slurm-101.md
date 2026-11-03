@@ -169,7 +169,7 @@ The output is as follows:
 
 Slurm keeps a database with information of all jobs run using the system. To access this data, you can use the `sacct` command. Using the JobID you saved from your job, we can show a wide list of information for your job. Use the `-o` parameter followed by a list of Job Accounting Fields.
 
-A list of all available Job Accounting Fields can be found [here](https://slurm.schedmd.com/sacct.html#SECTION_Job-Accounting-Fields)
+A list of all available Job Accounting Fields can be found in the [official Slurm documentation](https://slurm.schedmd.com/sacct.html#SECTION_Job-Accounting-Fields).
 
 Below is an example that gives you an overview of the requested resources for a job. You should see, these are the values you provided in the “SLURM SETTINGS” section of your submission script:
 
