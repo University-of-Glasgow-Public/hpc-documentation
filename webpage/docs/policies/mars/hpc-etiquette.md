@@ -2,7 +2,7 @@
 
 An HPC system is a shared resource for researchers and students to work with. To ensure all users have a good experience, there are some expected behaviours.
 
-If you see users not following these behaviours on the cluster, please [contact us](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945). We do not tolerate users harassing each other over cluster usage!
+If you see users not following these behaviours on the cluster, please contact the admins. We do not tolerate users harassing each other over cluster usage!
 
 ## Don’t use the login node to run computational work
 
