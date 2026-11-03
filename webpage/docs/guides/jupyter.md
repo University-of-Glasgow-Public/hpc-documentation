@@ -6,7 +6,7 @@ For more advanced information, please consult the official documentation of the 
 - [Jupyter Documentation](https://docs.jupyter.org/en/latest/)
 
 ## Install Jupyter
-Jupyter can easily be installed by yourself using `conda`. The manual for `conda` can be found [here](conda.md). However you are free to use any other installation method you prefer for this. Below is a step by step manual on how to create a new environment with jupyter installed.
+Jupyter can easily be installed by yourself using `conda`. We have a manual for `conda` available at [Conda](conda.md). However you are free to use any other installation method you prefer for this. Below is a step by step manual on how to create a new environment with jupyter installed.
 
 First we create a new environment:
 
@@ -57,7 +57,7 @@ The jupyter command would look something like this. As mentioned above, please e
 jupyter server --no-browser --ip=0.0.0.0 --port=12365
 ```
 
-We will now package this in an easily reusable batch submission script. For this choose a template of your chose from [here](../references/submission-script-templates.md), and add the following lines of code to the bottom:
+We will now package this in an easily reusable batch submission script. For this choose a template from [Submission Script Templates](../references/submission-script-templates.md), and add the following lines of code to the bottom:
 
 ```
 #Load any modules or activate any environment you need to run Jupyter
