@@ -1,6 +1,6 @@
 # Getting an Account
 
-Use the University of Glasgow’s self-service portal Ivanti to request your account.
+Use the UofG Helpdesk to request your account.
 
 [User Registration](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/6C80D9CCDE5A4B4D8134B617A9A33865){ .md-button }
 
@@ -8,13 +8,13 @@ Use the University of Glasgow’s self-service portal Ivanti to request your acc
 
     Any staff, student and affiliate user within the University of Glasgow is eligible to use Lochan. Please note that students and affiliates need supervisor or manager approval. 
     
-    As affiliate you’ll need a University of Glasgow email address, which you can request through the Ivanti help desk portal. 
+    As affiliate you’ll need a University of Glasgow email address, which you can request through the UofG Helpdesk. 
 
     The account will be bound to your University of Glasgow GUID, and therefore will have the same credentials and be disabled when you leave the organisation. 
 
-    We expect users to request their own account. A user account request should not be submitted by another person on behalf of that user. If you have a request for a bulk account creation of more than 10 accounts, please open a HPC Support request through Ivanti.
+    We expect users to request their own account. A user account request should not be submitted by another person on behalf of that user. If you have a request for a bulk account creation of more than 10 accounts, please open a HPC Support request through UofG Helpdesk.
 
-    In the case, where a formerly student user becomes a staff member with a new GUID they must request a new account through Ivanti. If the data of the old student account is still available, an admin may move the data over, upon request by the user.
+    In the case, where a formerly student user becomes a staff member with a new GUID they must request a new account through UofG Helpdesk. If the data of the old student account is still available, an admin may move the data over, upon request by the user.
 
 
 
@@ -26,7 +26,7 @@ Use the University of Glasgow’s self-service portal Ivanti to request your acc
 
 === "MARS"
 
-    We are happy to see you want to join MARS! Eligible for access are Staff and Students within MVLS or [affiliates / honorary](https://www.gla.ac.uk/myglasgow/it/businesssystems/hms/) and collaborators from other colleges, if they are part of a MARS approved and MVLS funded project. As affiliate / honorary you’ll also need a University of Glasgow email address, which you can request through the Ivanti help desk portal.
+    We are happy to see you want to join MARS! Eligible for access are Staff and Students within MVLS or [affiliates / honorary](https://www.gla.ac.uk/myglasgow/it/businesssystems/hms/) and collaborators from other colleges, if they are part of a MARS approved and MVLS funded project. As affiliate / honorary you’ll also need a University of Glasgow email address, which you can request through the UofG Helpdesk.
     
     The account will be bound to your University of Glasgow GUID, and therefore will have the same credentials and be disabled when your main account does.
     
@@ -34,4 +34,4 @@ Use the University of Glasgow’s self-service portal Ivanti to request your acc
     
     We expect users to request their own account. A user account request should not be submitted by another person on behalf of that user. If you have a request for a bulk account creation of more than 10 accounts, please contact us via a support request, also using the form linked above!
     
-    Use the University of Glasgow’s self-service portal Ivanti to request your account. Choose MARS in the “Cluster name” dropdown.
+    Use the University of Glasgow’s self-service portal UofG Helpdesk to request your account. Choose MARS in the “Cluster name” dropdown.

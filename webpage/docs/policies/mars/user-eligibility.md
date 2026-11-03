@@ -36,7 +36,7 @@ Affiliate and Honorary users are eligible for an account if they are part of a M
 
 ## User Creation
 
-Everyone with access to Ivanti and a University of Glasgow email may issue a MARS HPC access request. In general third party requests are not permitted and therefore all users should request their own account individually. Bulk requests may be considered on an individual basis, for example to facilitate a teaching project on MARS. MARS HPC requests are processed by the “Shared Research Facilities” team, which contains all MARS admins. Upon receipt an administrator will accept the ticket, verify the user’s eligibility and where eligible, create the user with a tool provided by the host provider Alces.
+Everyone with access to UofG Helpdesk and a University of Glasgow email may issue a MARS HPC access request. In general third party requests are not permitted and therefore all users should request their own account individually. Bulk requests may be considered on an individual basis, for example to facilitate a teaching project on MARS. MARS HPC requests are processed by the “Shared Research Facilities” team, which contains all MARS admins. Upon receipt an administrator will accept the ticket, verify the user’s eligibility and where eligible, create the user with a tool provided by the host provider Alces.
 
 The tool does the following:
 
@@ -50,7 +50,7 @@ Where requested, the user may also be added to a project. A user will only be ad
 
 A user account will always be bound to the University of Glasgow Active Directory account and therefore the password will always correspond to the password set for the Active Directory account. When a user account is disabled in Active Directory, they will also be disabled on MARS.
 
-In the case, where a formerly student user becomes a staff member with a new user account they must request a new MARS account through Ivanti. If the data of the old student account is still available, an admin may move the data over, upon request by the user.
+In the case, where a formerly student user becomes a staff member with a new user account they must request a new MARS account through UofG Helpdesk. If the data of the old student account is still available, an admin may move the data over, upon request by the user.
 
 ---
 
@@ -88,7 +88,7 @@ In the case of reason 4, the user will not have access to the data after the acc
 |MARS|MVLS Advanced Research System. A HPC system managed by the College of Medical, Veterinary and Life Sciences and Information Services’ Research Computing as a Service within the University of Glasgow: [MARS](https://hpc.gla.ac.uk/clusters/mars/)|
 |MVLS|College of Medical, Veterinary and Life Sciences within the University of Glasgow: [University of Glasgow – Colleges – College of Medical, Veterinary & Life Sciences](https://www.gla.ac.uk/colleges/mvls/)|
 |Active Directory|Active Directory is a directory service that provides the methods for storing directory data and making this data available to network users. The product is develop and maintained by Microsoft: [Active Directory Domain Services overview](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview)|
-|Ivanti|Refers to the IT service management tool provided by the software company Ivanti. The University of Glasgow is using this tool to facilitate delivery, receipt and management of Service Requests from users within the University: <https://www.gla.ac.uk/selfservice>|
+|UofG Helpdesk|Refers to the IT service management tool provided by the software company Ivanti. The University of Glasgow is using this tool to facilitate delivery, receipt and management of Service Requests from users within the University: <https://www.gla.ac.uk/selfservice>|
 |`none` account|Is a Slurm account on MARS, used for individual work, not associated with research projects, or to test the platform before applying for a project. The values assigned to a given user are described here, where “Max Single User” refers to the values in the none account: [min_max_values](https://hpc.gla.ac.uk/guides/slurm/#default-and-maximum-values)|
 |Project|A project is a research project, that has been approved to use MARS for computational work. Projects are subject to usage charges: [getting_project](https://hpc.gla.ac.uk/policies/mars/mars-projects)|
 |Shared Research Facilities|Also called SRF, is a function within MVLS, that helps researchers within their projects: [University of Glasgow – Colleges – College of Medical, Veterinary & Life Sciences – Shared Research Facilities](https://www.gla.ac.uk/colleges/mvls/shared-research-facilities/)|

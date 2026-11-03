@@ -183,7 +183,7 @@ setenv          APP_HOME            $APPDIR
     
     More details on each point:
     
-    **1-** Members who are supposed to add software should contact RCaaS through Ivanti and request to be added to that group.
+    **1-** Members who are supposed to add software should contact RCaaS through UofG Helpdesk and request to be added to that group.
     
     
     **2-** In general, to perform a software installation, you should follow the relevant installation guide, whether it's in the official documentation, a README file with the source distribution or on a GitHub page,.. Etc

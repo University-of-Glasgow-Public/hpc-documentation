@@ -119,7 +119,7 @@ You can use [Rclone](guides/rclone.md) to manage your data.
     |**Path**|`/mnt/home/<GUID>`|
     |**Use**|Set up your environments and store all the scripts and data you need for your personal use.|
     |**Clean-up**|N/A|
-    |**Backup**|Limited backups of home storage is available, please contact via Ivanti Support Request.|
+    |**Backup**|Limited backups of home storage is available, please contact via UofG Helpdesk HPC Support Request.|
 
     **Shared User Scratch**
 
@@ -163,7 +163,7 @@ You can use [Rclone](guides/rclone.md) to manage your data.
     |**Path**|`/mnt/home/<GUID>`|
     |**Use**|Set up your environments and store all the scripts and data you need for your personal use.|
     |**Clean-up**|N/A|
-    |**Backup**|Limited backups of home storage is available, please contact via Ivanti Support Request.|
+    |**Backup**|Limited backups of home storage is available, please contact via UofG Helpdesk HPC Support Request.|
 
     **Shared User Scratch**
 
@@ -512,7 +512,7 @@ The QOS associated with a job will affect the job in three key ways: scheduling 
 
         If you are looking to manage shared software on Lochan, either exclusive for a specialist group or available for all Lochan users, please get in contact with the admins about requesting a domain software space.
 
-    In some cases software installed will have to be restricted due to license concerns. You will have to contact the admin team via Ivanti to get access to these software. These software include:
+    In some cases software installed will have to be restricted due to license concerns. You will have to contact the admin team via UofG Helpdesk to get access to these software. These software include:
     
     - Matlab
     - Intel oneAPI Toolkit
@@ -528,7 +528,7 @@ The QOS associated with a job will affect the job in three key ways: scheduling 
 
     Below a list with all available [Modules](guides/modules.md) on MARS. This list is growing, as we keep installing software our users need for their work on the cluster. Don’t see the software you need? Don’t hesitate to get in contact with us!
 
-    Modules marked with a * are restricted modules. To gain access, please contact us via Ivanti Support Request.
+    Modules marked with a * are restricted modules. To gain access, please contact us via UofG Helpdesk HPC Support Request.
 
     To load a Module on MARS use the following syntax:
     
@@ -573,9 +573,9 @@ The most used commands are listed below:
 ---
 
 ## Support
-The RCaaS HPC Admin team is happy to help where possible, no matter if you are a novice or experienced user. Feel free to get in touch! All our services can be found through Ivanti:
+The RCaaS HPC Admin team is happy to help where possible, no matter if you are a novice or experienced user. Feel free to get in touch! All our services can be found through UofG Helpdesk:
 
-[Ivanti Help Desk](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945){ .md-button }
+[UofG Helpdesk](https://glasgow.saasiteu.com/Modules/SelfService/#serviceCatalog/request/AFB25E75ED5E40E4BDF84FDEE6108945){ .md-button }
 
 
 ---

@@ -1,5 +1,5 @@
 # Slurm for Beginners
-This small tutorial should give you a start to the world of Slurm! If you have any questions or issues, feel free to get in contact with the admins via Ivanti! We help novice and expert users alike to get settled.
+This small tutorial should give you a start to the world of Slurm! If you have any questions or issues, feel free to get in contact with the admins via UofG Helpdesk! We help novice and expert users alike to get settled.
 
 If you are not familiar with the UNIX console, please do the [UNIX Tutorial for Beginners](./unix-101.md) first.
 
