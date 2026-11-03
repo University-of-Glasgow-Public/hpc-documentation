@@ -8,15 +8,15 @@ If you choose to use RStudio on the system, for debugging or code development, w
 
 === "Lochan"
 
-    You can request an interactive GUI job as described [here](slurm.md#interactive-gui-job)
+    You can request an interactive GUI job as described [our Slurm guide](slurm.md#interactive-gui-job)
 
 === "GES-Petrarch"
 
-    You can request an interactive GUI job as described [here](slurm.md#interactive-gui-job)
+    You can request an interactive GUI job as described [our Slurm guide](slurm.md#interactive-gui-job)
 
 === "MARS"
 
-    First you will need to open a Flight Desktop session. You can find more information about that [here](https://hpc.gla.ac.uk/guides/gui-apps/).
+    First you will need to open a Flight Desktop session. You can find more information about that in out manual about the [Alces Flight Desktop](alces-flight.md#flight-desktop).
 
     ![RStudio-Via-Desktop](assets/RStudio-Via-Desktop.jpg)
 

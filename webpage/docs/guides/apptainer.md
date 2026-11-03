@@ -69,7 +69,7 @@ All three of these commands have similar parameters. If you want to see all avai
 |`--nv`|`--nv`|`--nv`|Enables Nvidia support. Use this option when working on GPU-servers to ensure you have the GPU available within your container.|
 
 ## Create images 
-You won't always be able to create images on the HPC, we recommend you install apptainer on your local device. Information on how to install can be found [here](https://apptainer.org/docs/admin/main/installation.html#).
+You won't always be able to create images on the HPC, we recommend you install Apptainer on your local device. Information on how to install can be found in the [Apptainer documentation](https://apptainer.org/docs/admin/main/installation.html#).
 
 Once you have an installation of apptainer working on your device, you can build images to then use on a HPC or any other device. For our simple example, we’ll build an image to install and run the test package `hello` from the Ubuntu upstream repository.
 

@@ -13,7 +13,7 @@ HPC stands for High Performance Computing. Commonly this refers to a cluster of 
 ### Architecture
 HPC can be built in in different configurations. This configuration is very popular and you will see it in many HPCs:
 
-![Architecture Diagram](assets/quickstart_imgs/architecture.svg)
+![Basic HPC architecture diagram.](assets/quickstart_imgs/architecture.svg)
 
 The HPC is made up of these components:
 
@@ -28,7 +28,7 @@ You will be submitting "work packages" in form of submission scripts, that defin
 
 Your work package will be queued by the scheduler. The scheduler will decide where your job can run, based on your resource requirements described. Multiple jobs can run on one server. If there is enough resource available your job might run right away, otherwise it will be queued and run at a later time. You should be able to provide contact information, and the scheduler will keep you in the loop if your job has started, finished or failed. 
 
-!["How does HPC work?" Diagram](assets/quickstart_imgs/how_does_hpc_work.svg)
+![Simple illustration of how scheduling works.](assets/quickstart_imgs/how_does_hpc_work.svg)
 
 Scheduling is a complicated matter, and multiple factors play into the priority of your job, however generally, the smaller your job, the faster it will run, so it pays out to be efficient!
 
@@ -474,7 +474,7 @@ QOS can be specified with with each job submission using the `--qos` parameter. 
 sacctmgr show qos
 ```
 
-The QOS associated with a job will affect the job in three key ways: scheduling priority, preemption, and resource limits. More information on this can be found in the official Slurm documentation [here](https://slurm.schedmd.com/qos.html#priority)
+The QOS associated with a job will affect the job in three key ways: scheduling priority, preemption, and resource limits. More information on this can be found in the [official Slurm documentation](https://slurm.schedmd.com/qos.html#priority)
 
 === "Lochan"
 
@@ -557,7 +557,7 @@ The QOS associated with a job will affect the job in three key ways: scheduling 
     |mpi|openmpi|5.0.5|
 
 ### Environment Modules
-This is software that is centrally installed and can be used across the cluster. The full manual of `modules` can be found [here](https://modules.readthedocs.io/en/latest/) or check our [guide](https://hpc.gla.ac.uk/guides/modules/).
+This is software that is centrally installed and can be used across the cluster. The full manual of `modules` can be found hosted online at [ReadTheDocs](https://modules.readthedocs.io/en/latest/) or check our guide here: [Modules](https://hpc.gla.ac.uk/guides/modules/).
 
 The most used commands are listed below:
 

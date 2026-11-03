@@ -103,7 +103,7 @@ Compile the code above into an executable called `hello_mpi`:
 mpicc hello_mpi.c -o hello_mpi
 ```
 
-You can now write a submission script to run your MPI program `hello_mpi` over multiple nodes. First you can copy a template from [here](../references/submission-script-templates.md) and adjust as described below.
+You can now write a submission script to run your MPI program `hello_mpi` over multiple nodes. First you can copy a template from the available [Submission Script Templates](../references/submission-script-templates.md) and adjust as described below.
 
 Adjust the `--nodes` to `2` to run the job across two servers and the `--ntasks-per-node` to `4` to spawn four processes per node, so eight in total. MPI will automatically spawn as many processes, as tasks are available in the allocation.
 

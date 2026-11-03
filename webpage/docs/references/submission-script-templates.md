@@ -2,7 +2,7 @@
 
 The scripts below can be run on the platform as is. You can expand them with parameters from [Slurm Parameters](./slurm-parameters.md) and your own workflows!
 
-All Scripts are also available on GitHub [here](https://github.com/University-of-Glasgow-Public/hpc-documentation/tree/main/downloads).
+All Scripts are also available here on [GitHub](https://github.com/University-of-Glasgow-Public/hpc-documentation/tree/main/downloads).
 
 If you want to download a specific script you can right click the link below the script of choice and choose "Save link as" to download on your local device, or choose "Copy link" and then download it from a login node using `wget` followed by the link:
 

@@ -2,25 +2,21 @@
 
 Built in 2023, this heterogenous computing platform is designed to support computationally intensive activities. Lead by a committee of senior researchers and supported by staff of the University of Glasgow, this HPC is built to support users in their research needs.
 
-MARS is made of 40 nodes with differing specifications, catered to different research needs. More info on the resources of the system can be found [here](https://hpc.gla.ac.uk/clusters/mars/#compute-resources).
-
-Software is continually installed and tested by out RSE and HPC-Admins, according to user needs. User can easily manage the software with a [module system](https://hpc.gla.ac.uk/guides/modules/).
-
-Interested in getting access to Mars? See [here](https://hpc.gla.ac.uk/account-registration/) for more information!
+MARS is made of 40 nodes with differing specifications, catered to different research needs. You can find mor information on the available resources at [Compute Resources](#compute-resources).
 
 Just got your account? We recommend reading through our [Getting Started Guide](https://hpc.gla.ac.uk/quickstart/)!
 
-![rack1](assets/mars_rack1.jpg)
-![rack2](assets/mars_rack2.jpg)
+![Image of MARS racks in data centre (1).](assets/mars_rack1.jpg)
+![Image of MARS racks in data centre (2).](assets/mars_rack2.jpg)
 
 Physically the equipment is installed into the ICE building data centre.
 
 
 ## System Overview
 
-Followed is a visualisation of the system components and their network connectivity (see top left). If you are looking for more information regarding the resources of the nodes, please see [Compute Resources](https://hpc.gla.ac.uk/clusters/mars/#compute-resources)
+Followed is a visualisation of the system components and their network connectivity (see top left).
 
-![system_overview](assets/mars_system_overview.jpg)
+![[Image of the system layout of MARS.](assets/mars_system_overview.jpg)
 
 ## Compute Resources
 
@@ -129,4 +125,4 @@ Below are total numbers for MARS for the year 2025. We included the CO2 emission
 
 ## University of Glasgow Sustainability
 
-A collection of resources about sustainability at the University of Glasgow can be found [here](https://www.gla.ac.uk/myglasgow/sustainability/).
+A collection of resources about sustainability at the University of Glasgow can be found on the [Univeristy of Glasgow website](https://www.gla.ac.uk/myglasgow/sustainability/).

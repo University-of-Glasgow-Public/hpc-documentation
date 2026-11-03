@@ -150,7 +150,7 @@ squeue -u <guid> -j <JobID>
 ```
 
 ### Historic Job Analysis
-Slurm keeps a database with information of all jobs run using the system. To access this data, you can use the `sacct` command.  Use the `-o` parameter followed by a list of Job-Accounting-Fields. A list of all available Job-Accounting-Fields can be found [here](https://slurm.schedmd.com/sacct.html#SECTION_Job-Accounting-Fields).
+Slurm keeps a database with information of all jobs run using the system. To access this data, you can use the `sacct` command.  Use the `-o` parameter followed by a list of Job-Accounting-Fields. A list of all available Job-Accounting-Fields can be found in the [official Slurm documentation](https://slurm.schedmd.com/sacct.html#SECTION_Job-Accounting-Fields).
 
 Per default you will get information for each job step in your output. If you don't want more than one line for each of your jobs, you can use the `-X` parameter.
 
