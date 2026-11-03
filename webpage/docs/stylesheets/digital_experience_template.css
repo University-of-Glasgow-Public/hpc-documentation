@@ -26,7 +26,22 @@ See here for more information: https://squidfunk.github.io/mkdocs-material/custo
 }
 
 
-/* MAKE NAVIGATION ITEM BOLD */
+/* CHANGE COLOUR OF LINKS IN DARK THEME */
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: #95B4EF;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover,
+[data-md-color-scheme="slate"] .md-typeset a:focus {
+  color: #516BFB;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item .md-nav__link--active {
+  color: #95B4EF
+}
+
+
+/* MAKE NAVIGATION ITEM BOLD AND ADJUST TO LINK COLOUR */
 .md-nav__item .md-nav__link--active {
   font-weight: 700;
 }
