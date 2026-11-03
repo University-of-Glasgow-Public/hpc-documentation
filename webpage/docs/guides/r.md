@@ -14,7 +14,7 @@ Here a very simple example R script file, it's named `myRCode.R`:
 print("Hello World!")
 ```
 
-Now if you want to execute this within your Slurm job submission, just use one of our templates [here](../references/submission-script-templates.md) and edit it as described below. The example submission script is named `mySlurmJob.sh`.
+Now if you want to execute this within your Slurm job submission, just use one of our [Submission Script Templates](../references/submission-script-templates.md) and edit it as described below. The example submission script is named `mySlurmJob.sh`.
 
 In our submission script, we will now run the code autonomously via `Rscript` by supplying it as a simple parameter:
 
