@@ -31,7 +31,7 @@ If you want to run highly demanding GUI applications, please see [Interactive GU
 
 !!! tip 
 
-    We recommend using the console for majority of your work, as it’s the most efficient way to use an HPC. If you need help adjusting, feel free to contact us via Ivanti Support Request.
+    We recommend using the console for majority of your work, as it’s the most efficient way to use an HPC. If you need help adjusting, feel free to contact us via UofG Helpdesk HPC Support Request.
 
 You can either start a new session or access an already existing one. If you make a new one, choose “Launch”. Give your session a memorable name, choose your preferred resolution and launch.
 

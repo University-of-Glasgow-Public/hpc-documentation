@@ -1,6 +1,6 @@
 # Lochan: Cluster Usage Policy
 
-To ensure the stability and usability of the platform for all users, there are certain rules and policies to abide by when using Lochan. This is a living document, so changes can be made at any time. If you have any questions regarding the contents of this page, feel free to get in contact with the admins via Ivanti.
+To ensure the stability and usability of the platform for all users, there are certain rules and policies to abide by when using Lochan. This is a living document, so changes can be made at any time. If you have any questions regarding the contents of this page, feel free to get in contact with the admins via UofG Helpdesk.
 
 ---
 
