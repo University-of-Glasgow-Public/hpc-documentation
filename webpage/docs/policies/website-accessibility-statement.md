@@ -1,5 +1,5 @@
 # Website Accessibility Statement
-This accessibility statement applies to the UofG HPC Documentation website [https://hpc.gla.ac.uk](https://hpc.gla.ac.uk).
+This accessibility statement applies to the UofG HPC Documentation website [UofG HPC Documentation website](https://hpc.gla.ac.uk).
 
 
 ## Using this website
@@ -23,13 +23,13 @@ We know some parts of this website aren’t fully accessible:
 ## Feedback and contact information
 If you find any problems not listed on this page or think we’re not meeting accessibility requirements, contact:
 
-- Email: ithelpdesk@glasgow.ac.uk
-- Web http://www.gla.ac.uk/it/helpdesk
+- Email: [ithelpdesk@glasgow.ac.uk](mailto:ithelpdesk@glasgow.ac.uk)
+- Web: [https://www.gla.ac.uk/it/helpdesk](https://www.gla.ac.uk/it/helpdesk)
 - Call: 0141 330 4800
 
 If you need information on this website in a different format like accessible PDF, large print, easy read, audio recording or braille, contact:
 
-- Email: alternativeformats@glasgow.ac.uk
+- Email: [alternativeformats@glasgow.ac.uk](mailto:alternativeformats@glasgow.ac.uk)
 
 We’ll consider your request and get back to you within 5 days.
 
@@ -51,7 +51,7 @@ The University of Glasgow is committed to making its website accessible, in acco
 ## Compliance status
 The website has been tested against the Web Content Accessibility Guidelines (WCAG) 2.2 AA standard.
 
-This website is partially compliant with the [Web Content Accessibility Guidelines version 2.2](https://www.w3.org/TR/WCAG22/) AA standard, due to [insert one of the following: ‘the non-compliances’, ‘the exemptions’ or ‘the non-compliances and exemptions’] listed below.
+This website is partially compliant with the [Web Content Accessibility Guidelines version 2.2](https://www.w3.org/TR/WCAG22/) AA standard, due to the non-compliances listed below.
 
 
 ## Non-accessible content
@@ -59,15 +59,11 @@ The content listed below is non-accessible for the following reasons.
 
 ### Non-compliance with the accessibility regulations
 
-- The search bar dialog element of the website does not have accessible names. This violates WCAG 4.1.2 Name, Role, Value (Level A). This webpage uses MKDocs with the Material template and this is a known issue. The team has to further investigate this issue and find a solution. We plan to have a remediation in place by June 2027.
-
-### Disproportionate burden
-
-### Content that’s not within the scope of the accessibility regulations
+- The search bar dialog element of the website does not have accessible names. This violates [WCAG 4.1.2 Name, Role, Value (Level A)](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1#name-role-value). This webpage uses MKDocs with the Material template and this is a known issue. The team has to further investigate this issue and find a solution. We plan to have a remediation in place by June 2027.
 
 
 ## Preparation of this accessibility statement
-This statement was prepared on 03.11.2026. It was last reviewed on 03.11.2026.
+This statement was prepared on 03.11.2026. It was last reviewed on 13.11.2026.
 
 This website was last tested on 03.11.2026 against the WCAG 2.2 AA standard.
 
